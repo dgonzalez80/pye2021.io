@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="dgonzalez" />
+
+
+<title>Tipos de probabilidad y sus aplicaciones</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Probabilidad y Estadística 2021-2 </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    PyE
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 0
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo0.html">Módulo 0</a>
+    </li>
+    <li>
+      <a href="Guia001.html">Guía 0.1</a>
+    </li>
+    <li>
+      <a href="Guia002.html">Guía 0.2</a>
+    </li>
+    <li>
+      <a href="Guia003.html">Guía 0.3</a>
+    </li>
+    <li>
+      <a href="Guia004.html">Guía 0.4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo1.html">Módulo 1</a>
+    </li>
+    <li>
+      <a href="Guia101.html">Guía 1.1</a>
+    </li>
+    <li>
+      <a href="Guia102.html">Guía 1.2</a>
+    </li>
+    <li>
+      <a href="Guia103.html">Guía 1.3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo2.html">Módulo 2</a>
+    </li>
+    <li>
+      <a href="Guia201.html">Guía 2.1</a>
+    </li>
+    <li>
+      <a href="Guia202.html">Guía 2.2</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo3.html">Módulo 3</a>
+    </li>
+    <li>
+      <a href="Guia301.html">Guía 3.1</a>
+    </li>
+    <li>
+      <a href="Guia302.html">Guía 3.2</a>
+    </li>
+    <li>
+      <a href="Guia303.html">Guía 3.3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo4.html">Módulo 4</a>
+    </li>
+    <li>
+      <a href="Guia401.html">Guía 4.1</a>
+    </li>
+    <li>
+      <a href="Guia402.html">Guía 4.2</a>
+    </li>
+    <li>
+      <a href="Guia403.html">Guía 4.3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 5
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo5.html">Módulo 5</a>
+    </li>
+    <li>
+      <a href="Guia501.html">Guía 5.1</a>
+    </li>
+    <li>
+      <a href="Guia502.html">Guía 5.2</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-code"></span>
+     
+    Código R
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="introduccionR.html">Introducción a R</a>
+    </li>
+    <li>
+      <a href="codigo101.html">Código u1.1</a>
+    </li>
+    <li>
+      <a href="codigo102.html">Código u1.2</a>
+    </li>
+    <li>
+      <a href="codigo103.html">Código u1.3</a>
+    </li>
+    <li>
+      <a href="codigo201.html">Código u2.1</a>
+    </li>
+    <li>
+      <a href="codigo301.html">Código u3.1</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><strong>Tipos de probabilidad y sus aplicaciones</strong></h1>
+<h3 class="subtitle"><strong>Módulo 2- Unidad 2.2</strong></h3>
+<h4 class="author">dgonzalez</h4>
+
+</div>
+
+
+<div id="guía-de-aprendizaje-2.2" class="section level1">
+<h1><strong>1.Guía de aprendizaje 2.2</strong></h1>
+<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;">
+<video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%">
+<source src="https://static.genial.ly/resources/panel-loader-low.mp4" type="video/mp4" />
+Your browser does not support the video tag.</video>
+<div id="5f4c855734dcc71ce637fbe4" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;">
+
+</div>
+</div>
+<script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genial.ly/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<div id="introducción" class="section level2">
+<h2><strong>1.1. Introducción</strong></h2>
+<p>Como fue mencionado en la Unidad 2.1 el concepto de probabilidad es fundamental dentro de la Estadística, pues soporta los conceptos de variable aleatoria y de las funciones que las rigen. Entre sus principales aplicaciones está la valoración del riesgo en relación con la toma de decisiones, la fiabilidad de productos y garantías de productos, teoría de juegos, entre otras aplicaciones.</p>
+<p>Como complemento de los conceptos vistos en la Unidad 2.1, en esta unidad se aborda el concepto de <strong>Probabilidad total</strong> y el <strong>Teorema de Bayes</strong>.</p>
+<p><br/><br/></p>
+</div>
+<div id="objetivos-de-la-unidad" class="section level2">
+<h2><strong>1.2. Objetivos de la unidad</strong></h2>
+<p>Al finalizar la unidad los estudiantes estarán en capacidad de RECONOCER, CALCULAR e INTERPRETAR los diferentes tipos de probabilidad y sus aplicaciones, con el propósito de valorar los riesgos asociados a una decisión.</p>
+<p><br/><br/></p>
+</div>
+<div id="duración" class="section level2">
+<h2><strong>1.3. Duración</strong></h2>
+<p>La presente unidad será desarrollada durante la semana comprendida entre el 25 y 29 de agosto de 2021. Ademas del material suministrado contaran con el acompañamiento del profesor en dos sesiones (Lunes y Viernes) y de un monitor (Miercoles) y espacio de Atencion a estudiantes y manera asincrónica de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el 29 de agosto de 2021</p>
+<p>Para alcanzar los objetivos planteados se propone realizar la siguiente actividad</p>
+<p><br/><br/></p>
+</div>
+<div id="cronograma-de-trabajo" class="section level2">
+<h2><strong>1.4. Cronograma de trabajo</strong></h2>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Actividad</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Actividad 201</td>
+<td align="left">A partir de los conceptos vistos en las Unidades 2.1 y 2.2 deberá resolver los problemas propuestos en el <a href="https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller_202.pdf"><strong>Taller 202</strong></a> y entregue su solución en formato <strong>pdf</strong> en el enlace correspondiente de Brightspace.</td>
+</tr>
+<tr class="even">
+<td align="left">Fecha</td>
+<td align="left">29 de agosto de 2021</td>
+</tr>
+<tr class="odd">
+<td align="left">Hora</td>
+<td align="left">23:59 hora local</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+</div>
+<div id="criterios-de-evaluación" class="section level2">
+<h2><strong>1.5. Criterios de evaluación</strong></h2>
+<p>El taller del Modulo 2 recoge los elementos estudiados y por tanto tiene objetivo la revisión de los principales conceptos tratados.</p>
+<ul>
+<li><p>Reconocer los principales conceptos de probabilidad y su efecto sobre la toma de decisiones informadas.</p></li>
+<li><p>Reconocer e identificar los diferentes tipos de probabilidad y sus respectivas interpretación.</p></li>
+</ul>
+<p><br/><br/></p>
+</div>
+<div id="entregables" class="section level2">
+<h2><strong>1.6. Entregables</strong></h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Entregable</th>
+<th align="left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Actividad202</td>
+<td align="left">Actividad202.pdf : Solucionario taller 202</td>
+</tr>
+<tr class="even">
+<td align="left">Fecha</td>
+<td align="left">Domongo 29 de agosto de 2021</td>
+</tr>
+<tr class="odd">
+<td align="left">Hora límite</td>
+<td align="left">23:59 hora local</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/><br/><br/></p>
+</div>
+<div id="presentaciones" class="section level2">
+<h2><strong>1.7. Presentaciones</strong></h2>
+<p><a href="https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/presentacion202.pdf"><strong>Presentación 202</strong></a> <br/><br/></p>
+</div>
+</div>
+<div id="recursos" class="section level1">
+<h1><strong>2. Recursos</strong></h1>
+<p><br/><br/></p>
+<p>En la guía 2.1 se habló de los conceptos básicos (Experimento aleatorio, Espacio muestral y Evento aleatorio), de los diferentes enfoque de probabilidad ( Clásico, Frecuentista y Subjetivo) y de los tipos de probabilidad simple o marginal (<span class="math inline">\(P(A)\)</span>) y probabilidad conjunta <span class="math inline">\(P(A \cap B)\)</span>.</p>
+<p>En esta guía se hará en énfasis en otro tipo de probabilidad llamada <strong>probabilidad condicional</strong></p>
+<p><br/><br/></p>
+<div id="probabilidad-condicional" class="section level2">
+<h2><strong>2.1. Probabilidad condicional</strong></h2>
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #F0F8FF; background-color: #0063CD ; border-color: #000000;">
+<p><strong>Definición : Probabilidad condicional</strong></p>
+<p>La probabilidad condicional de <span class="math inline">\(B\)</span>, dado <span class="math inline">\(A\)</span>, se denota como <span class="math inline">\(P(B|A)\)</span>, se define como:</p>
+<p><span class="math display">\[P(B|A)=\dfrac{P(A \cap B)}{P(A)}\]</span></p>
+<p>Siempre que <span class="math inline">\(P(A) &gt; 0\)</span></p>
+</div>
+<p><br/></p>
+<p><span class="math inline">\(P(B|A)\)</span> se puede leer como :</p>
+<ul>
+<li><p>Probabilidad de que ocurra <span class="math inline">\(B\)</span> dado que el evento <span class="math inline">\(A\)</span> ya ocurrió</p></li>
+<li><p>Probabilidad de que ocurra <span class="math inline">\(B\)</span> sabiendo previamente que ocurrió el evento <span class="math inline">\(A\)</span></p></li>
+<li><p>Si sabemos que ha ocurrido el evento <span class="math inline">\(A\)</span>, la probabilidad de que ocurra <span class="math inline">\(B\)</span></p></li>
+</ul>
+<p><br/><br/></p>
+<p>El efecto de conocer la ocurrencia del evento <span class="math inline">\(A\)</span> hace que el espacio muestral de referencia pase de ser <span class="math inline">\(S\)</span> a solo <span class="math inline">\(A\)</span>. Ahora dentro de este nuevo espacio muestal de referencia se debe establecer la probabilidad de que ocurra <span class="math inline">\(B\)</span></p>
+<p>De esta manera la probabilidad se expresa como la razón entre la probabilidad conjunta <span class="math inline">\(P(A \cap B)\)</span> con la probabilidad de <span class="math inline">\(A\)</span></p>
+<p><br/><br/></p>
+<div id="ejemplo" class="section level3">
+<h3><strong>Ejemplo:</strong></h3>
+<p>Supongamos que se tiene la siguiente información escrita en una tabla de doble entrada o tabla cruzada que contiene dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> :</p>
+<pre class="r"><code>x=c(460,140,40,260)
+m=matrix(x,nrow = 2) 
+rownames(m) = c(&quot;B&quot;, &quot;B*&quot;)
+colnames(m) = c(&quot;A&quot;, &quot;A*&quot;)
+m</code></pre>
+<pre><code>##      A  A*
+## B  460  40
+## B* 140 260</code></pre>
+<p>En la siguiente tabla se representan los tres tipos de probabilidad : <br/> <img src="img/tabla2031.png" style="width:80.0%" /> <br/><br/> Esta información tambien se puede representar como un diagrama de árbol <br/></p>
+<p><img src="img/arbol2031.png" style="width:80.0%" /> <br/><br/></p>
+<p>O también como un diagrama de Venn: <br/> <img src="img/venn.png" style="width:80.0%" /> <br/><br/></p>
+<p>Por despeje se pueden obtener la llanada regla de la multiplicación : <br/></p>
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #F0F8FF; background-color: #0063CD ; border-color: #000000;">
+<p><strong>Definición: Regla de la multiplicación de eventos</strong></p>
+<p>La probabilidad de que ocurra A y B asociados a un experimento aleatorio es :</p>
+<p><span class="math inline">\(P(A \cap B) = P(A) P(B|A)\)</span> o <span class="math inline">\(P(A \cap B) = P(B) P(A|B)\)</span></p>
+<p>En el caso de los eventos A y B sean independientes entonces :</p>
+<p><span class="math display">\[P(A \cap B) = P(A) P(B)\]</span></p>
+</div>
+<p><br/><br/> En el caso que se requiera evaluar si dos eventos son independientes o no, partiendo de la definición de probabilidad condicional se podría obtener la siguiente regla al despejar <span class="math inline">\(P(A \cap B\)</span> de la ecuación para obtener : <span class="math inline">\(P(A \cap B) = P(A) * P(B|A)\)</span>. En caso de que la ocurrencia del evento <span class="math inline">\(A\)</span> previamente al evento <span class="math inline">\(B\)</span>, no cambie su probabilidad, se podría escribir que <span class="math inline">\(P(B|A)= P(B)\)</span> y en este caso la regla indica que la probablidad conjunta de los eventos A y B es igual a la probabilidad de sus probabilidades marginales :</p>
+<p><br/></p>
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #F0F8FF; background-color: #0063CD ; border-color: #000000;">
+<p><strong>Definición: Independencia de eventos</strong></p>
+<p>Dos eventos A y B son independientes si y solo si la probabiliad del evento B no es afectada por la ocurrencia del evento A o viceversa.</p>
+<p><span class="math inline">\(P(A \cap B) = P(A) P(B)\)</span> o <span class="math inline">\(P(B|A)=P(B)\)</span></p>
+</div>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-1" class="section level3">
+<h3><strong>Ejemplo :</strong></h3>
+<p>El departamento de crédito de la universidad, informa que el 30% de los pagos realizados en la universidad se efectúan en efectivo, un 40% con tarjeta de crédito y el resto con tarjeta débito. En todos los casos estos pagos solo son recibidos en la caja ubicada en la oficina de Registro Académico de la universidad.</p>
+<p>Tambien se conoce que 20% de los pagos realizados en efectivo, 70% de los pagos realizados con tarjeta de crédito y el 80% de los pagos realizados con tarjeta débito, corresponden a pagos por valores superiores a $500 mil pesos</p>
+<p>Con el fin de mejorar el servicio, se esta diseñando un sistema de turnos que agilice el procedimiento de atención . El ingeniero a cargo del diseño de sistema requiere le ayude a valorar las prioridades para las personas que deben pagar mas de $500 mil pesos, pues el ingeniero sospecha que es más probable que una persona requiere pagar más de $500 mil pesos, lo haga con efectivo. Ayude al ingeniero con la información necesaria que le permita reafirmar su sospecha o por el contrario a valorar las diferentes posibilidades <br/><br/></p>
+<p><strong>Solución:</strong> <br/> Definimos los siguientes eventos :</p>
+<ul>
+<li><strong>E</strong> : El pago se realiza en efectivo</li>
+<li><strong>TC</strong> : El pago se realiza con tarjeta de crédito</li>
+<li><strong>TD</strong> : El pago se realiza con tarjeta débito</li>
+<li><strong>+5</strong> : El pago es por una cantidad superior a $500 mil pesos</li>
+</ul>
+<p><br/><br/> <img src="img/ejemplo1.png" style="width:70.0%" /> <img src="img/ejemplo2.png" style="width:70.0%" /></p>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="probabilidad-total" class="section level2">
+<h2><strong>2.2. Probabilidad Total</strong></h2>
+<p>Ahora supongamos que el espacio muestral esta formado por un conjunto de eventos lo podemos representar como una partición del conjunto <span class="math inline">\(S\)</span> así :</p>
+<p><img src="img/particion1.png" style="width:50.0%" /> <br/><br/></p>
+<p><strong>Nota:</strong> Una partición de un conjunto de <span class="math inline">\(S\)</span> está formada por subconjuntos <span class="math inline">\(A_{1}\)</span>, <span class="math inline">\(A_{2}\)</span>, <span class="math inline">\(\dots\)</span> , <span class="math inline">\(A_{n}\)</span>, que deben cumplir las siguiente propiedades :</p>
+<ul>
+<li><p><span class="math inline">\(A_{1} \cup A_{2} \cup \dots \cup A_{n}=S\)</span></p></li>
+<li><p><span class="math inline">\(A_{i} \cap A_{j} = \phi\)</span> , para todo <span class="math inline">\(i \neq j\)</span></p></li>
+<li><p><span class="math inline">\(A_{i} \neq \phi\)</span></p></li>
+</ul>
+<p><br/><br/> En nuestro caso podemos tener solo cinco particiones para simplificar el procedimiento <br/></p>
+<p><img src="img/particion2.png" style="width:60.0%" /> <br/><br/></p>
+<p>Pdemos reasaltar los conjuntos que conforman a <span class="math inline">\(B\)</span> :</p>
+<p><img src="img/particion3.png" style="width:60.0%" /></p>
+<p><br/><br/></p>
+<p>Tambien podemos recostruir <span class="math inline">\(B\)</span> como :</p>
+<p><span class="math inline">\(B = (A_{1} \cap B) \cup (A_{2} \cap B) \cup (A_{3} \cap B) \cup (A_{4} \cap B) \cup (A_{5} \cap B)\)</span></p>
+<p><br/><br/> En terminos de probabilidad tenemos</p>
+<p><span class="math inline">\(P(B) = P(A_{1} \cap B) + P(A_{2} \cap B) + P(A_{3} \cap B) + P(A_{4} \cap B) + P(A_{5} \cap B)\)</span></p>
+<p>Este resultado se puede expresar en otros terminos de la regla de la multiplicacion:</p>
+<p><span class="math inline">\(P(B) = P(A_{1})P(B|A_{1}) + P(A_{2})P(B|A_{2}) +P(A_{3})P(B|A_{}) + P(A_{4})P(B|A_{4}) + P(A_{5})P(B|A_{5})\)</span></p>
+<p><br/><br/> En general :</p>
+<p><br/></p>
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #F0F8FF; background-color: #0063CD ; border-color: #000000;">
+<p><strong>Definición: Regla de la probabilidad total</strong></p>
+<p>Dado una serie de eventos que conforman una partición <span class="math inline">\(E_{1}\)</span>, <span class="math inline">\(E_{2}\)</span>, <span class="math inline">\(E_{3}\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(E_{k}\)</span>, que son mutuamente excluyentes y exaustivos y un evento A, la probabilidad del evento A se expresa como :</p>
+<p><span class="math display">\[P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k})P(A|E_{k})\]</span></p>
+</div>
+<p><br/><br/></p>
+<div id="ejemplo-2" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<p>En el caso que en el ejemplo anterior se requiere calcular la probabilidad <span class="math inline">\(P(+5)\)</span> utilizamos la regla de la probabilidad total:</p>
+<p><span class="math inline">\(P(+5) = P(E)P(+5|E) + P(TC)P(+5|TC) +P(TD)P(+5|TD)\)</span></p>
+<p><span class="math inline">\(P(+5) = P(E)P(+5|E) + P(TC)P(+5|TC) +P(TD)P(+5|TD)\)</span></p>
+<p><span class="math inline">\(P(+5) = 0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80\)</span></p>
+<p><span class="math inline">\(P(+5) = 0.06 + 0.28 +0.24 = 0.58\)</span></p>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="teorema-de-bayes" class="section level2">
+<h2><strong>2.3. Teorema de Bayes</strong></h2>
+<p><img src="img/Thomas_Bayes.gif" /> <br/> <strong>Thomas Bayes</strong> (Londres, Inglaterra, ~1702 - Tunbridge Wells, 1761) fue un matemático británico y ministro presbiteriano. Su obra más conocida es el Teorema de Bayes.</p>
+<p><br/><br/> El teorema de Bayes, que lleva el nombre del matemático británico del siglo XVIII <strong>Thomas Bayes</strong>, es una fórmula matemática para determinar la probabilidad condicional . La probabilidad condicional es la probabilidad de que ocurra un resultado, basada en un resultado previo. El teorema de Bayes proporciona una forma de revisar las predicciones o teorías existentes (actualizar las probabilidades) dada la evidencia nueva o adicional. En finanzas, el teorema de Bayes se puede utilizar para calificar el riesgo de prestar dinero a posibles prestatarios.</p>
+<p>Tomado de : <a href="https://www.investopedia.com/terms/b/bayes-theorem.asp" class="uri">https://www.investopedia.com/terms/b/bayes-theorem.asp</a> <br/> Lectura recomendada : <a href="https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/" class="uri">https://blogs.scientificamerican.com/cross-check/bayes-s-theorem-what-s-the-big-deal/</a></p>
+<br/><br/>
+<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #F0F8FF; background-color: #0063CD ; border-color: #000000;">
+<p><strong>Definición: Teorema de Bayes </strong></p>
+<p>Dado una serie de eventos que conforma una partición <span class="math inline">\(E_{1}\)</span>, <span class="math inline">\(E_{2}\)</span>, <span class="math inline">\(E_{3}\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(E_{k}\)</span> , que son mutuamente excluyentes y exhautivos, con probabilidad a priori <span class="math inline">\(P(E_{1})\)</span>, <span class="math inline">\(P(E_{2})\)</span> <span class="math inline">\(P(E_{3})\)</span>, <span class="math inline">\(\dots\)</span>, <span class="math inline">\(P(E_{k})\)</span>. Si ocurre un evento <span class="math inline">\(A\)</span>, la probabilidad a posteriori de <span class="math inline">\(E_{i}\)</span> dados <span class="math inline">\(A\)</span>, es la probabilidad condicional :</p>
+<p><span class="math display">\[P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\displaystyle\sum_{j=1}^{k} P(E_{j})P(A|E_{j})} \]</span></p>
+</div>
+<p><br/><br/></p>
+<div id="ejemplo-3" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<p><br/> Continuando con el ejemplo anterior puede ser necesario calcular la probabilidad : <span class="math inline">\(P(E|+5)\)</span> para lo cual utilizamos el Teorema de Bayes</p>
+<p><span class="math inline">\(P(E|+5) = \dfrac{P(E \cap +5)}{P(+5)} = \dfrac{P(E)P(+5|E)}{P(E)P(+5|E) + P(TC)P(+5|TC) +P(TD)P(+5|TD)}\)</span></p>
+<p><span class="math inline">\(P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58} = 0.1034\)</span></p>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="reto" class="section level2">
+<h2><strong>2.4. Reto</strong></h2>
+<p><br/><br/> Entre Bogotá D.E., Medellín y Cali, En cuál ciudad en la que se tiene la mayor probabilidad de contraer Covid? Indique los cálculos realizados.</p>
+<p><br/><br/><br/><br/> Aplicaciones :</p>
+<p><strong>Árboles de decisión</strong> <a href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion" class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p>
+<p><a href="https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html" class="uri">https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html</a></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

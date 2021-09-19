@@ -1,21 +1,18 @@
 name: " "
 output_dir: "."
 navbar:
-  title: "Probabilidad y Estadística 2021-2 "
+  title: "Actividades PyE "
   left:
-    - text: "PyE"
+    - text: "P y E"
       icon: fa-home
       href: index.html
-    - text: "Módulo 0"
+    - text: "Actividades "
       menu:
-         - text: "Módulo 0"
-           href: Modulo0.html
-          
-    - text: "Módulo 1"
-      menu:
-        - text: "Módulo 1"
-          href: Modulo1.html
-
+         - text: "Actividad 331"
+           href: actividad331.html
+        - text: "Actividad 332"
+           href: actividad332.html        
+        
 output:
   html_document:
     theme: cosmos

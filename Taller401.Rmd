@@ -1,0 +1,63 @@
+---
+title: "Taller 401-1"
+subtitle: "Probabilidad y Estadística"
+author: "dgonzalez"
+date: "2021"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+### Problema 2
+
+Para una distribución normal con parámetros $\mu=150$ y $\sigma^{2}=25$, determinar las  características de los siguientes estimadores de $\mu$. Seleccione el que ofrezca mejores características.
+
++ $\widehat{x} =\dfrac{1}{n} \sum_{i=1}^{n} x_{i}$
+
++ $Me$
+
++ $\dfrac{(\min\{x\} + \max\{x\})}{2}$
+
++ $\dfrac{P_{25}+P_{75}}{2}$
+
+```{r Problema1, exercise=TRUE}
+```
+
+
+### Problema 3
+
+Para la misma distribución del punto anterior ($X \sim N(150, 25)$), identifique el estimador que ofrece mejores condiciones para hallar el parámetro $\sigma^{2}$:
+
+
++ $\widehat{\sigma^{2}_{1}}=\dfrac{1}{n} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}$
+
++ $\widehat{\sigma^{2}_{2}}=\dfrac{1}{n-1} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}$
+
+
+```{r Problema2, exercise=TRUE}
+
+```
+
+
+
+## Problema 3
+
+```{r Problema3, exercise=TRUE}
+
+```
+
+
+## Problema 4
+
+```{r Problema4, exercise=TRUE}
+
+```

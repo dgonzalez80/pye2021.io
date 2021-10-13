@@ -1,0 +1,31 @@
+---
+title: "Parcial"
+author: "dgonzalez80"
+date: "4/10/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Punto 4
+
+La variable X representa los precios de locales en una zona industrial. la función de densidad de X está dada por :
+ $$\begin{equation*}
+                f(x; \theta)=\left\lbrace
+                \begin{array}{lll}
+        \dfrac{1}{\theta} e^{- x / \theta}  &,& x > 0   \\
+                        &&\\
+                        0 &,& x \leq 0 
+        \end{array}
+                \right.
+        \end{equation*}$$
+        
+Se toma una muestra aleatoria simple $X_{1}, X_{2}, \dots X_{n}$, con $n \geq 2$. de los precios y se consideran los estimadores de $\theta$:
+
++ $\widehat{\theta}_{1}=\dfrac{X_{1}, X_{2}, \dots X_{n}}{n-1} $
++ $\widehat{\theta}_{2}=\dfrac{X_{1}, X_{2}, \dots X_{n}}{n+1}$  
+
+Estos estimadores ¿son insesgados o sesgados?, En caso de ser sesgados, ¿podrías estimar el valor del sesgo? ¿son consistentes?

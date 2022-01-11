@@ -23,6 +23,8 @@ c5="#BC2B6A" # MORADO
 
 ```
 
+<span style="color:#E77C00">**En construcción**</span>
+
 # **Guía de aprendizaje 1.3**
 
 
@@ -50,58 +52,13 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER los
 
 ## **3. Duración**
 
-La presente  unidad será desarrollada durante la  tercera semana del semestre ( 9 al 16 de agosto ). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  17 de agosto.
 
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
 
-|Actividad105   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Trabajo individual | A partir de la base de datos trabajada en las dos unidades anteriores construya un **tablero** (Dashboard)  que contenga gráficos e indicadores de las variables estadísticas contenidas  en la base de datos seleccionada en la Actividad 1 de la unidad 1.1. Realice una descripción con los resultados obtenidos en el tablero. |
-| Recurso       |  Código U1-3.R  y Tablero-M1 |
-||[Resumen R base](https://www.i3s.unice.fr/~malapert/R/pdf/base-r.pdf)|
-||[Dashboard en R](https://pkgs.rstudio.com/flexdashboard/)
-||[Resumen ggplot2](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)|
-||[Resumen RMarkdown](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)|
-|Fecha  | 17 de agosto de 2021 |
-|Hora   | 23:59 hora local |
-
-|Actividad106   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Trabajo individual |  Construya un **mapa mental** del Módulo 1  y adjunto el link del trabajo (en caso de ser construido en una herramienta en linea) o un pdf  que resuma los conceptos más importantes del Modulo 1.|
-|	Recurso    |[Capitulo 1](https://github.com/dgonzalez80/presentacionespye.io/blob/main/pdf/Capitulo1.pdf)
-|| Presentaciones y videos clases |
-|Fecha  | 17 de agosto  de 2021 |
-|Hora   | 23:59 hora local |
-
-|Actividad107   | Descripción                  | 
-|:--------------|:-----------------------------|
-|[Taller M1](https://github.com/dgonzalez80/presentacionespye.io/blob/main/pdf/Taller_M%C3%B3dilo_1.pdf) |  Actividad que tiene como  finalidad preparar la primera evaluación parcial|
- 
-<br/><br/>
-
 ## **5. Criterios de evaluación**
 
-+ Reconocer los principales elementos de un  análisis descriptivo de datos y su incidencia en la toma de decisiones.
 
-+ Reconocer e identificar los diferentes tipos de representaciones gráficas y sus respectivas interpretación.
-
-+ Utilizar herramientas computacionales para el procesamiento de la información.
-
-<br/><br/>
 
 ## **6. Entregables** 
-
-|               | Descripción                   | 
-|:--------------|:------------------------------|
-|**Entregable 1** | Actividad105.Rmd Tablero Acompañado de descripción de los resultados |
-|**Entregable 2** | Actividad106.pdf Mapa mental |
-|||
-|Fecha       | Domingo 17 de agosto de 2021 |
-|Hora límite | 23:59  hora  local |
-|||
-

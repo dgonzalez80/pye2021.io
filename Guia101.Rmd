@@ -30,10 +30,14 @@ library(tidyverse)
 
 ```
 
+<span style="color:#E77C00">**En construcción**</span>
+
 # **Guía de aprendizaje 1.1**
 
 
 ![](img/baner1.png)
+
+
 
 <br/><br/>
 
@@ -73,78 +77,13 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER los
 
 ## **3. Duración**
 
-<br/>
 
-La presente  unidad será desarrollada durante la  primera semana del semestre ( 26 de julio  al 01  de agosto de 2021). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad deberán ser entregados a través de la plataforma Brightspace hasta el  01 de agosto. 
-
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
-<br/>
-
-|Actividad101   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Individual     |  **Metodología estadística:** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas deberá establecer los  objetivos y las  variables de  interés , para las  cuales  deberá  identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en archivo pdf con  nombre: **actividad101.pdf** |
-| Recursos      | [**Metodología**](https://view.genial.ly/5f1ba8da1829700da368b4ab/horizontal-infographic-review-metodologia) |
-| Fecha         | 01 de agosto de 2021 |
-| Hora          | 23:59                |
-
-<br/> 
-
-|Actividad102   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Individual     |  **Base de datos** : Deberá  buscar una  base de  datos  de su interés  en el  portal  [Datos Abiertos Colombia](https://www.datos.gov.co/),  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en archivo pdf con  nombre: **actividad102.pdf** |
-| Recurso       | Video: [Como descargar datos abiertos](https://www.youtube.com/watch?v=lRftK2mL3Sw) 
-|               | Formato ficha : [Ficha técnica](https://drive.google.com/file/d/1O1eaS8y6olf5o_42ehgDgVZ4q1dganbd/view?usp=sharing) |
-|               | Excel |
-|               | RStudio |
-|Fecha          | 01 de agosto  2021 |
-|Hora           |  23:59 hora local  |
-
-<br/> 
-
-|Actividad103   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Individual     |**Instalación de R y RStudio** : Para el  desarrollo  de las  actividades del curso deberá instalar las últimas  versiones  de [R CRAN](https://www.r-project.org/) y de  [RStudio](https://rstudio.com/). Para su correcta instalación  existen varios videos en  YouTube que le permitirán realizarlo de una manera correcta   | 
-|Recursos       | [DESCARGAR e instalar R y RStudio 2021 -Video Rafa Gonzalez Gouveia](https://www.youtube.com/watch?v=Nmu4WPdJBRo) |
-|               | [R download](https://cran.r-project.org/) |
-|               | [RStudio download](https://rstudio.com/products/rstudio/download/) |
-| Fecha         | 01 de agosto 2021 |
-| Hora          | 23:59 hora local |
-
-<br/><br/>
 
 ## **5. Criterios de evaluación**
 
-<br/>
 
-* Reconocer la relación existente ente la  definición del problema, el planteamiento de los objetivos y la  definición de las variables de interés dentro de la  Metodología Estadística.
-
-* Reconocer e identificar los diferentes tipos de variables  y sus respectivas escalas de medición.
-
-* Identificar la estructura de una base de datos
-
-<br/> 
-
-Los entregables completos y enviados dentro de los tiempos establecidos  otorgarán 20 puntos por la actividad101 y 10 puntos por la actividad102, para un  total de 30 puntos. 
-
-
-<br/><br/>
 
 ## **6. Entregables** 
-
-<br/>
-
-| Entregable |  Descripción                    |
-|:--------------|:-----------------------------|
-|**actividad1.pdf** | Documento que contenga: Formulación de problema propuesto, definición  de los objetivos y definición de variables de interés. En este último caso detallar para cada variable su  tipo ( cualitativa o cuantitativa ) y su escala de medición ( nominal, ordinal, de intervalo o de razón).|
-|**actividad2.pdf**| Ficha técnica de  la base seleccionada |
-|||
-|**Fecha** |Domingo 01 de agosto de 2021| 
-|**Hora límite**| 23:59  hora  local|
-|||
-
-<br/><br/>

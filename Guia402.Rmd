@@ -26,7 +26,7 @@ c5="#BC2B6A" # MORADO
 
 ```
 
-
+<span style="color:#E77C00">**En construcción**</span>
 
 # **Guía de aprendizaje 4.2**
 
@@ -56,41 +56,13 @@ que le permita seleccionar la mejor alternativa para la estimación de un parám
 
 ## **3. Duración**
 
-La presente  unidad será desarrollada del 6 al 24 de octubre de 2021 . Ademas del material suministrado  contaran con el acompañamiento del profesor durante las sesiones de clase  y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  24 de octubre de 2021 
 
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
 
-|Actividad      | Descripción                    | 
-|:--------------|:-----------------------------  |
-|**Actividad 1**    |Construir un **mapa mental** sobre intervalos de confianza elaborado **a mano**, el cual deberá ser entregado en formato pdf|
-|Trabajo individual |  |
-|Fecha          | 24 de octubre  de 2021 |
-|Hora           | 23:59 hora local       |
-|**Actividad 2**    |Resuelva las preguntas y problemas planteadas en  el  [**Taller 421**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Taller412.pdf) y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace|
-|Trabajo individual |  |
-|Fecha          | 24 de octubre  de 2021 |
-|Hora           | 23:59 hora local       |
-
-
-
-
 ## **5. Criterios de evaluación**
 
-<br/><br/>
+
 
 ## **6. Entregables** 
-
-|               |                              | 
-|:--------------|:-----------------------------|
-|Entregable 1   | Mapa mental sobre intervalos de confianza|
-|Entregable 2   | Solucionario taller 421 de problemas sobre intervalos de confianza| 
-|Fecha          | 24 de octubre  de 2021 |
-|Hora           | 23:59 hora local       |
-
-
-

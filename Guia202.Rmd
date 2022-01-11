@@ -24,6 +24,7 @@ c5="#BC2B6A" # MORADO
 ```
 
 
+<span style="color:#E77C00">**En construcción**</span>
 
 # **Guía de aprendizaje 2.2**
 
@@ -49,42 +50,13 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER, CA
 
 ## **3. Duración**
 
-La presente  unidad será desarrollada durante la semana comprendida entre el 25 y 29 de agosto de 2021. Ademas del material suministrado  contaran con el acompañamiento del profesor en dos sesiones (Lunes y Viernes) y de un monitor (Miercoles) y espacio de Atencion a estudiantes y manera asincrónica  de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  29 de agosto de 2021
 
-Para alcanzar los objetivos planteados se propone realizar la siguiente actividad
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
 
-|Actividad      | Descripción                    | 
-|:--------------|:-----------------------------  |
-| Actividad 201 |A partir de los conceptos vistos en las Unidades 2.1 y 2.2 deberá resolver los problemas propuestos en el [**Taller 202**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller_202.pdf) y entregue su solución  en formato **pdf**  en el enlace correspondiente de Brightspace.|
-|Fecha  |  29 de agosto de 2021 |
-|Hora   |  23:59 hora local     |
-|||
-
-
-<br/><br/>
-
 ## **5. Criterios de evaluación**
 
-El taller del Modulo 2 recoge los elementos estudiados y por tanto  tiene objetivo la revisión de los principales conceptos tratados.
 
-+ Reconocer los principales conceptos de  probabilidad y su efecto sobre la toma de decisiones informadas.
-
-+ Reconocer e identificar los diferentes tipos de probabilidad  y sus respectivas interpretación.
-
-<br/><br/>
 
 ## **6. Entregables** 
-
-| Entregable |  Descripción                    |
-|:--------------|:-----------------------------|
-| Actividad202    | Actividad202.pdf : Solucionario taller 202 | 
-| Fecha           |Domongo  29 de agosto de 2021 | 
-|Hora límite      | 23:59  hora  local |
-
-
-

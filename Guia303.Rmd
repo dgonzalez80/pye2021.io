@@ -23,6 +23,8 @@ c5="#BC2B6A" # MORADO
 
 ```
 
+<span style="color:#E77C00">**En construcción**</span>
+
 # **Guía de aprendizaje 3.3**
 
 ![](img/baner3.png)
@@ -47,58 +49,13 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  IDENTIFICAR, 
 
 ## **3. Duración**
 
-La presente  unidad será desarrollada durante la comprendida entre 19 a 26 de septiembre     
-Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  26 de septiembre.
 
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
 
-|Actividad        | Descripción                                                             | 
-|:----------------|:------------------------------------------------------------------------|
-|**Actividad 331**|**Poster** : Construir una poster  para cada uno de los modelos asignados que contenga sus principales características  |
-|                 | Trabajo en grupo de  2 estudiantes                                      |
-|Recurso          | [**Guía 3.3**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Guia301.pdf)                                                            |
-|Videos           | [**Overleaf**](https://www.youtube.com/watch?v=wg3aVBMAyu8)             | 
-|                 | [**Porter en Latex**](https://www.youtube.com/watch?v=RLBNVC3McNw)      |
-|                 | [**Como hacer un poster**](https://www.youtube.com/watch?v=xDfs3BFK7_k) | 
-|Fecha            | 26 de septiembre                                                        |
-|Hora             | 23:59                                                                   |
-
-
-|                |                                                                         | 
-|:---------------|:------------------------------------------------------------------------|
-|**Activiad 332**| De manera individual deberá seleccionar uno de los siguientes problemas (**Taller de simulación**)  para ser resuelto con ayuda computacional. En un archivo pdf se deberán responder los interrogantes solicitados, adjuntado el código empleado |
-|               | Trabajo individual                                                      |
-|Fecha          | 26 de septiembre                                                        |
-|Hora           | 23:59                                                                   |
-
-<br/><br/>
-
 ## **5. Criterios de evaluación**
 
-<br/><br/>
 
-
-* Reconoce los modelos especiales asociados a contextos  y problemas reales
-
-* Utiliza las herramientas estadística apropiadas en el calculo de probabilidades en la solución de problemas en contexto
-
-* Utiliza herramientas computacionales que le permita  la solución de problemas en contexto a través de la simulación
-	
-<br/><br/>
 
 ## **6. Entregables** 
-
-<br/><br/>
-
-|Actividad      | Descripción                      | 
-|:--------------|:---------------------------------|
-|Entregable 1   | porster1.pdf , poster2.pdf       |
-|Entregable 2   | actividad2.pdf                   |
-| Fecha         | Domingo 26 de septiembre de 2021 |
-| Hora límite   | 23:59  hora  local               |
-

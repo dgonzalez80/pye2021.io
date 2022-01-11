@@ -29,7 +29,7 @@ c5="#BC2B6A" # MORADO
 
 ```
 
-
+<span style="color:#E77C00">**En construcción**</span>
 
 # **Guía de aprendizaje 1.2**
 
@@ -58,65 +58,13 @@ Al finalizar esta unidad el estudiante estará en capacidad de RESUMIR e INTERPR
 
 ## **3. Duración**
 
-La presente unidad será desarrollada durante la segunda semana del semestre ( 2 al 8 de agosto 
-de 2021). Ademas del material suministrado contaran con el acompañamiento del profesor en
-dos sesiones (lunes, miércoles y viernes) y de manera asincrónica con foro de actividades académicas. Los entregables para esta unidad deberán enviarse a través de la plataforma Brightspace hasta el 08 de agosto.
 
-
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
 
-|Actividad103   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Trabajo individual| **Actividad 103** - **Caso 101** :  Realice las actividades consignadas en el caso101, adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf |
-|Recursos       |[Video indicadores estadísticos](https://youtu.be/dWVs-M7oCh4)         |
-|| [Vídeo calculo indicadores con tablas de distribución](https://youtu.be/n2UCDZNncls)|
-| Fecha         | 08 de agosto de 2021          |
-| Hora          | 23:59                         |
-
-<br/> 
-
-|Actividad104   | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Trabajo individual|**Actividad 104** :  A partir de la información contenida en la **base de datos seleccionada en la Actividad 102**, realice un análisis de al menos dos variables cualitativas y dos cuantitativas teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.|
-|Recursos| Base de datos actividad-1 Unidad 1.1|
-|               |Excel                |
-|               |RStudio              |
-||Código u1.2                         |
-|Fecha          | 08 de agosto  2021  |
-|Hora           |  23:59 hora local   |
-
-
-<br/><br/>
-
 ## **5. Criterios de evaluación**
 
-+ Reconocer e interpretar las diferentes formas de resumir los datos a través de tablas de
-frecuencia para los casos de variables cuantitativas y para variables cualitativas.
 
-+ Calcular e interpretar los diferentes indicadores de posición, tendencia, dispersión y forma
-que permitan un correcto análisis de los datos
-
-+ Utilizar herramientas computacionales para el procesamiento de la información.
-
-<br/> <br/> 
-
-Los entregables completos y enviados dentro de los tiempos establecidos otorgarán 20 puntos en
-cada caso, para un total de 40 puntos.
-
-<br/><br/>
 
 ## **6. Entregables** 
-
-| Entregable    |  Descripción                   |
-|:--------------|:-------------------------------|
-|Entregable 1:  | **Actividad103.pdf** : Caso 101 |
-|Entregable 2:  | **Actividad104.pdf** : Aplicar lo aprendido a base de datos actividad102 |
-|Fecha**      |Domingo 08 de agosto de 2021    | 
-|Hora límite| 23:59  hora  local             |
-

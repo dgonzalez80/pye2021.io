@@ -23,6 +23,9 @@ c5="#BC2B6A" # MORADO
 cbox="#007FFF"  # AZUL BOX
 ```
 
+
+<span style="color:#E77C00">**En construcción**</span>
+
 # **Guía de aprendizaje**
 
 ![](img/baner3.png)
@@ -51,52 +54,13 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de IDENTIFICAR, C
 
 ## **3. Duración**
 
-<br/>
 
-La presente  unidad será desarrollada durante la semana séptima del semestre ( 13 al 19 de septiembre  de 2021). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  13 de septiembre.
-
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
-<br/>
-
-|Actividad        | Descripción                    | 
-|:----------------|:-----------------------------  |
-|Actividad 302    |
-|Trabajo en grupo | [**Taller 302**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller302.pdf) El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades. Actividad realizada en grupos de dos estudiantes. |
-|Recursos         | [**Guía 3.2**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Guia302.pdf) | 
-|                 | Capitulo  2 Navidi (Navidi, W. estadística para ingenieros y científicos. Editorial Mc Graw Hill. 2006. ) |
-|                 | Capítulos  3 y 4 Walpole  (Walpole, R. Myers, R. Myers, S. Ye, K. Probabilidad y Estadística para ingeniería y Ciencias.8 Ed. Editorial Pearson. 2007)|
-|||
-|Fecha            |  19 de septiembre de 2021
-|Hora             |  23:59 hora local 
-
-<br/><br/>
 
 ## **5. Criterios de evaluación**
 
-<br/>
 
-+ Reconoce las principales características de las variables conjuntas 
-
-+ Utiliza las herramientas estadística apropiadas en el calculo de probabilidades en la solución de problemas en contexto
-
-+ Utiliza herramientas computacionales que le permiten representar y calcular probabilidades en la solución de problemas en contexto
-
-+ Interpreta y expresa el desarrollo de los problemas con el lenguaje propio de la estadística
-<br/><br/>
 
 ## **6. Entregables** 
-
-<br/>
-
-**Taller 302.pdf** El taller tiene un valor de 30 puntos si es resuelto completamente y enviado dentro de los tiempos establecidos <br/><br/>
-Fecha :  19 de septiembre de 2021 <br/>
-Hora  :  23:59 hora local <br/>
-
-
-
-

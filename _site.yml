@@ -64,57 +64,7 @@ navbar:
           href: Guia501.html  
         - text: "Guía 5.2"
           href: Guia502.html
-    - text: "Código R"
-      icon: fa-code
-      menu:
-        - text: "Introducción a R"
-          href: introduccionR.html
-        - text: "Código u1.1"
-          href: codigo101.html
-        - text: "Código u1.2"
-          href: codigo102.html  
-        - text: "Código u1.3"
-          href: codigo103.html
-        - text: "Código u2.1"
-          href: codigo201.html
-        - text: "Código u3.1"
-          href: codigo301.html
-        - text: "Código u3.2"
-          href: codigo302.html
-        - text: "Simulación"
-          href: simulacion.html
-        - text: "Código u4.1"
-          href: codigo401.html   
-        - text: "Código u4.2"
-          href: codigo402.html 
-        - text: "Código u4.3"
-          href: codigo403.html
-        - text: "Código u5.1"
-          href: codigo501.html     
-        - text: "Código u5.2"
-          href: codigo502.html           
-    - text: "Actividades"
-      icon: fa-chess-pawn
-      menu: 
-        - text: "Actividasd 331"
-          href: actividad331.html
-        - text: "Actividad 332"
-          href: actividad332.html
-        - text: "Taller Discretas"
-          href: Taller_discretas.html
-        - text: "Taller Continuas"
-          href: Taller_continuas.html
-        - text: "Taller IC"
-          href: TallerIC.html
-        - text: "Taller Pruebas 1"
-          href: Taller_pruebas1.html          
-        - text: "Trabajo final"
-          href: Guia_trabajo.html
-    - text: "Atención"
-      icon: fa-chess-pawn
-      menu:           
-        - text: "Atención"
-          href: atencion.html         
+        
 output:
   html_document:
     theme: cosmos

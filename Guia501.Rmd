@@ -23,6 +23,7 @@ c5="#BC2B6A" # MORADO
 
 ```
 
+<span style="color:#E77C00">**En construcción**</span>
 
 # **Guía de aprendizaje 5.1**
 
@@ -48,42 +49,13 @@ Al finalizar la unidad el estudiante estará en capacidad de PROPONER soluciones
 
 ## **3. Duración**
 
-La presente  unidad será desarrollada durante la comprendida entre 5 y el 11 de noviembre.    
-Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Blackboard hasta el  11 de noviembre.
 
-Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
-
-<br/><br/>
 
 ## **4. Cronograma de trabajo**
 
 
-|Actividad      | Descripción                    | 
-|:--------------|:-----------------------------  |
-|Actividad 511  | Resuelva los problemas presentados en el [**Taller501**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller501.pdf) . La solución deberá ser entregada mediante formato pdf en link abierto para tal fin en Brightspace 
-|Trabajo individual |                             |
-|Recursos       |  [**Guia501**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Guia_501.pdf)    |
-|               | **Código 501**
-|Fecha          | 11 de Noviembre de 2020 |
-|Hora           |  23:59 hora local       |
-
-
-
-
-<br/><br/>
-
 ## **5. Criterios de evaluación**
 
-+ Plantea el modelo correcto para dar solución a la situación planteada	+ Realiza los procesos de estimación y validación de los supuestos correspondiente al modelo de regresión 
-+ Realiza de manera correcta la interpretación de los resultados obtenidos y plantea recomendaciones 
 
-<br/><br/>
 
 ## **6. Entregables** 
-
-|                   |                                       |
-|:------------------|:--------------------------------------|
-|Actividad511.pdf   | Solución problemas planteados en el **Taller501** en formato pdf |
-|                   |                                       |
-
- 

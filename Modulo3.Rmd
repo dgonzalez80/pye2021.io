@@ -1,0 +1,30 @@
+---
+title: "**Módulo 3**"
+author: "dgonzalez "
+subtitle: "2022" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](img/baner3.png)
+
+<br/><br/><br/>
+
+### <span style="color:#4CBFBA">**Introducción**</span>
+
+El concepto de variable  aleatoria  y sus principales características como el  valor esperado, la varianza, funciones de  distribución de  probabilidad y distribución  acumulada, distribuciones conjuntas, covarianza y correlación, permiten la identificación de diferentes modelos para su  uso a través de la simulación de situaciones reales. 
+
+<br/><br/><br/>
+
+### <span style="color:#4CBFBA">**Objetivo**</span>
+
+Al finalizar el módulo el estudiante estará en capacidad de APLICAR los conceptos y las principales características  de las VARIABLE ALEATORIA UNIVARIADAS y CONJUNTAS para RESOLVER problemas mediante la simulación a través de software estadístico.
+

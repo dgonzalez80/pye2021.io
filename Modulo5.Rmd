@@ -1,0 +1,34 @@
+---
+title: "**Módulo 5**"
+author: "dgonzalez "
+subtitle: "2022" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](img/baner5.png)
+
+<br/><br/><br/>
+
+### <span style="color:#BC2B6A">**Introducción**</span>
+
+Una de las aplicaciones más utilizadas de la Estadística la conforman los modelos de regresión, los cuales permiten explicar una variable a partir de la combinación  lineal de otro  grupo de variables, pero también  la estimación de  coeficientes que miden la relación  entre dos variables.  Ambas situaciones con un gran número de aplicaciones.
+
+<br/><br/><br/>
+
+### <span style="color:#BC2B6A">**Objetivo**</span>
+
+Al finalizar el módulo el estudiante estará en capacidad de PROPONER soluciones a problemas reales mediante la utilización de los MODELOS DE REGRESIÓN a situaciones que permitan la toma de decisiones informadas y la generación de políticas
+
+
+
+
+

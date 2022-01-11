@@ -1,11 +1,35 @@
 name: " "
 output_dir: "."
 navbar:
-  title: "Probabilidad y Estadística "
+  title: " "
   left:
-    - text: "2022-1"
+    - text: "PyE"
       icon: fa-home
       href: index.html
+    - text: "Módulo 0"
+      menu:
+         - text: "Módulo 0"
+           href: Modulo0.html
+    - text: "Módulo 1"
+      menu:
+        - text: "Módulo 1"
+          href: Modulo1.html
+    - text: "Módulo 2"
+      menu:
+        - text: "Módulo 2"
+          href: Modulo2.html
+    - text: "Módulo 3"
+      menu:
+        - text: "Módulo 3"
+          href: Modulo3.html
+    - text: "Módulo 4"
+      menu:
+        - text: "Módulo 4"
+          href: Modulo4.html
+    - text: "Módulo 5"
+      menu:
+        - text: "Módulo 5"
+          href: Modulo5.html
 output:
   html_document:
     theme: cosmos

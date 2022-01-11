@@ -1,0 +1,96 @@
+---
+title: "**Estimación por intervalos de confianza**"
+author: "dgonzalez"
+subtitle: "**Módulo 4- Unidad 4.2**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+library(readr)
+library(paquetepye)
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO  
+
+
+
+```
+
+
+
+# **Guía de aprendizaje 4.2**
+
+![](img/baner4.png)
+
+<br/><br/>
+
+<br/><br/>
+
+## **1. Introducción**
+
+La inferencia estadística constituye una de las principales componentes de la metodologia estadistica, encaminados a generar procedimiento para el avance de la ciencia. Con ella se pueden generalizar los
+resultados obtenidos en una muestra a toda la población, previo cumplimiento de supuestos establecidos por la estadística (llamada paramétrica) .
+
+Antes de empezar es necesario entender los conceptos básicos como: población, censo, parámetro, muestra, muestreo, estimador, estimación, métodos de estimación, propiedades de los estimadores como la insesgadez, la eficiencia, la consistencia .Las distribuciones muestrales : normal, t-student, chi-cuadrado y f de Fisher. Todos trabajados y tratados en la unidad 4.1.
+
+El siguiente documento te  oriente sobre los pasos a seguir para alcanzar el objetivo planteado
+
+<br/><br/>
+
+## **2. Objetivos de la unidad**
+
+Al finalizar la unidad el estudiante estará en capacidad de IDENTIFICAR, CALCULAR, INTERPRETAR e INFERIR sobre un intervalo de confianza para estimadores de una y dos poblaciones,
+que le permita seleccionar la mejor alternativa para la estimación de un parámetro poblacional, orientados a la toma de decisiones  informadas.
+
+<br/><br/>
+
+## **3. Duración**
+
+La presente  unidad será desarrollada del 6 al 24 de octubre de 2021 . Ademas del material suministrado  contaran con el acompañamiento del profesor durante las sesiones de clase  y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  24 de octubre de 2021 
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+
+<br/><br/>
+
+## **4. Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+|**Actividad 1**    |Construir un **mapa mental** sobre intervalos de confianza elaborado **a mano**, el cual deberá ser entregado en formato pdf|
+|Trabajo individual |  |
+|Fecha          | 24 de octubre  de 2021 |
+|Hora           | 23:59 hora local       |
+|**Actividad 2**    |Resuelva las preguntas y problemas planteadas en  el  [**Taller 421**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Taller412.pdf) y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace|
+|Trabajo individual |  |
+|Fecha          | 24 de octubre  de 2021 |
+|Hora           | 23:59 hora local       |
+
+
+
+
+## **5. Criterios de evaluación**
+
+<br/><br/>
+
+## **6. Entregables** 
+
+|               |                              | 
+|:--------------|:-----------------------------|
+|Entregable 1   | Mapa mental sobre intervalos de confianza|
+|Entregable 2   | Solucionario taller 421 de problemas sobre intervalos de confianza| 
+|Fecha          | 24 de octubre  de 2021 |
+|Hora           | 23:59 hora local       |
+
+
+

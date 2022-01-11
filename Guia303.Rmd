@@ -1,0 +1,104 @@
+---
+title: "**Modelos de probabilidad especiales**"
+author: "dgonzalez"
+subtitle: "**Módulo 3- Unidad 3.3**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO 
+
+```
+
+# **Guía de aprendizaje 3.3**
+
+![](img/baner3.png)
+<br/><br/>
+
+<br/><br/>
+
+## **1. Introducción**
+
+En las unidades 3.1 y 3.2 hemos recorrido los principales conceptos relacionados caracterización de las variables aleatorias tanto discretas como continuas.  Características como:  $f(x)$, $F(x)$, $E[X]$, $V[X]$, en el caso univariado. Para el caso conjunto : $f(x,y)$, $F(x,y)$, $E[XY]$, $Cov[XY]$  y  $\rho$. 
+
+En esta unidad se presentan los principales modelos estadísticos tanto para variables discretas como continuas y sus aplicaciones. En el caso de los modelos discretas se deberá identificar el modelo a través de  las características del experimento que la genera la variable. Para el caso continuo los ejemplos indicaran el modelo correspondiente que genera la variable.
+
+
+<br/><br/>
+
+## **2. Objetivos de la unidad**
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de  IDENTIFICAR, CALCULAR y APLICAR los diferentes modelos de probabilidad para la solución de problemas en contexto  y su representación a través de la simulación.
+
+<br/><br/>
+
+## **3. Duración**
+
+La presente  unidad será desarrollada durante la comprendida entre 19 a 26 de septiembre     
+Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  26 de septiembre.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+
+<br/><br/>
+
+## **4. Cronograma de trabajo**
+
+
+|Actividad        | Descripción                                                             | 
+|:----------------|:------------------------------------------------------------------------|
+|**Actividad 331**|**Poster** : Construir una poster  para cada uno de los modelos asignados que contenga sus principales características  |
+|                 | Trabajo en grupo de  2 estudiantes                                      |
+|Recurso          | [**Guía 3.3**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Guia301.pdf)                                                            |
+|Videos           | [**Overleaf**](https://www.youtube.com/watch?v=wg3aVBMAyu8)             | 
+|                 | [**Porter en Latex**](https://www.youtube.com/watch?v=RLBNVC3McNw)      |
+|                 | [**Como hacer un poster**](https://www.youtube.com/watch?v=xDfs3BFK7_k) | 
+|Fecha            | 26 de septiembre                                                        |
+|Hora             | 23:59                                                                   |
+
+
+|                |                                                                         | 
+|:---------------|:------------------------------------------------------------------------|
+|**Activiad 332**| De manera individual deberá seleccionar uno de los siguientes problemas (**Taller de simulación**)  para ser resuelto con ayuda computacional. En un archivo pdf se deberán responder los interrogantes solicitados, adjuntado el código empleado |
+|               | Trabajo individual                                                      |
+|Fecha          | 26 de septiembre                                                        |
+|Hora           | 23:59                                                                   |
+
+<br/><br/>
+
+## **5. Criterios de evaluación**
+
+<br/><br/>
+
+
+* Reconoce los modelos especiales asociados a contextos  y problemas reales
+
+* Utiliza las herramientas estadística apropiadas en el calculo de probabilidades en la solución de problemas en contexto
+
+* Utiliza herramientas computacionales que le permita  la solución de problemas en contexto a través de la simulación
+	
+<br/><br/>
+
+## **6. Entregables** 
+
+<br/><br/>
+
+|Actividad      | Descripción                      | 
+|:--------------|:---------------------------------|
+|Entregable 1   | porster1.pdf , poster2.pdf       |
+|Entregable 2   | actividad2.pdf                   |
+| Fecha         | Domingo 26 de septiembre de 2021 |
+| Hora límite   | 23:59  hora  local               |
+

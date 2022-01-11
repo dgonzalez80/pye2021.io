@@ -1,0 +1,33 @@
+---
+title: "**Derivación e integración**"
+author: "dgonzalez"
+subtitle: "**Módulo 0- Unidad 0.4**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO  
+
+```
+
+ <span style="color:#E77C00">**En construcción**</span>
+
+# **Guía 0.4**
+
+<br/>
+![](img/baner0.png)
+
+

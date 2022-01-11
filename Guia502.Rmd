@@ -1,0 +1,62 @@
+---
+title: "**Modelo de regresión lineal múltiple**"
+author: "dgonzalez"
+subtitle: "**Módulo 5- Unidad 5.2**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO  
+
+```
+
+<span style="color:#E77C00">**En construcción**</span>
+
+## **Guía de aprendizaje 5.2**
+
+![](img/baner5.png)
+
+
+<br/><br/>
+
+<br/><br/>
+
+## **1. Introducción**
+
+<br/><br/>
+
+## **2. Objetivos de la unidad**
+
+<br/><br/>
+
+## **3. Duración**
+
+<br/><br/>
+
+## **4. Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+
+<br/><br/>
+
+## **5. Criterios de evaluación**
+
+<br/><br/>
+
+## **6. Entregables** 
+

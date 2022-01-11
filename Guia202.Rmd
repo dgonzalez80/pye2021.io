@@ -1,0 +1,90 @@
+---
+title: "**Tipos de probabilidad y sus aplicaciones**"
+author: "dgonzalez"
+subtitle: "**Módulo 2- Unidad 2.2**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO  
+
+```
+
+
+
+# **Guía de aprendizaje 2.2**
+
+![](img/baner2.png)
+
+<br/><br/>
+
+<br/><br/>
+
+## **1. Introducción**
+
+Como fue mencionado en la Unidad 2.1 el concepto de probabilidad es fundamental dentro de la Estadística, pues soporta los conceptos de variable aleatoria y de las funciones que las rigen. Entre sus principales aplicaciones está la valoración del riesgo en relación con la toma de decisiones, la fiabilidad de productos y garantías de productos, teoría de juegos, entre otras aplicaciones.
+
+Como complemento de los conceptos vistos en la Unidad 2.1, en esta unidad se aborda el concepto de **Probabilidad total** y el **Teorema de Bayes**.
+
+<br/><br/>
+
+## **2. Objetivos de la unidad**
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER, CALCULAR e INTERPRETAR  los diferentes tipos de probabilidad y sus aplicaciones, con el propósito de valorar los riesgos asociados a una decisión. 
+
+<br/><br/>
+
+## **3. Duración**
+
+La presente  unidad será desarrollada durante la semana comprendida entre el 25 y 29 de agosto de 2021. Ademas del material suministrado  contaran con el acompañamiento del profesor en dos sesiones (Lunes y Viernes) y de un monitor (Miercoles) y espacio de Atencion a estudiantes y manera asincrónica  de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  29 de agosto de 2021
+
+Para alcanzar los objetivos planteados se propone realizar la siguiente actividad
+
+<br/><br/>
+
+## **4. Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+| Actividad 201 |A partir de los conceptos vistos en las Unidades 2.1 y 2.2 deberá resolver los problemas propuestos en el [**Taller 202**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller_202.pdf) y entregue su solución  en formato **pdf**  en el enlace correspondiente de Brightspace.|
+|Fecha  |  29 de agosto de 2021 |
+|Hora   |  23:59 hora local     |
+|||
+
+
+<br/><br/>
+
+## **5. Criterios de evaluación**
+
+El taller del Modulo 2 recoge los elementos estudiados y por tanto  tiene objetivo la revisión de los principales conceptos tratados.
+
++ Reconocer los principales conceptos de  probabilidad y su efecto sobre la toma de decisiones informadas.
+
++ Reconocer e identificar los diferentes tipos de probabilidad  y sus respectivas interpretación.
+
+<br/><br/>
+
+## **6. Entregables** 
+
+| Entregable |  Descripción                    |
+|:--------------|:-----------------------------|
+| Actividad202    | Actividad202.pdf : Solucionario taller 202 | 
+| Fecha           |Domongo  29 de agosto de 2021 | 
+|Hora límite      | 23:59  hora  local |
+
+
+

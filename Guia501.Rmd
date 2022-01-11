@@ -1,0 +1,89 @@
+---
+title: "**Modelo de regresión lineal simple**"
+author: "dgonzalez"
+subtitle: "**Módulo 5- Unidad 5.1**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO  
+
+```
+
+
+# **Guía de aprendizaje 5.1**
+
+![](img/baner5.png)
+
+<br/><br/>
+
+<br/><br/>
+
+## **1. Introducción**
+
+Una de las aplicaciones mas importantes de la estadística corresponde a al modelo de regresión lineal. Esta técnica permite medir la relación que pueda existir entre una variable llamada variable respuesta  y un conjunto de variables independientes. Casos como la estimación de las ventas a partir de los gastos en publicidad, el consumo de un producto a partir de su precio, el precio de una casa a partir de sus características, la relación entre la resistencia a la compresión de un determinado concreto y la cantidad de uno de sus componentes,  entre otros
+
+El siguiente documento contiene los pasos que deberá realizar para  alcanzar el objetivo planteado
+
+<br/><br/>
+
+## **2. Objetivos de la unidad**
+
+Al finalizar la unidad el estudiante estará en capacidad de PROPONER soluciones mediante la CONSTRUCCIÓN, VALIDACIÓN DE SUPUESTOS e INTERPRETACIÓN de resultados obtenidos de modelos de regresión en situaciones reales que permitan la toma de decisiones informadas y la generación de políticas o conclusiones.
+
+<br/><br/>
+
+## **3. Duración**
+
+La presente  unidad será desarrollada durante la comprendida entre 5 y el 11 de noviembre.    
+Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entegables para esta unidad podrán enviarse a través de la plataforma Blackboard hasta el  11 de noviembre.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+
+<br/><br/>
+
+## **4. Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+|Actividad 511  | Resuelva los problemas presentados en el [**Taller501**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller501.pdf) . La solución deberá ser entregada mediante formato pdf en link abierto para tal fin en Brightspace 
+|Trabajo individual |                             |
+|Recursos       |  [**Guia501**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Guia_501.pdf)    |
+|               | **Código 501**
+|Fecha          | 11 de Noviembre de 2020 |
+|Hora           |  23:59 hora local       |
+
+
+
+
+<br/><br/>
+
+## **5. Criterios de evaluación**
+
++ Plantea el modelo correcto para dar solución a la situación planteada	+ Realiza los procesos de estimación y validación de los supuestos correspondiente al modelo de regresión 
++ Realiza de manera correcta la interpretación de los resultados obtenidos y plantea recomendaciones 
+
+<br/><br/>
+
+## **6. Entregables** 
+
+|                   |                                       |
+|:------------------|:--------------------------------------|
+|Actividad511.pdf   | Solución problemas planteados en el **Taller501** en formato pdf |
+|                   |                                       |
+
+ 

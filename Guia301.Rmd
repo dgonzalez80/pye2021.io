@@ -1,0 +1,85 @@
+---
+title: "**Variable aleatoria**"
+author: "dgonzalez"
+subtitle: "**Módulo 3- Unidad 3.1**" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0="#0DA5A6" # VERDE CLARO
+c1="#E77C00" # NARANJA
+c2="#6666FF" # AZUL  
+c3="#4CBFBA" # VERDE CLARO  
+c4="#E09600" # AMARILLO  
+c5="#BC2B6A" # MORADO  
+
+```
+
+
+# **Guía de aprendizaje 3.1**
+
+![](img/baner3.png)
+
+<br/><br/>
+
+<br/><br/>
+
+## **1. Introducción**
+
+El concepto de variable  aleatoria  y sus principales características como es su tipo, su función de probabilidad, función de distribución acumulada,  valor esperado y la varianza, permiten la identificación de diferentes modelos para su uso a través funciones matemáticas y su posterior aplicación  computacional con el fin de representar situaciones reales en la búsqueda de solución a problemas. 
+
+<br/><br/>
+
+## **2. Objetivos de la unidad**
+
+Al finalizar la unidad los estudiantes estarán  en  capacidad de IDENTIFICAR, CALCULAR y APLICAR los conceptos y las principales características  de las VARIABLE ALEATORIA para representar situaciones reales en la búsqueda de soluciones a problemas o valorar los riesgos que se pueden presentar en toma de decisiones
+
+<br/><br/>
+
+## **3. Duración**
+
+La presente  unidad será desarrollada durante la semana séptima del semestre ( 6 al 12 de septiembre de 2021). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de manera asincrónica con  foro de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightsce hasta el  12 de septiembre.
+
+Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
+<br/><br/>
+
+## **. Cronograma de trabajo**
+
+
+|Actividad      | Descripción                    | 
+|:--------------|:-----------------------------  |
+|Individual     |[**Taller301**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller3.01.pdf): El siguiente taller recoge los principales conceptos relacionados con variables aleatorias, tanto discretas como continuas y sus aplicaciones en la estimación de probabilidades|
+|Reursos        | Guía 3.1 | 
+|               |Capitulo  2 Navidi. Navidi, W. estadística para ingenieros y científicos. Editorial Mc Graw Hill. 2006. |
+|               | Capitulos  3 y 4 Walpole. Walpole, R. Myers, R. Myers, S. Ye, K. Probabilidad y Estadística para ingeniería y Ciencias.8 Ed. Editorial Pearson. 2007 |
+<br/><br/>
+
+## **5. Criterios de evaluación**
+
+* Reconoce los diferentes tipos de variables aleatorias y sus principales características 
+
+* Utiliza las herramientas estadística apropiadas en el calculo de probabilidades en la solución de problemas en contexto
+
+* Utiliza herramientas computacionales que le permiten representar y calcular probabilidades en la solución de problemas en contexto
+
+* Interpreta y expresa el desarrollo de los problemas con el lenguaje propio de la estadística
+
+<br/><br/>
+
+## **6. Entregables** 
+
+|                   |                                       |
+|:------------------|:--------------------------------------|
+|**Taller 301.pdf** | El taller tiene un valor de 30 puntos si es resuelto completamente y enviado dentro de los tiempos establecidos |
+| Fecha             | Domingo 12 de septiembr de 2021 |
+| Hora límite       | 23:59  hora  local           |
+
+

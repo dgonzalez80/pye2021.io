@@ -10,14 +10,6 @@ navbar:
       menu:
          - text: "Módulo 0"
            href: Modulo0.html
-         - text: "Guía 0.1"
-           href: Guia001.html  
-         - text: "Guía 0.2"
-           href: Guia002.html  
-         - text: "Guía 0.3"
-           href: Guia003.html  
-         - text: "Guía 0.4"
-           href: Guia004.html  
     - text: "Módulo 1"
       menu:
         - text: "Módulo 1"

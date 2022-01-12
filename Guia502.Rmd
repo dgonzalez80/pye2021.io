@@ -49,9 +49,6 @@ c5="#BC2B6A" # MORADO
 ## **4. Cronograma de trabajo**
 
 
-|Actividad      | Descripción                    | 
-|:--------------|:-----------------------------  |
-
 <br/><br/>
 
 ## **5. Criterios de evaluación**

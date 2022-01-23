@@ -51,7 +51,7 @@ library(tidyverse)
 bpe20221 <- read.csv2("~/Javeriana/Escuelas/pye20221.io/data/bpye20221.csv")
 ```
 
-<span style="color:#E77C00">**En construcción**</span>
+
 
 # **Guía de aprendizaje 1.1**
 
@@ -178,12 +178,14 @@ Los entregables completos y enviados dentro de los tiempos establecidos  otorgar
 
 <br/><br/>
 
+
+# **Recursos**
+
 [Grupo A](https://www.menti.com/ryey3f1u3m)
 [Grupo B](https://www.menti.com/zgybxma2bb)
 
 
 
-### **Análisis de datos para la toma de decisiones**
 
 <br/><br/>
 
@@ -191,12 +193,12 @@ Con el fin de tener una idea inicial del propósito de este módulo, se presenta
 
 <br/><br/>
 
-**Grupos Probabilidad y Estadística 2022- 1**
+## **Grupos 2022- 1**
 
 
 ```{r}
 t1011=table(bpe20221$carrera,bpe20221$grup)
-barplot(t1011,col = brewer.pal(6,"Set1"), ylim = c(0,50),
+barplot(t1011,col = brewer.pal(6,"Set1"), ylim = c(0,60),
         legend = rownames(t1011))
 ```
 
@@ -263,9 +265,7 @@ La descripción de cada una de ellas se presenta a continuación:
 
 <br/>
 
-<html>
-<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genial.ly/resources/panel-loader-low.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="5f1ba8da1829700da368b4ab" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genial.ly/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
-</html>
+[![](img/metodologia.png)](https://view.genial.ly/5f1ba8da1829700da368b4ab/horizontal-infographic-review-metodologia)
 
 
 <br/><br/>
@@ -291,7 +291,7 @@ Una base de datos en estadística es un conjunto de información relacionada con
 
 <br/>
 
-Es importente indicar que variables como: número de la encuesta, número de identificación, teléfono, dirección, entre otros, no constituyen variables estadística, aun que pueden ser utilzadas para la identificación de la persona u objeto  de donde proviene la información. 
+Es importante indicar que variables como: número de la encuesta, número de identificación, teléfono, dirección, entre otros, no constituyen variables estadística, aun que pueden ser utilizadas para la identificación de la persona u objeto  de donde proviene la información. 
 
 <br/>
 
@@ -437,6 +437,7 @@ Algunas de las herramientas utiliziadas en el manejo de información  son :
 + SQL
 + Oracle
 + SAS
++ Julia 
 
 + R,  RStudio
 + Python

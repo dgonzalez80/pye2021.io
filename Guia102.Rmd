@@ -13,10 +13,9 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,comment = NA)
 library(readxl)
-bd0052 <- read_excel("data/bd0052.xlsx")
+bpe20221 <- read.csv2("~/Javeriana/Escuelas/pye20221.io/data/bpye20221.csv")
 
-bd0052$carrera[bd0052$carrera=="Biologia"]="Biología"
-matrix(bd0052$acumulado, ncol = 12)
+matrix(bpe20221$promedio, ncol = 12)
 
 
 # colores

@@ -261,9 +261,9 @@ https://rpubs.com/ydmarinb/429759
 
 ## **Manejo de MAYUSCULAS y minusculas**
 
-```{r, echo=FALSE}
+```{r}
 library(stringr)
-texto <- "probabilidad y estadística es una asignatura importante en la formación de todo profesional"
+texto <- "probabilidad y estadística es importante en la formación de todo profesional"
 str_to_upper(texto)
 #[1] "PROBABILIDAD Y ESTADISTICA ES UNA ASIGNATURA IMPORTANTE EN LA FORMACIÓN DE TODO PROFESIONAL"
 str_to_lower(texto)

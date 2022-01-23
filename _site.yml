@@ -58,7 +58,7 @@ navbar:
           href: Guia502.html
     - text: "<Código R>"
       menu:
-        - text: "Introducció a R"
+        - text: "Introducción a R"
           href: introduccionR.html
         - text: "Código 1.1"
           href: codigo101.html  

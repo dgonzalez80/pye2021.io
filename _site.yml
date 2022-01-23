@@ -10,6 +10,8 @@ navbar:
       menu:
          - text: "Módulo 0"
            href: Modulo0.html
+         - text: "Guía 001"
+           href: Guia001.html           
     - text: "Módulo 1"
       menu:
         - text: "Módulo 1"

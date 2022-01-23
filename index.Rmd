@@ -1,7 +1,7 @@
 ---
-title: "PROBABILIDAD Y ESTADÍSTICA "
-subtitle: "300mae005 "
-author: "dgonzalez80"
+title: "**PROBABILIDAD Y ESTADÍSTICA**"
+subtitle: "300MAE005"
+author: "dgonzalez"
 date: ""
 output:
   html_document:

@@ -106,7 +106,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/><br/>
 
-## **Cronograma de trabajo**
+## **4. Cronograma de trabajo**
 
 <br/>
 
@@ -142,7 +142,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/><br/>
 
-## **Criterios de evaluación**
+## **5. Criterios de evaluación**
 
 <br/>
 
@@ -159,7 +159,7 @@ Los entregables completos y enviados dentro de los tiempos establecidos  otorgar
 
 <br/><br/>
 
-## **Entregables** 
+## **6. Entregables** 
 
 <br/>
 
@@ -174,7 +174,6 @@ Los entregables completos y enviados dentro de los tiempos establecidos  otorgar
 
 <br/><br/>
 
-## **Presentaciones**
 
 <br/><br/>
 
@@ -193,7 +192,7 @@ Con el fin de tener una idea inicial del propósito de este módulo, se presenta
 
 <br/><br/>
 
-## **Grupos 2022- 1**
+## **1. Grupos 2022- 1**
 
 
 ```{r}
@@ -232,7 +231,7 @@ ggplot(bpe20221, aes(x = promedio, fill = grup)) +
 <br/><br/>
 
 
-## **Metodología estadística**
+## **2. Metodología estadística**
 
 <br/><br/>
 
@@ -278,7 +277,7 @@ Continuaremos con una parte importante de esta metodología que está relacionad
 
 <br/>
 
-## **Base de datos**
+## **3. Base de datos**
 
 <br/>
 
@@ -374,7 +373,7 @@ DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength =
 
 <br/><br/>
 
-## **Etapas del proceso de datos**
+## **4. Etapas del proceso de datos**
 
 <br/>
 
@@ -392,7 +391,7 @@ Utilizaremos para este proceso el lenguaje estadístico **R** , bajo **RStudio**
 
 <br/><br/>
 
-## **Importar datos**
+## **5. Importar datos**
 
 <br/><br/>
 
@@ -447,7 +446,7 @@ En nuestro caso haremos uso del lenguaje estadístico **R*
 
 <br/><br/>
 
-## **Limpieza de datos**
+## **6. Limpieza de datos**
 
 <br/>
 
@@ -464,7 +463,7 @@ Existen metodologías para corregir estos problemas sin afectar la información 
 
 <br/><br/>
 
-## **Ficha técnica**
+## **7. Ficha técnica**
 
 <br/>
 
@@ -476,7 +475,7 @@ Las bases de datos debe estar acompañadas de una ficha técnica donde si indica
 
 <br/><br/><br/>
 
-## **Importar bases de datos**
+## **8. Importar bases de datos**
 
 <br/>
 
@@ -579,7 +578,7 @@ Cargar la base de datos de COVID-19 Colombia
 
 <br/><br/><br/>
 
-## **Actividades a realizar**
+## **9. Actividades a realizar**
 <br/><br/>
 **A1 Metodología estadística** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas deberá establecer los  objetivos y las  variables de  interés , para las  cuales  deberá  identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en archivo pdf con  nombre: **actividad1.pdf**
 <br/><br/><br/>

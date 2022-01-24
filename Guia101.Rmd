@@ -590,3 +590,7 @@ Cargar la base de datos de COVID-19 Colombia
 
 **A3 Instalación de R y RStudio** : Para el  desarrollo  de las  actividades del curso deberá instalar las ultimas  versiones  de [**R CRAN**](\href{https://www.r-project.org/) y de [**RStudio**](https://rstudio.com/products/rstudio/download/)
 	
+	
+	
+	
+	

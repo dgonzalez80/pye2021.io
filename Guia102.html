@@ -790,7 +790,28 @@ t1</code></pre>
 </div>
 <div id="tablas-de-frecuencia-para-variables-cuantitativas" class="section level3">
 <h3><strong>Tablas de frecuencia para variables cuantitativas</strong></h3>
-<p>Para las variables cuantitativas las tablas de frecuencias tiene una presentacion diferente a la vista anteriormente. Como se trata de variables con una gran numero de valores diferentes, es necesario dividirlas por intervalos .</p>
+<p>Para las variables cuantitativas las tablas de frecuencias tiene una presentación diferente a la vista anteriormente. Como se trata de variables con una gran número de valores diferentes, es necesario dividirlas por intervalos .</p>
+<p>Cuando tenemos los datos sin agrupar nos es difícil extraer información que nos permita hacer un análisis de los mismos</p>
+<pre class="r"><code>bpe$promedio</code></pre>
+<pre><code> [1] 4.07 3.39 4.50 4.62 4.16 4.12 3.52 4.35 3.45 3.98 4.26 4.17 4.53 4.14 3.88
+[16] 4.08 4.31 4.31 3.43 3.58 3.35 3.54 4.53 4.29 3.58 4.01 3.92 3.59 4.17 4.40
+[31] 3.86 3.44 4.30 3.94 3.59 3.47 4.48 3.74 4.33 3.91 3.56 3.96 4.44 4.03 4.24
+[46] 4.42 3.79 4.46 3.38 4.65 4.19 3.85 3.85 3.92 4.23 4.22 4.09 4.12 4.42 4.22
+[61] 4.26 4.06 4.20 4.30 3.85 4.30 4.52</code></pre>
+<p>Una primera aproximación pude ser el diagrama de tallos y hojas con consiste en separar los dígitos de los datos en dos : una primera parte que se repite llamada tallo y otra parte que tiene diversos valores. Este diagrama también nos permite ordenar los datos de menor a mayor</p>
+<pre class="r"><code>stem(bpe$promedio)</code></pre>
+<pre><code>
+  The decimal point is 1 digit(s) to the left of the |
+
+  32 | 589
+  34 | 34572468899
+  36 | 49
+  38 | 55568122468
+  40 | 1367892246779
+  42 | 022346690001135
+  44 | 0224680233
+  46 | 25</code></pre>
+<p>Una forma de construir una tabla de freciencias por intervalos es utilizando la funcion <code>graph.freq</code> del paquete agricolae</p>
 <pre class="r"><code>library(agricolae)
 h2=with(bpe,graph.freq(promedio,plot=FALSE));t2=table.freq(h2);
 colnames(t2) = c(&quot;  LI  &quot;, &quot;  LS  &quot;, &quot;marca clase&#39;&quot;, &quot;Frec.Abs&quot;,&quot;Frec.Rel&quot;, &quot;Frec.Abs.Ac&quot;,&quot;Frec.Rel.Ac&quot;)
@@ -839,10 +860,33 @@ t1</code></pre>
 <p><br/></p>
 <pre class="r"><code>library(ggplot2)
 ggplot(bpe, aes(x=promedio))+geom_boxplot()</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-5-1.png" width="1027.2" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-7-1.png" width="1027.2" /></p>
 <p><br/></p>
 <p>atípico | <span class="math inline">\(LI=Q_{1}- 1.5(Q_{3}-Q_{1})\)</span> | <span class="math inline">\(Q_{1}\)</span> | <span class="math inline">\(Q_{2}\)</span> | <span class="math inline">\(Q_{3}\)</span> | <span class="math inline">\(LS=Q_{3}+ 1.5(Q_{3}-Q_{1})\)</span> | atípico</p>
 <p><br/> <br/> <br/></p>
+<p>Con ayuda del diagrama de tallos y hojas es posible ubicar los percentiles en un conjunto de datos</p>
+<pre class="r"><code>stem(bpe$promedio)</code></pre>
+<pre><code>
+  The decimal point is 1 digit(s) to the left of the |
+
+  32 | 589
+  34 | 34572468899
+  36 | 49
+  38 | 55568122468
+  40 | 1367892246779
+  42 | 022346690001135
+  44 | 0224680233
+  46 | 25</code></pre>
+<p>Determine los percentiles :</p>
+<ul>
+<li><span class="math inline">\(P_{25}\)</span></li>
+<li><span class="math inline">\(P_{50}\)</span></li>
+<li><span class="math inline">\(P_{75}\)</span></li>
+<li><span class="math inline">\(P_{10}\)</span></li>
+</ul>
+<pre class="r"><code>quantile(bpe$promedio, c(0.25,.50,0.75,0.10))</code></pre>
+<pre><code> 25%  50%  75%  10% 
+3.85 4.12 4.30 3.50 </code></pre>
 </div>
 </div>
 <div id="características-de-los-datos" class="section level2">
@@ -944,7 +988,7 @@ x</code></pre>
 <pre><code>[1] 4.12</code></pre>
 <p><br/> <br/></p>
 <pre class="r"><code>boxplot(bpe$promedio, las=1, horizontal = TRUE, col = c1)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p><br/> <br/></p>
 <p>La <strong>Me</strong> corresponde a la linea central de a caja en el diagrama de cajas</p>
 <p>La mediana es mas robusta a los cambio en los datos extremos. En presencia de datos atípicos es mejor utilizar la mediana en lugar que la media.</p>
@@ -1169,10 +1213,10 @@ N: 32
           N.Valid    32.00
         Pct.Valid   100.00</code></pre>
 <pre class="r"><code>d1=density(bpe$promedio, na.rm=TRUE); plot(d1)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 <pre class="r"><code>data(&quot;mtcars&quot;)
 d2=density(mtcars$mpg); plot(d2)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <p><br/> <br/></p>
 </div>
 </div>

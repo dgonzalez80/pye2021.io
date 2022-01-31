@@ -231,7 +231,21 @@ Nota: paquete [summarytools](https://cran.r-project.org/web/packages/summarytool
  
 ### **Tablas de frecuencia para variables cuantitativas**
 
-Para las variables cuantitativas las tablas de frecuencias tiene una presentacion diferente a la vista anteriormente. Como se trata de variables con una gran numero de valores diferentes, es necesario dividirlas por intervalos .
+Para las variables cuantitativas las tablas de frecuencias tiene una presentación diferente a la vista anteriormente. Como se trata de variables con una gran número de valores diferentes, es necesario dividirlas por intervalos .
+
+Cuando tenemos los datos sin agrupar nos es difícil extraer información que nos permita hacer un análisis de los mismos
+
+```{r}
+bpe$promedio
+```
+
+Una primera aproximación pude ser el diagrama de tallos y hojas con consiste en separar los dígitos de los datos en dos : una primera parte que se repite llamada tallo y otra parte que tiene diversos valores. Este diagrama también nos permite ordenar los datos de menor a mayor
+
+```{r}
+stem(bpe$promedio)
+```
+
+Una forma de construir una tabla de freciencias por intervalos es utilizando la funcion `graph.freq` del paquete agricolae
 
 ```{r,  echo=TRUE, message=FALSE, warning=FALSE}
 library(agricolae)
@@ -297,6 +311,26 @@ ggplot(bpe, aes(x=promedio))+geom_boxplot()
 atípico | $LI=Q_{1}- 1.5(Q_{3}-Q_{1})$ | $Q_{1}$ | $Q_{2}$ | $Q_{3}$ | $LS=Q_{3}+ 1.5(Q_{3}-Q_{1})$ |  atípico 
 
  <br/> <br/> <br/>
+ 
+ 
+ Con ayuda del diagrama de tallos y hojas es posible ubicar los percentiles en un conjunto de datos
+ 
+ ```{r}
+stem(bpe$promedio)
+```
+
+Determine los percentiles :
+
++ $P_{25}$
++ $P_{50}$
++ $P_{75}$
++ $P_{10}$
+
+
+```{r}
+quantile(bpe$promedio, c(0.25,.50,0.75,0.10))
+```
+ 
  
 ## **Características de los  datos**
 

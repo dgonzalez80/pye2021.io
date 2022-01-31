@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="dgonzalez" />
+
+
+<title>Código 2</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"> </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    PyE
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 0
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo0.html">Módulo 0</a>
+    </li>
+    <li>
+      <a href="Guia001.html">Guía 001</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo1.html">Módulo 1</a>
+    </li>
+    <li>
+      <a href="Guia101.html">Guía 1.1</a>
+    </li>
+    <li>
+      <a href="Guia102.html">Guía 1.2</a>
+    </li>
+    <li>
+      <a href="Guia103.html">Guía 1.3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo2.html">Módulo 2</a>
+    </li>
+    <li>
+      <a href="Guia201.html">Guía 2.1</a>
+    </li>
+    <li>
+      <a href="Guia202.html">Guía 2.2</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo3.html">Módulo 3</a>
+    </li>
+    <li>
+      <a href="Guia301.html">Guía 3.1</a>
+    </li>
+    <li>
+      <a href="Guia302.html">Guía 3.2</a>
+    </li>
+    <li>
+      <a href="Guia303.html">Guía 3.3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo4.html">Módulo 4</a>
+    </li>
+    <li>
+      <a href="Guia401.html">Guía 4.1</a>
+    </li>
+    <li>
+      <a href="Guia402.html">Guía 4.2</a>
+    </li>
+    <li>
+      <a href="Guia403.html">Guía 4.3</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Módulo 5
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo5.html">Módulo 5</a>
+    </li>
+    <li>
+      <a href="Guia501.html">Guía 5.1</a>
+    </li>
+    <li>
+      <a href="Guia502.html">Guía 5.2</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    &lt;Código R&gt;
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="introduccionR.html">Introducción a R</a>
+    </li>
+    <li>
+      <a href="codigo101.html">Código 1.1</a>
+    </li>
+    <li>
+      <a href="codigo102.html">Código 1.2</a>
+    </li>
+    <li>
+      <a href="codigo103.html">Código 1.3</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Código 2</h1>
+<h3 class="subtitle">Módulo 1- Unidad 1.1</h3>
+<h4 class="author">dgonzalez</h4>
+
+</div>
+
+
+<div id="introducción" class="section level1">
+<h1><strong>1. Introducción</strong></h1>
+<p>Al tener una base de datos se requiere resumirlos en una tabla o en indicadores que faciliten su análisis, dependiendo el tipo de variable ( cualitativas o cuantitativas) la tabla puede tener diferentes columnas.</p>
+<p>En el caso de los indicadores las variables cualitativas se les resumen en el nivel con mayor frecuencias a la que se le llama <strong>MODA</strong></p>
+<p>Las variables cuantitativas tiene un gran número de indicadores que se dividien en tres categorias:</p>
+<ul>
+<li>Indicadores de tendencia central</li>
+<li>Indicadores de dispersión</li>
+<li>Indicadores de forma</li>
+</ul>
+<p>A continuación se indica como realizar el proceso utilizando RStudio, bajo el supuesto que se cuenta con una base de datos que se ha importado en RStudio.</p>
+<p><br/><br/></p>
+</div>
+<div id="tablas-de-frecuencia" class="section level1">
+<h1><strong>2. Tablas de frecuencia</strong></h1>
+<p>Resumirlos datos en tablas facilita su análisis y también su representación gráfica. Varios gráficos están basados en tablas de frecuencia como veremos en la unidad 1.3</p>
+<p>Antes de empezar vamos a cargar la base construida en el código anterior y las dos bases de Dataset de R</p>
+<ul>
+<li>Base de datos Colombia</li>
+</ul>
+<pre class="r"><code>Colombia=readRDS(file = &quot;data/Colombia.RDS&quot;)</code></pre>
+<ul>
+<li>Base de datos iris</li>
+</ul>
+<pre class="r"><code>iris=data(iris)</code></pre>
+<ul>
+<li>Base de datos ventas</li>
+</ul>
+<pre class="r"><code>library(readr)
+ventas &lt;- read_csv(&quot;data/ventas.csv&quot;)</code></pre>
+<p><br/><br/></p>
+<div id="tablas-variables-cualitativas" class="section level2">
+<h2><strong>Tablas variables cualitativas</strong></h2>
+<p>Iniciaremos con la construcción de tablas para variables cualitativas en escala nominal. Recordemos que las variables medidas en esta escala no presentan orden especial y en algunos casos son ordenadas de mayor a menor frecuencia</p>
+<p>Utilizaremos en este caso la función <strong>table()</strong></p>
+<pre class="r"><code>table(ventas$Metodo_Pago)</code></pre>
+<pre><code>
+American Express         Discover       MasterCard        Star Card 
+               4                8               28              140 
+            Visa 
+              20 </code></pre>
+<p>El resultado corresponde a un conteo de cada uno de los valores de la variable. En caso de que se requiera calcular la proporción que corresponde cada caso utilizamos la función : <strong>prop.table()</strong> y se la aplicamos a la tabla anterior</p>
+<pre class="r"><code>t1=table(ventas$Metodo_Pago)
+prop.table(t1)</code></pre>
+<pre><code>
+American Express         Discover       MasterCard        Star Card 
+            0.02             0.04             0.14             0.70 
+            Visa 
+            0.10 </code></pre>
+<p>Si utilizamos la función <strong>freq</strong> del paquete summarytools, la salida es una tabla más elaborada</p>
+<pre class="r"><code>summarytools::freq(ventas$Metodo_Pago, cumul = F)</code></pre>
+<pre><code>Frequencies  
+
+                         Freq   % Valid   % Total
+---------------------- ------ --------- ---------
+      American Express      4      2.00      2.00
+              Discover      8      4.00      4.00
+            MasterCard     28     14.00     14.00
+             Star Card    140     70.00     70.00
+                  Visa     20     10.00     10.00
+                  &lt;NA&gt;      0                0.00
+                 Total    200    100.00    100.00</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="tablas-variables-cuantitativas" class="section level2">
+<h2><strong>Tablas variables cuantitativas</strong></h2>
+<p>Para el caso de las variables cuantitativas que presentan muchos valores difentes construir una tabla como las anteriores no tiene sentido, pues salen muchas categorias probablemente con frecuencia uno.</p>
+<p>En este caso es necesario construir rangos que den sentido y que permitan resumir la información para una facil interpretación.</p>
+<p>El ejemplo a continuación da cuenta de ello. Supongamos que queremos analizar la variable edad y para ello debemos establecer los limites y cuantos intervalo vamos aconstruir. En este caso tenemos tres alternativas posible_</p>
+<ol style="list-style-type: decimal">
+<li>Tomar los intervalos construidos en un estudio anterior con cual queremos comparar los nuestros</li>
+<li>Tomar intervalos de acuerdo a estudios anteriores o teorias sobre el tema</li>
+<li>Tomar intervalos de igual longitud. En este caso existen diferentes alternativas para establecer el numero de intervalos a construir. Uno de ellos indica como respuesta a este interrogante la formula construida por Sturgues (se puede conocer mediante la función nclass.Sturges(variable) ) que es utilizada por otras funcione en R</li>
+</ol>
+<p>En el caso de la variable Edad procederemos asi:</p>
+<p>Consultados los ciclos de la vida tenemos: + Primera Infancia (0-5 años) + Infancia (6 - 11 años) + Adolescencia (12 - 17 años) + Juventud (18 - 26 años) + Adultez (27- 59 años) + Persona Mayor (60 años o mas) envejecimiento y vejez</p>
+<pre class="r"><code>Colombia$edadR[Colombia$edad&lt;=5]=&quot;1. (0  a 5  años]&quot;
+Colombia$edadR[Colombia$edad&gt;5 &amp; Colombia$edad&lt;=11]=&quot;2. (5  a 11 años]&quot;
+Colombia$edadR[Colombia$edad&gt;11 &amp; Colombia$edad&lt;=17]=&quot;3. (11 a 17 años]&quot; 
+Colombia$edadR[Colombia$edad&gt;17 &amp; Colombia$edad&lt;=26]=&quot;4. (17 a 26 años]&quot;
+Colombia$edadR[Colombia$edad&gt;26 &amp; Colombia$edad&lt;=59]=&quot;5. (26 a 59 años]&quot;
+Colombia$edadR[Colombia$edad&gt;59]=&quot;6. (Más de 59 años]&quot;
+summarytools::freq(Colombia$edadR)</code></pre>
+<pre><code>Frequencies  
+
+                               Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+------------------------- --------- --------- -------------- --------- --------------
+        1. (0  a 5  años]    100217      1.76           1.76      1.76           1.76
+        2. (5  a 11 años]    154340      2.71           4.48      2.71           4.48
+        3. (11 a 17 años]    233409      4.10           8.58      4.10           8.58
+        4. (17 a 26 años]    930587     16.37          24.95     16.37          24.95
+        5. (26 a 59 años]   3431239     60.34          85.29     60.34          85.29
+      6. (Más de 59 años]    836273     14.71         100.00     14.71         100.00
+                     &lt;NA&gt;         0                               0.00         100.00
+                    Total   5686065    100.00         100.00    100.00         100.00</code></pre>
+<p>Esta tabla nos permite identificar los rangos de mayor frecuencia</p>
+<p>Tambien podemo realizar una tabla sin tener que realizar la recodificación. Esto se logra con la función <strong>hist()</strong></p>
+<pre class="r"><code>h=hist(Colombia$edad)</code></pre>
+<p><img src="codogo102_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code>h$breaks   # puntos de corte</code></pre>
+<pre><code> [1]   0   5  10  15  20  25  30  35  40  45  50  55  60  65  70  75  80  85  90
+[20]  95 100 105 110 115</code></pre>
+<pre class="r"><code>h$counts   # frecuencias absolutas en cada intervalo</code></pre>
+<pre><code> [1] 100217 123562 172352 311437 574497 690826 651737 607576 504817 423919
+[11] 399040 354509 260951 179669 128237  88346  61159  34713  14429   3508
+[21]    499     55     10</code></pre>
+<pre class="r"><code>h$density  # densidad en cada intervalo</code></pre>
+<pre><code> [1] 3.525004e-03 4.346134e-03 6.062259e-03 1.095439e-02 2.020719e-02
+ [6] 2.429891e-02 2.292401e-02 2.137070e-02 1.775629e-02 1.491080e-02
+[11] 1.403572e-02 1.246940e-02 9.178615e-03 6.319625e-03 4.510571e-03
+[16] 3.107457e-03 2.151189e-03 1.220985e-03 5.075215e-04 1.233894e-04
+[21] 1.755168e-05 1.934554e-06 3.517371e-07</code></pre>
+<p>Seria de interés tambien construir una tabla con las edades de las personas fallecidas por covid en Colombia, para lo cual debemos primero seleccionar la base de datos de las fallecidas y luego en ello construir la tabla</p>
+<p>En este caso vamos a seleccionar los rangos de edad y luego construimos la tabla</p>
+<pre class="r"><code>Fallecidos=subset(Colombia, estado==&quot;fallecido&quot;)
+breaks=seq(0,110, by=10)
+Edad.fallecidos=cut(Fallecidos$edad, breaks)
+summarytools::freq(Edad.fallecidos)</code></pre>
+<pre><code>Frequencies  
+
+                    Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+--------------- -------- --------- -------------- --------- --------------
+         (0,10]      159      0.12           0.12      0.12           0.12
+        (10,20]      249      0.19           0.31      0.19           0.31
+        (20,30]     1755      1.33           1.64      1.33           1.64
+        (30,40]     4939      3.75           5.39      3.75           5.39
+        (40,50]    10693      8.11          13.50      8.11          13.50
+        (50,60]    21129     16.03          29.53     16.03          29.53
+        (60,70]    31496     23.89          53.42     23.89          53.42
+        (70,80]    32248     24.46          77.88     24.46          77.88
+        (80,90]    23255     17.64          95.52     17.64          95.52
+       (90,100]     5730      4.35          99.87      4.35          99.87
+      (100,110]      171      0.13         100.00      0.13         100.00
+           &lt;NA&gt;        0                               0.00         100.00
+          Total   131824    100.00         100.00    100.00         100.00</code></pre>
+<p>O tambien</p>
+<pre class="r"><code>h=hist(Colombia$edad, breaks = c(0,4.9, 11.9,17.9,26.9, 59.9,115))</code></pre>
+<p><img src="codogo102_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code># Con los valores contenidos en el objeto h construimos la tabla
+LI=h$breaks[1:6]
+LS=h$breaks[2:7]
+FreAbs=h$counts
+FreRel=round(h$counts/sum(h$counts),4)
+FreAbAc=cumsum(FreAbs)
+FreRAc=cumsum(FreRel)
+data.frame(LI,LS,FreAbs,FreRel, FreAbAc, FreRAc)</code></pre>
+<pre><code>    LI    LS  FreAbs FreRel FreAbAc FreRAc
+1  0.0   4.9   79620 0.0140   79620 0.0140
+2  4.9  11.9  174937 0.0308  254557 0.0448
+3 11.9  17.9  233409 0.0410  487966 0.0858
+4 17.9  26.9  930587 0.1637 1418553 0.2495
+5 26.9  59.9 3431239 0.6034 4849792 0.8529
+6 59.9 115.0  836273 0.1471 5686065 1.0000</code></pre>
+</div>
+<div id="tablas-de-doble-entrada" class="section level2">
+<h2><strong>Tablas de doble entrada</strong></h2>
+<pre class="r"><code>table(Colombia$ubicacion, Colombia$estado)</code></pre>
+<pre><code>              
+               fallecido   grave    leve moderado
+  casa                 0       0 5525694        0
+  fallecido       131824       0       0        0
+  hospital             0       0       0     4150
+  hospital uci         0    1030       0        0</code></pre>
+<pre class="r"><code>tabla1=table(Colombia$ubicacion, Colombia$estado)
+prop.table(tabla1)</code></pre>
+<pre><code>              
+                  fallecido        grave         leve     moderado
+  casa         0.0000000000 0.0000000000 0.9758058791 0.0000000000
+  fallecido    0.0232793626 0.0000000000 0.0000000000 0.0000000000
+  hospital     0.0000000000 0.0000000000 0.0000000000 0.0007328662
+  hospital uci 0.0000000000 0.0001818921 0.0000000000 0.0000000000</code></pre>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="indicadores-descriptivos" class="section level1">
+<h1><strong>3. Indicadores descriptivos </strong></h1>
+<p>Un indicador es un numero que resumen o representa un grupo de valores. El poder resumir una gran cantidad de valores en unos pocos, facilita el realizar un análisis de ellos</p>
+<p>En el caso de las variables cualitativas en escala nominal, se pueden representar por el valor mas frecuente. A este valor se le conoce como <strong>Moda</strong> y lo podemos ver claramente en una tabla de frecuencias</p>
+<p>En el caso de las variables cuantitativas debemos de construirlos</p>
+<pre class="r"><code>summary(Colombia$edad)</code></pre>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00   27.00   37.00   39.54   52.00  114.00 </code></pre>
+<pre class="r"><code>psych::describe(Colombia$edad)</code></pre>
+<pre><code>   vars       n  mean    sd median trimmed   mad min max range skew kurtosis
+X1    1 5686065 39.54 17.98     37   38.74 17.79   1 114   113 0.42    -0.17
+     se
+X1 0.01</code></pre>
+<pre class="r"><code>psych::describe.by(Colombia$edad, group = Colombia$ubicacion)</code></pre>
+<pre><code>
+ Descriptive statistics by group 
+group: casa
+   vars       n  mean    sd median trimmed   mad min max range skew kurtosis
+X1    1 5525694 38.74 17.37     37   38.05 17.79   1 114   113 0.39    -0.15
+     se
+X1 0.01
+------------------------------------------------------------ 
+group: fallecido
+   vars      n  mean    sd median trimmed   mad min max range  skew kurtosis
+X1    1 131824 67.79 15.35     69   68.67 16.31   1 110   109 -0.54     0.17
+     se
+X1 0.04
+------------------------------------------------------------ 
+group: hospital
+   vars    n  mean sd median trimmed  mad min max range  skew kurtosis   se
+X1    1 4150 50.66 28     56   51.87 34.1   1 101   100 -0.33    -1.12 0.43
+------------------------------------------------------------ 
+group: hospital uci
+   vars    n  mean    sd median trimmed   mad min max range  skew kurtosis   se
+X1    1 1030 55.45 24.15     61   57.97 20.76   1 100    99 -0.82    -0.23 0.75</code></pre>
+<pre class="r"><code>summarytools::descr(Colombia$edad)</code></pre>
+<pre><code>Descriptive Statistics  
+value  
+N: 5686065  
+
+                         value
+----------------- ------------
+             Mean        39.54
+          Std.Dev        17.98
+              Min         1.00
+               Q1        27.00
+           Median        37.00
+               Q3        52.00
+              Max       114.00
+              MAD        17.79
+              IQR        25.00
+               CV         0.45
+         Skewness         0.42
+      SE.Skewness         0.00
+         Kurtosis        -0.17
+          N.Valid   5686065.00
+        Pct.Valid       100.00</code></pre>
+<p><br/><br/> <strong>YA ESTAMOS LISTOS PARA INTERPRETAR LA INFORMACION</strong></p>
+</div>
+<div id="documentos-pdf" class="section level1">
+<h1><strong>4. Documentos pdf</strong></h1>
+<p>A través de RStudio se pueden construir documentos en formatos <strong>PDF</strong>, <strong>DOC</strong>, <strong>HTML</strong> entre otros. En esta ocasión se describe como realizar un informe utilizando para ello un archivo Rmd en RStudio.</p>
+<p>Inicialmente en RStudio abrimos un nuevo archivo en formato Rmd</p>
+<p>File/New File/ R Markdown…</p>
+<p>Al hacerlo se despliega la siguiente ventana</p>
+<p><img src="img/Rmd1.png" width="300" /></p>
+<p>En este caso seleccionamos <strong>PDF</strong> para abrir una plantilla que nos ofrece el programa para orientar nuestros primeros pasos</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rl1xsFMxJuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p><br/><br/><br/></p>
+<pre><code>---
+title: &quot;Untitled&quot;
+author: &quot;dgonzalez&quot;
+date: &quot;3/8/2021&quot;
+output: pdf_document
+---</code></pre>
+<p><br/></p>
+<p>El primer bloque contiene información sobre el titulo del documento, el autor, la fecha y el formato de salida</p>
+<p>Podemos tambien abregar un subtitulo: subtitle: “Subtitulo”</p>
+<p>Despues de este bloque encontramos el cuerpo del documento que puede contener texto escrito de manera normal, código html, código Markdown y LaTeX</p>
+<p>Algunas de las principales instrucciones para empezar son</p>
+<div id="titulos" class="section level3">
+<h3>Titulos</h3>
+<pre><code># Título 1
+## Título 2
+### Título 3
+#### Título 4
+##### Título 5
+#####  Títuñlo 6</code></pre>
+</div>
+<div id="listas" class="section level3">
+<h3>Listas</h3>
+<pre><code>+ Punto 1
++ Punto 2
++ Punto 3
+  + Punto 3.1
+  + Punto 3.2</code></pre>
+<p>Tambien se pueden hacer numerada</p>
+<pre><code>1. Punto 1
+2. Punto 2
+3. Punto 3</code></pre>
+<ol style="list-style-type: decimal">
+<li>Punto 1</li>
+<li>Punto 2</li>
+<li>Punto 3</li>
+</ol>
+<p>Permite tambien escribir ecuaciones en codigo LaTeX, como por ejemplo</p>
+<pre><code>$$\dfrac{1}{n}\sum_{i=1}^{n} x_{i} = \bar{x}$$</code></pre>
+<p><span class="math display">\[\dfrac{1}{n}\sum_{i=1}^{n} x_{i} = \bar{x}\]</span></p>
+<p>Una de sus principales ventajas es el de permitir correr código <strong>R</strong> y de otros lenguajes como Phyton, SQL, entre otros</p>
+<p>Para ello utilizamos el botón <strong>+c</strong> ubicado en la barra superior de la ventana <strong>Source</strong></p>
+<p><img src="img/Rmd2.png" width="120" /></p>
+<p>Dentro de este bloque podemos correr codigo R y asi ubicar dentro del documento tablas, indicadores o gráficos</p>
+<p><img src="img/Rmd3.png" width="400" /></p>
+<p>En la siguiente página pueden encotrar resumen de varios paquetes de R dentro de los cuales está RMardown</p>
+<p><a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

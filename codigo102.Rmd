@@ -204,7 +204,7 @@ summarytools::descr(Colombia$edad)
 <br/><br/>
 **YA ESTAMOS LISTOS PARA INTERPRETAR LA INFORMACION**
 
-# **4. Documentos pdf**
+# **4. Documentos pdf con Rmarkdown**
 
 A través de RStudio se pueden construir documentos en formatos **PDF**, **DOC**, **HTML** entre otros. En esta ocasión se describe como realizar un informe utilizando para ello un archivo Rmd en RStudio.
 

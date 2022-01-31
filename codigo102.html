@@ -580,7 +580,7 @@ summarytools::freq(Colombia$edadR)</code></pre>
 <p>Esta tabla nos permite identificar los rangos de mayor frecuencia</p>
 <p>Tambien podemo realizar una tabla sin tener que realizar la recodificación. Esto se logra con la función <strong>hist()</strong></p>
 <pre class="r"><code>h=hist(Colombia$edad)</code></pre>
-<p><img src="codogo102_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="codigo102_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <pre class="r"><code>h$breaks   # puntos de corte</code></pre>
 <pre><code> [1]   0   5  10  15  20  25  30  35  40  45  50  55  60  65  70  75  80  85  90
 [20]  95 100 105 110 115</code></pre>
@@ -619,7 +619,7 @@ summarytools::freq(Edad.fallecidos)</code></pre>
           Total   131824    100.00         100.00    100.00         100.00</code></pre>
 <p>O tambien</p>
 <pre class="r"><code>h=hist(Colombia$edad, breaks = c(0,4.9, 11.9,17.9,26.9, 59.9,115))</code></pre>
-<p><img src="codogo102_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="codigo102_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code># Con los valores contenidos en el objeto h construimos la tabla
 LI=h$breaks[1:6]
 LS=h$breaks[2:7]

@@ -160,7 +160,7 @@ Finalmente adjunte un análisis de los resultados obtenidos.
 
 <br/>
 
-[DATOS: beer.xlsx]()
+[DATOS: beer.csv](https://github.com/dgonzalez80/pye20221.io/blob/main/beer.csv)
 
 <br/><br/> <br/>
 

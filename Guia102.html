@@ -513,14 +513,14 @@ div.tocify {
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Actividad103</th>
+<th align="left">Actividad104</th>
 <th align="left">Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Trabajo individual</td>
-<td align="left"><strong>Actividad 103</strong> - <strong>Caso 101</strong> : Realice las actividades consignadas en el caso101, adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf</td>
+<td align="left"><strong>Actividad 104</strong> - <strong>Caso 101</strong> : Realice las actividades consignadas en el caso101, adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf</td>
 </tr>
 <tr class="even">
 <td align="left">Recursos</td>
@@ -548,14 +548,14 @@ div.tocify {
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Actividad104</th>
+<th align="left">Actividad105</th>
 <th align="left">Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Trabajo individual</td>
-<td align="left"><strong>Actividad 104</strong> : A partir de la información contenida en la <strong>base de datos seleccionada en la Actividad 102</strong>, realice un análisis de al menos dos variables cualitativas y dos cuantitativas teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.</td>
+<td align="left"><strong>Actividad 105</strong> : A partir de la información contenida en la <strong>base de datos seleccionada en la Actividad 102</strong>, realice un análisis de al menos dos variables cualitativas y dos cuantitativas teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.</td>
 </tr>
 <tr class="even">
 <td align="left">Recursos</td>
@@ -612,11 +612,11 @@ div.tocify {
 <tbody>
 <tr class="odd">
 <td align="left">Entregable 1:</td>
-<td align="left"><strong>Actividad103.pdf</strong> : Caso 101</td>
+<td align="left"><strong>Actividad104.pdf</strong> : Caso 101</td>
 </tr>
 <tr class="even">
 <td align="left">Entregable 2:</td>
-<td align="left"><strong>Actividad104.pdf</strong> : Aplicar lo aprendido a base de datos actividad102</td>
+<td align="left"><strong>Actividad105.pdf</strong> : Aplicar lo aprendido a base de datos actividad102</td>
 </tr>
 <tr class="odd">
 <td align="left">Fecha</td>
@@ -950,30 +950,31 @@ ggplot(bpe, aes(x=promedio))+geom_boxplot()</code></pre>
 <p><span class="math display">\[\widehat{x}= \frac{1}{n} \sum_{i=1}^{n} x_{i}\]</span></p>
 <p><br/></p>
 <p>Es una de los indicadores estadísticos mas conocidos</p>
-<p>Propiedades de la media : + La suma de las desviaciones de los datos con respecto a la media es cero. <span class="math inline">\(\sum (x_{i}-\bar{x})=0\)</span>.</p>
+<p>Propiedades de la media :</p>
 <ul>
+<li><p>La suma de las desviaciones de los datos con respecto a la media es cero. <span class="math inline">\(\sum (x_{i}-\bar{x})=0\)</span>.</p></li>
 <li><p>La suma de los cuadrados de las desviaciones de los datos con respecto a un valor {} es mínimo cuando <span class="math inline">\(a=\bar{x}\)</span>.</p></li>
 <li><p>Si <span class="math inline">\(x_{i}=k\)</span> para todo <span class="math inline">\(i\)</span>, entonces, <span class="math inline">\(\bar{x}=k\)</span>.</p></li>
 <li><p>Si todos los datos de una variable se multiplican por una constante <span class="math inline">\(k\)</span>, es decir <span class="math inline">\(y_{i}=kx_{i}\)</span>, entonces <span class="math inline">\(\bar{y}=k\bar{x}\)</span></p></li>
-<li><p>Si <span class="math inline">\(z_{i}=a x_{i}+b y_{i}\)</span>, donde: <strong><em>a</em></strong>, <strong><em>b</em></strong> constantes y <span class="math inline">\(x_{i}\)</span>, <span class="math inline">\(y_{i}\)</span> variables, entonces: <span class="math inline">\(\bar{z}=a\bar{x}+b\bar{y}\)</span>.</p></li>
+<li><p>Si <span class="math inline">\(z_{i}=a x_{i}+b y_{i}\)</span>, donde: <strong>a</strong>, <strong>b</strong> constantes y <span class="math inline">\(x_{i}\)</span>, <span class="math inline">\(y_{i}\)</span> variables, entonces: <span class="math inline">\(\bar{z}=a\bar{x}+b\bar{y}\)</span>.</p></li>
 </ul>
 <p><br/> <br/></p>
-<p>Ejemplo1</p>
+<p><strong>Ejemplo 1</strong></p>
 <pre class="r"><code>mean(mtcars$mpg,na.rm = TRUE)</code></pre>
 <pre><code>[1] 20.09062</code></pre>
 <p><br/> <br/></p>
-<p>Ejemplo2</p>
+<p><strong>Ejemplo 2</strong></p>
 <pre class="r"><code>mean(bpe$promedio, na.rm = TRUE)</code></pre>
 <pre><code>[1] 4.04209</code></pre>
 <p><br/> <br/></p>
-<p>Ejemplo3</p>
+<p><strong>Ejemplo 3</strong></p>
 <pre class="r"><code>x=1:10
 x</code></pre>
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <pre class="r"><code>cat(&quot;media :&quot;,mean(x))</code></pre>
 <pre><code>media : 5.5</code></pre>
 <p><br/> <br/></p>
-<p>Ejemplo4</p>
+<p><strong>Ejemplo 4</strong></p>
 <pre class="r"><code>x[10]=20
 x</code></pre>
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 20</code></pre>
@@ -1023,28 +1024,34 @@ t1</code></pre>
                         &lt;NA&gt;      0                0.00
                        Total     67    100.00    100.00</code></pre>
 <p>moda : <strong>Ingeniería de Sistemas</strong></p>
+<p><br/> <br/></p>
 </div>
 <div id="otras-medidas-de-centro" class="section level3">
 <h3><strong>Otras medidas de centro</strong></h3>
+<p><br/> <br/></p>
 </div>
 <div id="media-truncada" class="section level3">
 <h3><strong>Media truncada</strong></h3>
 <pre class="r"><code>mean(bpe$promedio, na.rm = TRUE, trim = 0.10)</code></pre>
 <pre><code>[1] 4.055091</code></pre>
+<p><br/> <br/></p>
 </div>
 <div id="rango-medio" class="section level3">
 <h3><strong>Rango medio</strong></h3>
 <p><span class="math inline">\(\frac{1}{2}(max(x)+min(x))\)</span></p>
 <pre class="r"><code>(max(bpe$promedio,na.rm = TRUE)+min(bpe$promedio,na.rm = TRUE))/2</code></pre>
 <pre><code>[1] 4</code></pre>
+<p><br/> <br/></p>
 </div>
 <div id="media-geométrica" class="section level3">
 <h3><strong>Media geométrica</strong></h3>
 <p>este indicador de tendencia central se utiliza para promediar tasa de crecimiento o de interés. Para encontrar su valor se multiplican los valores de <span class="math inline">\(n\)</span> tasas incrementadas en uno. A ese producto se le extrae la raíz n-esima.</p>
+<p><br/> <br/></p>
 </div>
 <div id="media-armónica" class="section level3">
 <h3><strong>Media armónica</strong></h3>
 <p>Este indicador corresponde al inverso de la media aritmética</p>
+<p><br/> <br/></p>
 </div>
 <div id="problema-reconocimiento-de-grupo" class="section level3">
 <h3><strong>Problema reconocimiento de grupo</strong></h3>
@@ -1070,6 +1077,7 @@ t1</code></pre>
 </table>
 <p><img src="img/grupos.png" width="700"></p>
 <p>Hace falta otro indicador que nos oriente de cual grupo hablamos cuando solo tenemos como información : media = 20 años.</p>
+<p><br/> <br/></p>
 </div>
 </div>
 <div id="indicadores-de-dispersión" class="section level2">
@@ -1101,11 +1109,13 @@ t1</code></pre>
 </tbody>
 </table>
 <p>Indicador muy útil cuando se deben realizar cálculos rápidos</p>
+<p><br/> <br/></p>
 </div>
 <div id="varianza" class="section level3">
 <h3><strong>Varianza</strong></h3>
 <p>Es la medida de dispersión más utilizada en estadística y está definida por</p>
 <p><span class="math display">\[s^{2}=\frac{1}{n-1} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}\]</span></p>
+<p><br/> <br/></p>
 <div id="propiedades-de-la-varianza" class="section level4">
 <h4><strong>Propiedades de la varianza</strong></h4>
 <ul>
@@ -1119,6 +1129,7 @@ t1</code></pre>
 <p>La varianza se puede interpretar como el promedio de las diferencias cuadradas entre cada uno de los datos y la media</p>
 <p>El problema de la varianza es su <strong>interpretación</strong></p>
 <p>Sus unidades son al cuadrado y en la mayoría de los casos no es posible interpretarlos. Por esta razón se optó por utilizar otra mediada de dispersión</p>
+<p><br/> <br/></p>
 </div>
 </div>
 <div id="desviación-estándar" class="section level3">
@@ -1131,6 +1142,7 @@ t1</code></pre>
 <pre class="r"><code>cat(&quot;Desviación estándar :&quot;,sd(bpe$promedio))</code></pre>
 <pre><code>Desviación estándar : 0.3532556</code></pre>
 <p>Aunque la desviación estándar reduce el problema debido a tener las mismas unidades de la variable, es útil para comparación de dos grupos</p>
+<p><br/> <br/></p>
 </div>
 <div id="coeficiente-de-variación" class="section level3">
 <h3><strong>Coeficiente de variación</strong></h3>
@@ -1139,6 +1151,7 @@ t1</code></pre>
 <p>Existen diferentes reglas empíricas para la interpretación del coeficiente de variación. Una de ellas establece como límite el 20% para separar los grupos homogéneos de los heterogéneos Por lo general se utiliza un valor hasta el 20% para determinar que un grupo de datos son homogéneos, de lo contrario se calificará como heterogéneo.</p>
 <pre class="r"><code>cat(&quot;Coeficiente de variación :&quot;,sd(bpe$promedio)/mean(bpe$promedio)*100, &quot; %&quot;)</code></pre>
 <pre><code>Coeficiente de variación : 8.73943  %</code></pre>
+<p><br/> <br/></p>
 </div>
 </div>
 <div id="indicadores-de-forma" class="section level2">
@@ -1153,6 +1166,7 @@ t1</code></pre>
 <li><p><strong>Platicútrica</strong>, con valores pequeños para el coeficiente (CA&lt;0)</p></li>
 </ul>
 <p><img src="img/curtosis.png" width="500"></p>
+<p><br/> <br/></p>
 </div>
 <div id="asimetría-o-sesgo" class="section level3">
 <h3><strong>Asimetría o sesgo</strong></h3>
@@ -1224,17 +1238,178 @@ d2=density(mtcars$mpg); plot(d2)</code></pre>
 <h2><strong>Actividades</strong></h2>
 <p><br/></p>
 <ul>
-<li><strong>Actividad 1</strong> : Realice las actividades consignadas en el <strong>Taller 1-01</strong>. Adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf.
+<li><strong>Actividad 104</strong>: Realice las actividades consignadas en el <strong>Taller 1-01</strong>. Adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf.
 <ul>
 <li><strong>Nota</strong>: RMarkdown permite realizar el trabajo fácilmente</li>
 </ul></li>
 </ul>
 <p><br/></p>
 <ul>
-<li><strong>Actividad 2</strong> : A partir de la información contenida en la base de datos seleccionada en la <strong>Unidad 1.1</strong>, realice un análisis de al menos una variable cualitativa y una cuantitativa teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.</li>
+<li><strong>Actividad 105</strong> : A partir de la información contenida en la base de datos seleccionada en la <strong>Unidad 1.1</strong>, realice un análisis de al menos una variable cualitativa y una cuantitativa teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.</li>
 </ul>
 <p><br/><br/><br/></p>
+</div>
+<div id="formulario" class="section level2">
+<h2><strong>Formulario</strong></h2>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="41%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Estadística</th>
+<th align="left">fórmula</th>
+<th align="left">código R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>centro</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">media aritmética</td>
+<td align="left"><span class="math inline">\(\displaystyle\dfrac{1}{n}\sum_{i=1}^{n} x_{i}\)</span></td>
+<td align="left"><code>mean(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">mediana</td>
+<td align="left"><span class="math inline">\(Me = P_{50} = X_{n+1/2}\)</span></td>
+<td align="left"><code>median(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left">moda</td>
+<td align="left"><span class="math inline">\(Mo\)</span> dato que más se repite</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">media truncada</td>
+<td align="left">media calculada con el 90% central de los datos</td>
+<td align="left"><code>mean(x,trim=10/100)</code></td>
+</tr>
+<tr class="even">
+<td align="left">rango medio</td>
+<td align="left"><span class="math inline">\(rm=\dfrac{min\{x\}-max\{x\}}{2}\)</span></td>
+<td align="left"><code>max(x)-min(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">media geométrica</td>
+<td align="left"><span class="math inline">\((x_{1} \times x_{2} \times x_{3} .... x_{n})^{1/n}\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">media armónica</td>
+<td align="left"><span class="math inline">\(\dfrac{n}{\dfrac{1}{x_{1}}+\dfrac{1}{x_{2}}+\dfrac{1}{x_{3}}+...+\dfrac{1}{x_{n}}}\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>dispersión</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">rango</td>
+<td align="left"><span class="math inline">\(r= min\{x\}-max\{x\}\)</span></td>
+<td align="left"><code>max(x)-min(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">varianza</td>
+<td align="left"><span class="math inline">\(s^{2} = \dfrac{1}{n-1} \displaystyle\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}\)</span></td>
+<td align="left"><code>var(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left">desviación estandar</td>
+<td align="left"><span class="math inline">\(s = \sqrt{s^{2}}\)</span></td>
+<td align="left"><code>sd(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">coeficiente de variación</td>
+<td align="left"><span class="math inline">\(cv= \dfrac{s}{\bar{x}} \times 100\)</span> %</td>
+<td align="left"><code>sd(x)/mean(x)*100</code></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>forma</strong></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">coeficiente de curtosis</td>
+<td align="left"><span class="math inline">\(\displaystyle\dfrac{Q_{3}-Q_{1}}{P_{90}-P_{10}}\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">coeficiente de asimetría</td>
+<td align="left"><span class="math inline">\(\displaystyle\dfrac{3(\bar{x}-Me)}{s}\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">percentil 25</td>
+<td align="left"><span class="math inline">\(X_{n \times 0.25}\)</span></td>
+<td align="left"><code>quantile(x,0.25)</code></td>
+</tr>
+<tr class="even">
+<td align="left">percentil 50</td>
+<td align="left"><span class="math inline">\(X_{n \times 0.50}\)</span></td>
+<td align="left"><code>quantile(x,0.50)</code></td>
+</tr>
+<tr class="odd">
+<td align="left">percentil 75</td>
+<td align="left"><span class="math inline">\(X_{n \times 0.75}\)</span></td>
+<td align="left"><code>quantile(x,0.75)</code></td>
+</tr>
+<tr class="even">
+<td align="left">rango intercuartílico</td>
+<td align="left"><span class="math inline">\(Q_{3}-Q_{1}\)</span></td>
+<td align="left">``</td>
+</tr>
+</tbody>
+</table>
+<p><br/> <br/></p>
+</div>
+<div id="taller-121" class="section level2">
+<h2><strong>Taller 121</strong></h2>
+<div id="nivel-de-ansiedad" class="section level3">
+<h3><strong>Nivel de ansiedad</strong></h3>
+<p>Los siguientes datos corresponden al <strong>nivel de ansiedad</strong> de un grupo de estudiantes de la universidad valorada antes de la presentación del primer examen parcial. El investigador a cargo del proyecto utilizó una prueba para medir el nivel de ansiedad que permite puntajes entre 0 y 100. Los valores inferiores a 50 puntos se consideran como nivel bajo . Entre 50 y 80 , nivel medio y superiores a 80 se consideran altos.</p>
+<p>Los resultados obtenidos se presenta a continuación :</p>
+<pre class="r"><code>nivans=c(28,33,34,36,38,38,41,41,45,45,46,46,47,47,48,48,49,50,51,51,51,52,53,53,
+         53,54,54,54,55,55,55,56,56,56,57,57,58,60,61,61,61,62,63,64,64,65,65,65,
+         65,65,66,67,67,68,68,68,69,69,69,70,70,71,74,77,77,78,79,79,80,82,85,89,
+         90,96,58,90,77,71,41,55,53,65,57,56,68,56,50,36,70,57,41,62,48,67,33,52,
+         65,67,79,55,34,46,55,56,47,69,61,54,74,47,64,79,85,61,28,46,65,51,49,45,
+         78,96,68,38,77,34,69,69,38,65,63,68,48,53,82,61,51,45,66,65,64,70,89,51,
+         54,53,80,54,60)</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="tablas-de-frecuencia-1" class="section level3">
+<h3>Tablas de frecuencia</h3>
+<ul>
+<li><p>Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos</p></li>
+<li><p>Cálculos las estadísticas descriptivas del nivel de ansiedad y describa los resultados en un párrafo</p></li>
+</ul>
+<p><br/><br/></p>
+<p>Otra variable importante en el análisis corresponde a la <strong>facultad</strong> a la que pertence el estudiante</p>
+<ol style="list-style-type: decimal">
+<li>Facultad de Ingeniería y Ciencias</li>
+<li>Facultad de Ciencias Económicas y Administrativas</li>
+<li>Facultad de Humanidades</li>
+<li>Facultad de Salud</li>
+</ol>
+<pre class="r"><code>fac=c(2,1,2,2,4,3,4,2,4,2,4,1,1,1,1,1,1,2,3,3,3,3,1,2,1,2,2,1,1,2,3,2,3,2,2,3,3,
+      1,1,1,2,1,2,2,2,3,1,1,3,1,4,3,1,3,2,1,2,3,4,3,2,3,4,4,1,3,4,4,2,2,1,4,2,1,
+      2,4,1,1,1,3,4,1,1,1,1,1,3,3,3,3,1,1,1,2,2,1,3,1,1,1,3,2,2,2,2,1,2,2,1,3,2,
+      1,2,2,2,4,2,1,3,4,1,1,3,1,2,2,2,1,3,3,1,1,2,2,3,3,3,1,4,3,1,2,4,2,2,1,2,3,
+      2,2)</code></pre>
+<ul>
+<li>Construya una tabla de frecuencias e interprete los resultados</li>
+<li>Construya una tabla de frecuencias para el nivel de ansiedad por facultad</li>
+</ul>
+<p><br/><br/></p>
 <p><img src="img/person-1245959_1920.jpg" width="1000"></p>
+</div>
 <div id="lo-podemos-lograr" class="section level3">
 <h3><strong>Lo podemos lograr…</strong></h3>
 <div id="daniel-enrique-gonzález-gómez" class="section level4">

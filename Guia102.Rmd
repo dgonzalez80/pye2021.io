@@ -65,9 +65,9 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 ## **Cronograma de trabajo**
 
 
-|Actividad103   | Descripción                    | 
+|Actividad104   | Descripción                    | 
 |:--------------|:-----------------------------  |
-|Trabajo individual| **Actividad 103** - **Caso 101** :  Realice las actividades consignadas en el caso101, adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf |
+|Trabajo individual| **Actividad 104** - **Caso 101** :  Realice las actividades consignadas en el caso101, adjunte y envíe las respuesta a la plataforma de Brightspace en formato pdf |
 |Recursos       |[Video indicadores estadísticos](https://youtu.be/dWVs-M7oCh4)         |
 || [Vídeo calculo indicadores con tablas de distribución](https://youtu.be/n2UCDZNncls)|
 | Fecha         | 06 de febrero de 2022          |
@@ -75,9 +75,9 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/> 
 
-|Actividad104   | Descripción                    | 
+|Actividad105   | Descripción                    | 
 |:--------------|:-----------------------------  |
-|Trabajo individual|**Actividad 104** :  A partir de la información contenida en la **base de datos seleccionada en la Actividad 102**, realice un análisis de al menos dos variables cualitativas y dos cuantitativas teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.|
+|Trabajo individual|**Actividad 105** :  A partir de la información contenida en la **base de datos seleccionada en la Actividad 102**, realice un análisis de al menos dos variables cualitativas y dos cuantitativas teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.|
 |Recursos| Base de datos actividad-1 Unidad 1.1|
 |               |Excel                |
 |               |RStudio              |
@@ -90,18 +90,15 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 ## **Criterios de evaluación**
 
-+ Reconocer e interpretar las diferentes formas de resumir los datos a través de tablas de
-frecuencia para los casos de variables cuantitativas y para variables cualitativas.
++ Reconocer e interpretar las diferentes formas de resumir los datos a través de tablas de frecuencia para los casos de variables cuantitativas y para variables cualitativas.
 
-+ Calcular e interpretar los diferentes indicadores de posición, tendencia, dispersión y forma
-que permitan un correcto análisis de los datos
++ Calcular e interpretar los diferentes indicadores de posición, tendencia, dispersión y forma que permitan un correcto análisis de los datos
 
 + Utilizar herramientas computacionales para el procesamiento de la información.
 
 <br/> <br/> 
 
-Los entregables completos y enviados dentro de los tiempos establecidos otorgarán 25 puntos en
-cada caso, para un total de 50 puntos.
+Los entregables completos y enviados dentro de los tiempos establecidos otorgarán 25 puntos en cada caso, para un total de 50 puntos.
 
 <br/><br/>
 
@@ -109,8 +106,8 @@ cada caso, para un total de 50 puntos.
 
 | Entregable    |  Descripción                   |
 |:--------------|:-------------------------------|
-|Entregable 1:  | **Actividad103.pdf** : Caso 101 |
-|Entregable 2:  | **Actividad104.pdf** : Aplicar lo aprendido a base de datos actividad102    |
+|Entregable 1:  | **Actividad104.pdf** : Caso 101 |
+|Entregable 2:  | **Actividad105.pdf** : Aplicar lo aprendido a base de datos actividad102    |
 |Fecha          |Domingo 06 de febrero de 2022    | 
 |Hora límite    | 23:59  hora  local             |
 
@@ -362,6 +359,7 @@ $$\widehat{x}= \frac{1}{n} \sum_{i=1}^{n} x_{i}$$
 Es una de los indicadores estadísticos mas conocidos
 
 Propiedades de la media :
+
 + La suma de las desviaciones de los datos con respecto a la media es cero. $\sum (x_{i}-\bar{x})=0$.
 
 + La suma de los cuadrados de las desviaciones de los datos con respecto a un valor {\bf $a$} es mínimo cuando $a=\bar{x}$.
@@ -370,11 +368,11 @@ Propiedades de la media :
 
 + Si todos los datos de una variable se multiplican por una constante $k$, es decir $y_{i}=kx_{i}$, entonces $\bar{y}=k\bar{x}$
 
-+ Si $z_{i}=a x_{i}+b y_{i}$, donde: ***a***, ***b*** constantes y $x_{i}$, $y_{i}$ variables, entonces: $\bar{z}=a\bar{x}+b\bar{y}$. 
++ Si $z_{i}=a x_{i}+b y_{i}$, donde: **a**, **b** constantes y $x_{i}$, $y_{i}$ variables, entonces: $\bar{z}=a\bar{x}+b\bar{y}$. 
 
  <br/> <br/>
  
-Ejemplo1
+**Ejemplo 1**
 
 
 ```{r}
@@ -383,7 +381,7 @@ mean(mtcars$mpg,na.rm = TRUE)
 
  <br/> <br/>
 
-Ejemplo2
+**Ejemplo 2**
 
 ```{r}
 mean(bpe$promedio, na.rm = TRUE)
@@ -391,7 +389,7 @@ mean(bpe$promedio, na.rm = TRUE)
 
  <br/> <br/>
  
-Ejemplo3
+**Ejemplo 3**
 
 ```{r}
 x=1:10
@@ -404,7 +402,7 @@ cat("media :",mean(x))
 
  <br/> <br/>
  
- Ejemplo4
+ **Ejemplo 4**
 
 ```{r}
 x[10]=20
@@ -468,9 +466,12 @@ t1
 
 moda : **Ingeniería de Sistemas**
 
-
+ <br/> <br/>
+ 
 ### **Otras medidas de centro**
 
+ <br/> <br/>
+ 
 ### **Media truncada**
 
 ```{r, warning=FALSE, message=FALSE}
@@ -478,6 +479,8 @@ moda : **Ingeniería de Sistemas**
 mean(bpe$promedio, na.rm = TRUE, trim = 0.10)
 ```
 
+ <br/> <br/>
+ 
 ### **Rango medio**  
 
 $\frac{1}{2}(max(x)+min(x))$
@@ -487,15 +490,20 @@ $\frac{1}{2}(max(x)+min(x))$
 (max(bpe$promedio,na.rm = TRUE)+min(bpe$promedio,na.rm = TRUE))/2
 ```
 
+ <br/> <br/>
+ 
 ###  **Media geométrica** 
 
 este indicador de tendencia central se utiliza para promediar tasa de crecimiento o de interés. Para encontrar su valor se multiplican los valores de $n$ tasas incrementadas en uno. A ese producto se le extrae la raíz n-esima.
+
+ <br/> <br/>
 
 ###  **Media armónica**  
 
 Este indicador corresponde al inverso de la media aritmética 
 
-
+ <br/> <br/>
+ 
 ### **Problema reconocimiento de grupo**
 
 |                             |                                    |
@@ -510,6 +518,8 @@ Este indicador corresponde al inverso de la media aritmética
 
 Hace falta otro indicador que nos oriente de cual grupo hablamos cuando solo tenemos como información : media = 20 años.
 
+ <br/> <br/>
+ 
 ## **Indicadores de Dispersión**
 
 ### **Rango**
@@ -526,14 +536,16 @@ En caso de los dos grupos:
   
 Indicador muy útil cuando se deben realizar cálculos rápidos
 
-
+ <br/> <br/>
+ 
 ### **Varianza**
 
 Es la medida de dispersión más utilizada en estadística y está definida por 
 
 $$s^{2}=\frac{1}{n-1} \sum_{i=1}^{n} (x_{i}-\bar{x})^{2}$$
 
-
+ <br/> <br/>
+ 
 #### **Propiedades de la varianza**
 
 + $s^{2} = \frac{1}{n} \sum x_{i}^{2}- (\bar{x})^{2}$ 
@@ -554,6 +566,8 @@ El problema de la varianza es su **interpretación**
 
 Sus unidades son al cuadrado y en la mayoría de los casos no es posible interpretarlos. Por esta razón se optó por utilizar otra mediada de dispersión
 
+ <br/> <br/>
+ 
 ### **Desviación estándar** 
 
 Es la raíz cuadrada de la varianza
@@ -569,7 +583,8 @@ cat("Desviación estándar :",sd(bpe$promedio))
 
 Aunque la desviación estándar reduce el problema debido a tener las mismas unidades de la variable, es útil para comparación de dos grupos
 
-
+ <br/> <br/>
+ 
 ### **Coeficiente de variación**
 
 Nos indica que tan grande o que tan pequeña es la desviación estándar con respecto a su media
@@ -582,7 +597,8 @@ Existen diferentes reglas empíricas para la interpretación del coeficiente de 
 cat("Coeficiente de variación :",sd(bpe$promedio)/mean(bpe$promedio)*100, " %")
 ```
 
-
+ <br/> <br/>
+ 
 ## **Indicadores de forma**
 
 ### **Curtosis**
@@ -599,7 +615,8 @@ De acuerdo con su valor, la puntudez de los datos puede clasificarse en tres gru
 
 <img src="img/curtosis.png" width="500">
 
-
+ <br/> <br/>
+ 
 ### **Asimetría o sesgo**
 
 Mide que tanto la forma de la distribución de frecuencias de los datos es simétrica o no con respecto a la media. Esta característica de los datos se mide a través del coeficiente de asimetría o sesgo.
@@ -649,14 +666,101 @@ d2=density(mtcars$mpg); plot(d2)
 
 <br/>
 
-+ **Actividad 1** : Realice las  actividades consignadas en  el **Taller 1-01**.  Adjunte y envíe las respuesta a la plataforma de Brightspace en  formato pdf.
++ **Actividad 104**: Realice las  actividades consignadas en  el **Taller 1-01**.  Adjunte y envíe las respuesta a la plataforma de Brightspace en  formato pdf.
     + **Nota**: RMarkdown permite realizar el trabajo fácilmente
 
 <br/>
 
-+ **Actividad 2** : A partir de la  información contenida en  la base de datos  seleccionada en la **Unidad 1.1**, realice un análisis de al menos una variable cualitativa y una cuantitativa teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.
++ **Actividad 105** : A partir de la  información contenida en  la base de datos  seleccionada en la **Unidad 1.1**, realice un análisis de al menos una variable cualitativa y una cuantitativa teniendo como soportes las tablas de frecuencia y los indicadores estadísticos correspondiente.
 
 <br/><br/><br/>
+
+
+## **Formulario**
+
+|Estadística             | fórmula                               | código R                      |
+|:-----------------------|:--------------------------------------|:------------------------------|
+|**centro**              |                                       |                               |
+|media aritmética        | $\displaystyle\dfrac{1}{n}\sum_{i=1}^{n} x_{i}$    | `mean(x)`                     |
+|mediana                 | $Me = P_{50} = X_{n+1/2}$             | `median(x)`                   |
+|moda                    | $Mo$ dato que más se repite           |                               |
+|media truncada | media calculada con el 90% central de los datos|`mean(x,trim=10/100)`          |
+|rango medio             | $rm=\dfrac{min\{x\}-max\{x\}}{2}$     | `max(x)-min(x)`               |
+|media geométrica        | $(x_{1} \times x_{2} \times x_{3} .... x_{n})^{1/n}$  |               |
+|media armónica          | $\dfrac{n}{\dfrac{1}{x_{1}}+\dfrac{1}{x_{2}}+\dfrac{1}{x_{3}}+...+\dfrac{1}{x_{n}}}$ | |
+|**dispersión**          |                                       |                               |
+|rango                   |$r= min\{x\}-max\{x\}$                 |`max(x)-min(x)`                |
+|varianza                |$s^{2} = \dfrac{1}{n-1} \displaystyle\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}$  |`var(x)`    |
+|desviación estandar     |$s = \sqrt{s^{2}}$                     |`sd(x)`                        |
+|coeficiente de variación|$cv= \dfrac{s}{\bar{x}} \times 100$ %  |`sd(x)/mean(x)*100`            |
+|**forma**               |                                       |                               |
+|coeficiente de curtosis |$\displaystyle\dfrac{Q_{3}-Q_{1}}{P_{90}-P_{10}}$ |                    |
+|coeficiente de asimetría|$\displaystyle\dfrac{3(\bar{x}-Me)}{s}$|                               |
+|percentil 25            |$X_{n \times 0.25}$                    |`quantile(x,0.25)`             |
+|percentil 50            |$X_{n \times 0.50}$                    |`quantile(x,0.50)`             |
+|percentil 75            |$X_{n \times 0.75}$                    |`quantile(x,0.75)`             |
+|rango intercuartílico   |$Q_{3}-Q_{1}$                          |``                             |
+
+
+
+ <br/> <br/>
+
+
+## **Taller 121**
+
+### **Nivel de ansiedad**
+
+Los siguientes datos corresponden al **nivel de ansiedad** de un grupo de estudiantes de la universidad valorada antes de la presentación del primer examen parcial. El investigador a cargo del proyecto utilizó una prueba para medir el nivel de ansiedad que permite puntajes entre 0 y 100. Los valores inferiores a 50 puntos se consideran como nivel bajo . Entre 50 y 80 , nivel medio y superiores a 80 se consideran altos.
+
+Los resultados obtenidos se presenta a continuación :
+
+```{r nivel, exercise=TRUE}
+nivans=c(28,33,34,36,38,38,41,41,45,45,46,46,47,47,48,48,49,50,51,51,51,52,53,53,
+         53,54,54,54,55,55,55,56,56,56,57,57,58,60,61,61,61,62,63,64,64,65,65,65,
+         65,65,66,67,67,68,68,68,69,69,69,70,70,71,74,77,77,78,79,79,80,82,85,89,
+         90,96,58,90,77,71,41,55,53,65,57,56,68,56,50,36,70,57,41,62,48,67,33,52,
+         65,67,79,55,34,46,55,56,47,69,61,54,74,47,64,79,85,61,28,46,65,51,49,45,
+         78,96,68,38,77,34,69,69,38,65,63,68,48,53,82,61,51,45,66,65,64,70,89,51,
+         54,53,80,54,60)
+
+```
+
+<br/><br/>
+
+### Tablas de frecuencia
+
++ Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos
+
++ Cálculos las estadísticas descriptivas del nivel de ansiedad y describa los resultados en un párrafo
+
+
+<br/><br/>
+
+Otra variable importante en el análisis corresponde a la **facultad** a la que pertence el estudiante
+
+1. Facultad de Ingeniería y Ciencias
+2. Facultad de Ciencias Económicas y Administrativas
+3. Facultad de Humanidades
+4. Facultad de Salud
+
+
+```{r facultad, exercise=TRUE }
+fac=c(2,1,2,2,4,3,4,2,4,2,4,1,1,1,1,1,1,2,3,3,3,3,1,2,1,2,2,1,1,2,3,2,3,2,2,3,3,
+      1,1,1,2,1,2,2,2,3,1,1,3,1,4,3,1,3,2,1,2,3,4,3,2,3,4,4,1,3,4,4,2,2,1,4,2,1,
+      2,4,1,1,1,3,4,1,1,1,1,1,3,3,3,3,1,1,1,2,2,1,3,1,1,1,3,2,2,2,2,1,2,2,1,3,2,
+      1,2,2,2,4,2,1,3,4,1,1,3,1,2,2,2,1,3,3,1,1,2,2,3,3,3,1,4,3,1,2,4,2,2,1,2,3,
+      2,2)
+```
+
+
++ Construya una tabla de frecuencias e interprete los resultados
++ Construya una tabla de frecuencias para el nivel de ansiedad por facultad 
+
+
+<br/><br/>
+
+
+
 
 <img src="img/person-1245959_1920.jpg" width="1000">
 

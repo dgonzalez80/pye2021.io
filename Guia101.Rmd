@@ -47,8 +47,10 @@ library(summarytools)
 library(knitr)
 library(readxl)
 library(tidyverse)
-
-bpe20221 <- read.csv2("~/Javeriana/Escuelas/pye20221.io/data/bpye20221.csv")
+library(readr)
+bpe20221 <- read_delim("/home/deg/Javeriana/Escuelas/pye20221.io/data/bpye20221.csv", 
+     delim = ";", escape_double = FALSE, col_types = cols(promedio = col_number()), 
+     trim_ws = TRUE)
 ```
 
 
@@ -197,7 +199,7 @@ barplot(t1011,col = brewer.pal(6,"Set1"), ylim = c(0,60),
 
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE}
 p=ggplot(bpe20221, aes(x=promedio))+
   geom_density()
 p 

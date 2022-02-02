@@ -981,7 +981,9 @@ x</code></pre>
 <pre class="r"><code>cat(&quot;media :&quot; ,mean(x))</code></pre>
 <pre><code>media : 6.5</code></pre>
 <p><br/> <br/></p>
-<p>## Mediana :</p>
+</div>
+<div id="mediana" class="section level3">
+<h3><strong>Mediana</strong></h3>
 <p><strong>Me</strong> :Es el número que divide la muestra en dos partes de igual proporción (50% : 50%). Es decir que corresponde a:</p>
 <p><span class="math inline">\(P_{50} = D_{5} = Q_{2}\)</span></p>
 <p>también corresponde a la linea central del diagrama de cajas.</p>
@@ -1006,8 +1008,8 @@ x</code></pre>
 <pre><code>media : 5.5</code></pre>
 <p><br/> <br/></p>
 </div>
-<div id="la-moda" class="section level3">
-<h3><strong>La moda</strong></h3>
+<div id="moda" class="section level3">
+<h3><strong>Moda</strong></h3>
 <p><strong>Mo</strong> : Dato o valor que más se repite. Es utilizada como medida de tendencia central en variables cualitativas o o en cuantitativas discretas con pocos valores. En una tabla o gráfico se puede distinguir fácilmente.</p>
 <pre class="r"><code>#utilizando summarytools
 library(summarytools)
@@ -1167,6 +1169,8 @@ t1</code></pre>
 </ul>
 <p><img src="img/curtosis.png" width="500"></p>
 <p><br/> <br/></p>
+<pre class="r"><code>rapportools::kurtosis(bpe$promedio)</code></pre>
+<pre><code>[1] -0.9377956</code></pre>
 </div>
 <div id="asimetría-o-sesgo" class="section level3">
 <h3><strong>Asimetría o sesgo</strong></h3>
@@ -1182,6 +1186,8 @@ t1</code></pre>
 <li><strong>Simetrica</strong> : Poco con poco, poco con mucho, mucho al rededor de un centro</li>
 <li><strong>Asimetria positiva</strong> : Mucho con poco, poco con mucho</li>
 </ul>
+<pre class="r"><code>rapportools::skewness(bpe$promedio)</code></pre>
+<pre><code>[1] -0.385614</code></pre>
 <pre class="r"><code>summarytools::descr(bpe$promedio)</code></pre>
 <pre><code>Descriptive Statistics  
 value  
@@ -1227,10 +1233,10 @@ N: 32
           N.Valid    32.00
         Pct.Valid   100.00</code></pre>
 <pre class="r"><code>d1=density(bpe$promedio, na.rm=TRUE); plot(d1)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
 <pre class="r"><code>data(&quot;mtcars&quot;)
 d2=density(mtcars$mpg); plot(d2)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <p><br/> <br/></p>
 </div>
 </div>
@@ -1338,12 +1344,12 @@ d2=density(mtcars$mpg); plot(d2)</code></pre>
 <tr class="odd">
 <td align="left">coeficiente de curtosis</td>
 <td align="left"><span class="math inline">\(\displaystyle\dfrac{Q_{3}-Q_{1}}{P_{90}-P_{10}}\)</span></td>
-<td align="left"></td>
+<td align="left"><code>rapportools::kurtosis(bpe$promedio)</code></td>
 </tr>
 <tr class="even">
 <td align="left">coeficiente de asimetría</td>
 <td align="left"><span class="math inline">\(\displaystyle\dfrac{3(\bar{x}-Me)}{s}\)</span></td>
-<td align="left"></td>
+<td align="left"><code>rapportools::skewness(bpe$promedio)</code></td>
 </tr>
 <tr class="odd">
 <td align="left">percentil 25</td>

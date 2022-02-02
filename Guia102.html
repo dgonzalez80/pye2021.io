@@ -1363,7 +1363,7 @@ d2=density(mtcars$mpg); plot(d2)</code></pre>
 <tr class="even">
 <td align="left">rango intercuartílico</td>
 <td align="left"><span class="math inline">\(Q_{3}-Q_{1}\)</span></td>
-<td align="left">``</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1374,23 +1374,6 @@ d2=density(mtcars$mpg); plot(d2)</code></pre>
 <div id="nivel-de-ansiedad" class="section level3">
 <h3><strong>Nivel de ansiedad</strong></h3>
 <p>Los siguientes datos corresponden al <strong>nivel de ansiedad</strong> de un grupo de estudiantes de la universidad valorada antes de la presentación del primer examen parcial. El investigador a cargo del proyecto utilizó una prueba para medir el nivel de ansiedad que permite puntajes entre 0 y 100. Los valores inferiores a 50 puntos se consideran como nivel bajo . Entre 50 y 80 , nivel medio y superiores a 80 se consideran altos.</p>
-<p>Los resultados obtenidos se presenta a continuación :</p>
-<pre class="r"><code>nivans=c(28,33,34,36,38,38,41,41,45,45,46,46,47,47,48,48,49,50,51,51,51,52,53,53,
-         53,54,54,54,55,55,55,56,56,56,57,57,58,60,61,61,61,62,63,64,64,65,65,65,
-         65,65,66,67,67,68,68,68,69,69,69,70,70,71,74,77,77,78,79,79,80,82,85,89,
-         90,96,58,90,77,71,41,55,53,65,57,56,68,56,50,36,70,57,41,62,48,67,33,52,
-         65,67,79,55,34,46,55,56,47,69,61,54,74,47,64,79,85,61,28,46,65,51,49,45,
-         78,96,68,38,77,34,69,69,38,65,63,68,48,53,82,61,51,45,66,65,64,70,89,51,
-         54,53,80,54,60)</code></pre>
-<p><br/><br/></p>
-</div>
-<div id="tablas-de-frecuencia-1" class="section level3">
-<h3>Tablas de frecuencia</h3>
-<ul>
-<li><p>Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos</p></li>
-<li><p>Cálculos las estadísticas descriptivas del nivel de ansiedad y describa los resultados en un párrafo</p></li>
-</ul>
-<p><br/><br/></p>
 <p>Otra variable importante en el análisis corresponde a la <strong>facultad</strong> a la que pertence el estudiante</p>
 <ol style="list-style-type: decimal">
 <li>Facultad de Ingeniería y Ciencias</li>
@@ -1398,15 +1381,123 @@ d2=density(mtcars$mpg); plot(d2)</code></pre>
 <li>Facultad de Humanidades</li>
 <li>Facultad de Salud</li>
 </ol>
-<pre class="r"><code>fac=c(2,1,2,2,4,3,4,2,4,2,4,1,1,1,1,1,1,2,3,3,3,3,1,2,1,2,2,1,1,2,3,2,3,2,2,3,3,
+<p>Los resultados obtenidos se presenta a continuación :</p>
+<pre class="r"><code>nivans=c(28,33,34,36,38,38,41,41,45,45,46,46,47,47,48,48,49,50,51,51,51,52,53,53,
+         53,54,54,54,55,55,55,56,56,56,57,57,58,60,61,61,61,62,63,64,64,65,65,65,
+         65,65,66,67,67,68,68,68,69,69,69,70,70,71,74,77,77,78,79,79,80,82,85,89,
+         90,96,58,90,77,71,41,55,53,65,57,56,68,56,50,36,70,57,41,62,48,67,33,52,
+         65,67,79,55,34,46,55,56,47,69,61,54,74,47,64,79,85,61,28,46,65,51,49,45,
+         78,96,68,38,77,34,69,69,38,65,63,68,48,53,82,61,51,45,66,65,64,70,89,51,
+         54,53,80,54,60,53)
+
+fac=c(2,1,2,2,4,3,4,2,4,2,4,1,1,1,1,1,1,2,3,3,3,3,1,2,1,2,2,1,1,2,3,2,3,2,2,3,3,
       1,1,1,2,1,2,2,2,3,1,1,3,1,4,3,1,3,2,1,2,3,4,3,2,3,4,4,1,3,4,4,2,2,1,4,2,1,
       2,4,1,1,1,3,4,1,1,1,1,1,3,3,3,3,1,1,1,2,2,1,3,1,1,1,3,2,2,2,2,1,2,2,1,3,2,
       1,2,2,2,4,2,1,3,4,1,1,3,1,2,2,2,1,3,3,1,1,2,2,3,3,3,1,4,3,1,2,4,2,2,1,2,3,
-      2,2)</code></pre>
+      2,2)
+
+data=data.frame(fac, nivans) # forma base de datos </code></pre>
+<p><br/><br/></p>
+</div>
+<div id="tablas-de-frecuencia-1" class="section level3">
+<h3>Tablas de frecuencia</h3>
 <ul>
-<li>Construya una tabla de frecuencias e interprete los resultados</li>
-<li>Construya una tabla de frecuencias para el nivel de ansiedad por facultad</li>
+<li>Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos.</li>
 </ul>
+<p><strong>Primera forma</strong> : Utilizando el paquete <code>agricolae</code></p>
+<pre class="r"><code>library(agricolae)
+h2=with(data,graph.freq(nivans,plot=FALSE))
+t2=table.freq(h2);
+colnames(t2) = c(&quot;  LI  &quot;, &quot;  LS  &quot;, &quot;marca clase&#39;&quot;, &quot;Frec.Abs&quot;,&quot;Frec.Rel&quot;, &quot;Frec.Abs.Ac&quot;,&quot;Frec.Rel.Ac&quot;)
+t2</code></pre>
+<pre><code>    LI     LS   marca clase&#39; Frec.Abs Frec.Rel Frec.Abs.Ac Frec.Rel.Ac
+1   28.0   36.5        32.25        9      6.0           9         6.0
+2   36.5   45.0        40.75        8      5.3          17        11.3
+3   45.0   53.5        49.25       35     23.3          52        34.7
+4   53.5   62.0        57.75       32     21.3          84        56.0
+5   62.0   70.5        66.25       40     26.7         124        82.7
+6   70.5   79.0        74.75       10      6.7         134        89.3
+7   79.0   87.5        83.25       10      6.7         144        96.0
+8   87.5   96.0        91.75        6      4.0         150       100.0</code></pre>
+<p><strong>Segunda forma</strong> : utilizando la función <code>hist</code></p>
+<pre class="r"><code>h=hist(data$nivans, breaks = c(20,29.99,39.99,49.99,59.99,69.99,79.99,89.99,100), plot=FALSE)
+LI=round(h$breaks[1:8],0) 
+LS=round(h$breaks[2:9],0) 
+ni=h$counts
+hi=h$counts/150
+Ni=cumsum(h$counts)
+Hi=Ni/150
+
+t=data.frame(LI,LS,ni,hi,Ni,Hi)
+t</code></pre>
+<pre><code>  LI  LS ni         hi  Ni         Hi
+1 20  30  2 0.01333333   2 0.01333333
+2 30  40 11 0.07333333  13 0.08666667
+3 40  50 22 0.14666667  35 0.23333333
+4 50  60 41 0.27333333  76 0.50666667
+5 60  70 44 0.29333333 120 0.80000000
+6 70  80 18 0.12000000 138 0.92000000
+7 80  90  8 0.05333333 146 0.97333333
+8 90 100  4 0.02666667 150 1.00000000</code></pre>
+<p><strong>Tercera forma</strong> : utilizando la funciones : <code>cut</code> y <code>cbind</code></p>
+<pre class="r"><code>nivans1=cut(data$nivans, breaks = c(20,29.99,39.99,49.99,59.99,69.99,79.99,89.99,100))
+t2=table(nivans1)
+t2=cbind(t2, t2/sum(t2),cumsum(t2), cumsum(t2)/sum(t2))
+colnames(t2)=c(&quot;n&quot;,&quot;h&quot;,&quot;N&quot;,&quot;H&quot;)
+t2</code></pre>
+<pre><code>          n          h   N          H
+(20,30]   2 0.01333333   2 0.01333333
+(30,40]  11 0.07333333  13 0.08666667
+(40,50]  22 0.14666667  35 0.23333333
+(50,60]  41 0.27333333  76 0.50666667
+(60,70]  44 0.29333333 120 0.80000000
+(70,80]  18 0.12000000 138 0.92000000
+(80,90]   8 0.05333333 146 0.97333333
+(90,100]  4 0.02666667 150 1.00000000</code></pre>
+<ul>
+<li>Cálculos las estadísticas descriptivas del nivel de ansiedad y describa los resultados en un párrafo</li>
+</ul>
+<pre class="r"><code>summarytools::descr(data$nivans)</code></pre>
+<pre><code>Descriptive Statistics  
+value  
+N: 150  
+
+                     value
+----------------- --------
+             Mean    59.51
+          Std.Dev    14.13
+              Min    28.00
+               Q1    51.00
+           Median    58.00
+               Q3    68.00
+              Max    96.00
+              MAD    14.08
+              IQR    17.00
+               CV     0.24
+         Skewness     0.19
+      SE.Skewness     0.20
+         Kurtosis    -0.20
+          N.Valid   150.00
+        Pct.Valid   100.00</code></pre>
+<p>El grupo observado corresponde a un total de 150 estudiantes de las cuatro facultades de la universidad (aun no estaba la Facultad de Habitat) y presentan un valor promedio de 9.5 puntos que corresponde a un nivel medio. Su coeficiente de variación (24%) muestra un poco de heterogeneidad en los valores alcanzados por los estudiantes, mientras que su forma se aproxima a una distribución simétrica</p>
+<p><br/><br/></p>
+<p>Tabla de frecuencias para variables cualitativas utilizando del paquete <code>summarytools</code> la función <code>freq</code></p>
+<pre class="r"><code>data$fac[data$fac==1]=&quot;Facultad de Ingeniería y Ciencias&quot;
+data$fac[data$fac==2]=&quot;Facultad de Ciencias Económicas y Administrativas&quot;
+data$fac[data$fac==3]=&quot;Facultad de Humanidades&quot;
+data$fac[data$fac==4]=&quot;Facultad de Salud&quot;
+summarytools::freq(data$fac, cumul = FALSE)</code></pre>
+<pre><code>Frequencies  
+
+                                                          Freq   % Valid   % Total
+------------------------------------------------------- ------ --------- ---------
+      Facultad de Ciencias Económicas y Administrativas     48     32.00     32.00
+                                Facultad de Humanidades     34     22.67     22.67
+                      Facultad de Ingeniería y Ciencias     51     34.00     34.00
+                                      Facultad de Salud     17     11.33     11.33
+                                                   &lt;NA&gt;      0                0.00
+                                                  Total    150    100.00    100.00</code></pre>
+<p>Los reultados indican una mayor proporción de estudiantes de la Facultad de Ingenieria y Ciencias (34%), mientras que la Facultad de Salud la menor (11.3%)</p>
 <p><br/><br/></p>
 <p><img src="img/person-1245959_1920.jpg" width="1000"></p>
 </div>

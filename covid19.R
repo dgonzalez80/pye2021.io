@@ -3,7 +3,7 @@ library(RSocrata)    # llamado de libreria
 library(tidyverse)   # libreria de librerias util en el manejo de datos
 token <- "zxMsD6eXc0zlEMryRGW87Hwrz"  # token
 Colombia <- read.socrata("https://www.datos.gov.co/resource/gt2j-8ykr.json", app_token = token) # lectura 
-saveRDS(Colombia, file = "data/Colombia.RDS") 
+
 
 Colombia<- readRDS("data/Colombia.RDS")
 Colombia$edad=as.integer(Colombia$edad)
@@ -12,14 +12,27 @@ Colombia$estado=str_to_lower(Colombia$estado)
 Colombia$estado[Colombia$estado=="n/a"]=NA
 Colombia$recuperado=str_to_lower(Colombia$recuperado)
 Colombia$recuperado[Colombia$recuperado=="n/a"]=NA
-
-
-
 Colombia22=subset(Colombia, Colombia$fecha_reporte_web>="2022-01-01")
+Colombia21=subset(Colombia, Colombia$fecha_reporte_web>="2021-01-01" & Colombia$fecha_reporte_web<"2022-01-01")
+Colombia20=subset(Colombia, Colombia$fecha_reporte_web>="2020-01-01" & Colombia$fecha_reporte_web<"2021-01-01")
 
 table(Colombia22$estado)
+table(Colombia21$estado)
+table(Colombia20$estado)
+
+
+
+
 summarytools::freq(Colombia22$estado, cumul = F)
+summarytools::freq(Colombia21$estado, cumul = F)
+summarytools::freq(Colombia20$estado, cumul = F)
+
 
 summarytools::descr(Colombia22$edad)
+
+saveRDS(Colombia, file = "data/Colombia.RDS") 
+saveRDS(Colombia22, file = "data/Colombia22.RDS") 
+saveRDS(Colombia21, file = "data/Colombia21.RDS") 
+saveRDS(Colombia21, file = "data/Colombia20.RDS") 
 
 

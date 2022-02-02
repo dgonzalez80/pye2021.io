@@ -699,7 +699,7 @@ d2=density(mtcars$mpg); plot(d2)
 |percentil 25            |$X_{n \times 0.25}$                    |`quantile(x,0.25)`             |
 |percentil 50            |$X_{n \times 0.50}$                    |`quantile(x,0.50)`             |
 |percentil 75            |$X_{n \times 0.75}$                    |`quantile(x,0.75)`             |
-|rango intercuartílico   |$Q_{3}-Q_{1}$                          |``                             |
+|rango intercuartílico   |$Q_{3}-Q_{1}$                          |                          |
 
 
 
@@ -712,6 +712,14 @@ d2=density(mtcars$mpg); plot(d2)
 
 Los siguientes datos corresponden al **nivel de ansiedad** de un grupo de estudiantes de la universidad valorada antes de la presentación del primer examen parcial. El investigador a cargo del proyecto utilizó una prueba para medir el nivel de ansiedad que permite puntajes entre 0 y 100. Los valores inferiores a 50 puntos se consideran como nivel bajo . Entre 50 y 80 , nivel medio y superiores a 80 se consideran altos.
 
+Otra variable importante en el análisis corresponde a la **facultad** a la que pertence el estudiante
+
+1. Facultad de Ingeniería y Ciencias
+2. Facultad de Ciencias Económicas y Administrativas
+3. Facultad de Humanidades
+4. Facultad de Salud
+
+
 Los resultados obtenidos se presenta a continuación :
 
 ```{r nivel, exercise=TRUE}
@@ -721,40 +729,85 @@ nivans=c(28,33,34,36,38,38,41,41,45,45,46,46,47,47,48,48,49,50,51,51,51,52,53,53
          90,96,58,90,77,71,41,55,53,65,57,56,68,56,50,36,70,57,41,62,48,67,33,52,
          65,67,79,55,34,46,55,56,47,69,61,54,74,47,64,79,85,61,28,46,65,51,49,45,
          78,96,68,38,77,34,69,69,38,65,63,68,48,53,82,61,51,45,66,65,64,70,89,51,
-         54,53,80,54,60)
+         54,53,80,54,60,53)
 
-```
-
-<br/><br/>
-
-### Tablas de frecuencia
-
-+ Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos
-
-+ Cálculos las estadísticas descriptivas del nivel de ansiedad y describa los resultados en un párrafo
-
-
-<br/><br/>
-
-Otra variable importante en el análisis corresponde a la **facultad** a la que pertence el estudiante
-
-1. Facultad de Ingeniería y Ciencias
-2. Facultad de Ciencias Económicas y Administrativas
-3. Facultad de Humanidades
-4. Facultad de Salud
-
-
-```{r facultad, exercise=TRUE }
 fac=c(2,1,2,2,4,3,4,2,4,2,4,1,1,1,1,1,1,2,3,3,3,3,1,2,1,2,2,1,1,2,3,2,3,2,2,3,3,
       1,1,1,2,1,2,2,2,3,1,1,3,1,4,3,1,3,2,1,2,3,4,3,2,3,4,4,1,3,4,4,2,2,1,4,2,1,
       2,4,1,1,1,3,4,1,1,1,1,1,3,3,3,3,1,1,1,2,2,1,3,1,1,1,3,2,2,2,2,1,2,2,1,3,2,
       1,2,2,2,4,2,1,3,4,1,1,3,1,2,2,2,1,3,3,1,1,2,2,3,3,3,1,4,3,1,2,4,2,2,1,2,3,
       2,2)
+
+data=data.frame(fac, nivans) # forma base de datos 
 ```
 
 
-+ Construya una tabla de frecuencias e interprete los resultados
-+ Construya una tabla de frecuencias para el nivel de ansiedad por facultad 
+<br/><br/>
+
+### Tablas de frecuencia
+
++ Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos.
+
+**Primera forma** : Utilizando el paquete  `agricolae` 
+
+```{r}
+library(agricolae)
+h2=with(data,graph.freq(nivans,plot=FALSE))
+t2=table.freq(h2);
+colnames(t2) = c("  LI  ", "  LS  ", "marca clase'", "Frec.Abs","Frec.Rel", "Frec.Abs.Ac","Frec.Rel.Ac")
+t2
+```
+
+**Segunda forma** : utilizando la función `hist`
+
+```{r}
+h=hist(data$nivans, breaks = c(20,29.99,39.99,49.99,59.99,69.99,79.99,89.99,100), plot=FALSE)
+LI=round(h$breaks[1:8],0) 
+LS=round(h$breaks[2:9],0) 
+ni=h$counts
+hi=h$counts/150
+Ni=cumsum(h$counts)
+Hi=Ni/150
+
+t=data.frame(LI,LS,ni,hi,Ni,Hi)
+t
+```
+
+**Tercera forma** : utilizando la funciones :  `cut` y `cbind`
+
+```{r}
+nivans1=cut(data$nivans, breaks = c(20,29.99,39.99,49.99,59.99,69.99,79.99,89.99,100))
+t2=table(nivans1)
+t2=cbind(t2, t2/sum(t2),cumsum(t2), cumsum(t2)/sum(t2))
+colnames(t2)=c("n","h","N","H")
+t2
+```
+
+
+
+
++ Cálculos las estadísticas descriptivas del nivel de ansiedad y describa los resultados en un párrafo
+
+```{r}
+summarytools::descr(data$nivans)
+```
+El grupo observado corresponde a un total de 150 estudiantes de las cuatro facultades de la universidad (aun no estaba la Facultad de Habitat) y presentan un valor promedio de 9.5 puntos que corresponde a un nivel medio. Su coeficiente de variación (24%) muestra un poco de heterogeneidad en los valores alcanzados por los estudiantes, mientras que su forma se aproxima a una distribución simétrica
+
+<br/><br/>
+
+
+Tabla de frecuencias para variables cualitativas  utilizando del paquete `summarytools` la función `freq`
+
+```{r facultad, exercise=TRUE }
+data$fac[data$fac==1]="Facultad de Ingeniería y Ciencias"
+data$fac[data$fac==2]="Facultad de Ciencias Económicas y Administrativas"
+data$fac[data$fac==3]="Facultad de Humanidades"
+data$fac[data$fac==4]="Facultad de Salud"
+summarytools::freq(data$fac, cumul = FALSE)
+
+```
+
+Los reultados indican una mayor proporción de estudiantes de la Facultad de Ingenieria y Ciencias (34%), mientras que la Facultad de Salud la menor (11.3%)
+
 
 
 <br/><br/>

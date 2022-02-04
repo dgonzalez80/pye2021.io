@@ -438,7 +438,7 @@ https://plotly-r.com/
 [R flexdashboard - implementaciòn](https://geoprocesamiento-2020i.github.io/tutorial-flexdashboard/)
 
 
-background-image: url("img/pujcali.jpeg")
+![](img/pujcali.jpeg)
 
 Una imagen dice mas que mil palabras... 
 

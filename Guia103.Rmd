@@ -363,9 +363,9 @@ ggplot(clasificacion, aes(x=off , y=def))+  geom_point()+  facet_wrap(~ confed)+
 ---
 ```{r, fig.height=5}
 library(ggplot2)
-data=data.frame(grupo=c("BIO","CIV","SIS","ELE","MEC"),frecuencia=c(13,13,18,8,15))
+data=data.frame(carrera=c("BIO","CIV","SIS","ELE","MEC"),frecuencia=c(13,13,18,8,15))
 
-ggplot(data, aes(x=grupo, y=frecuencia)) +
+ggplot(data, aes(x=carrera, y=frecuencia)) +
   geom_bar(stat="identity", fill="steelblue")+
   geom_text(aes(label=frecuencia), vjust=2.6, color="white", size=3.5)+
   theme_minimal()
@@ -398,8 +398,7 @@ ggplot(bpe, aes(x=promedio, y=grup)) +
   geom_boxplot(fill="#313ae8",              # color de relleno
                color="#bf6f2e",             # color de lineas
                alpha=0.5)+
-  geom_point(color="#b431e8",alpha=0.9) 
-# Colour picker
+  geom_point(color="#b431e8",alpha=0.9)     # color puntos
 ```
 
 [Anàlisis de datos con R Cap,7 ggplot2](https://rafalab.github.io/dslibro/ggplot2.html)<br/>

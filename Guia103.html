@@ -899,9 +899,9 @@ ggplot(clasificacion, aes(x=off , y=def))</code></pre>
 <p><img src="Guia103_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <hr />
 <pre class="r"><code>library(ggplot2)
-data=data.frame(grupo=c(&quot;BIO&quot;,&quot;CIV&quot;,&quot;SIS&quot;,&quot;ELE&quot;,&quot;MEC&quot;),frecuencia=c(13,13,18,8,15))
+data=data.frame(carrera=c(&quot;BIO&quot;,&quot;CIV&quot;,&quot;SIS&quot;,&quot;ELE&quot;,&quot;MEC&quot;),frecuencia=c(13,13,18,8,15))
 
-ggplot(data, aes(x=grupo, y=frecuencia)) +
+ggplot(data, aes(x=carrera, y=frecuencia)) +
   geom_bar(stat=&quot;identity&quot;, fill=&quot;steelblue&quot;)+
   geom_text(aes(label=frecuencia), vjust=2.6, color=&quot;white&quot;, size=3.5)+
   theme_minimal()</code></pre>
@@ -921,9 +921,8 @@ ggplot(bpe, aes(x=promedio, y=grup)) +
   geom_boxplot(fill=&quot;#313ae8&quot;,              # color de relleno
                color=&quot;#bf6f2e&quot;,             # color de lineas
                alpha=0.5)+
-  geom_point(color=&quot;#b431e8&quot;,alpha=0.9) </code></pre>
+  geom_point(color=&quot;#b431e8&quot;,alpha=0.9)     # color puntos</code></pre>
 <p><img src="Guia103_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
-<pre class="r"><code># Colour picker</code></pre>
 <p><a href="https://rafalab.github.io/dslibro/ggplot2.html">Anàlisis de datos con R Cap,7 ggplot2</a><br/> <a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot2 resumen</a></p>
 </div>
 <div id="graficos-con-highcharter" class="section level2">

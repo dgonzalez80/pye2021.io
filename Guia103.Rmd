@@ -16,6 +16,9 @@ knitr::opts_chunk$set(echo = TRUE,comment = NA)
 library(readr)
 library(readxl)
 library(rapportools) # miselania de estadisticas
+library(gapminder)
+library(gganimate)
+
 bpe=read_delim("data/bpye20221.csv",delim = ";", escape_double = FALSE, trim_ws = TRUE)
 bpe=bpe[,c(1,2,4,5)]
 
@@ -56,7 +59,7 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER los
 
 ## **Duración**
 
-La presente  unidad será desarrollada durante la  tercera semana del semestre ( 7 al 13 de febrero ). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Miércoles y Viernes) y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  miércoles 16 de febrero.
+La presente  unidad será desarrollada durante la  tercera semana del semestre ( 7 al 16 de febrero ). Ademas del material suministrado  contaran con el acompañamiento del profesor en tres sesiones (Miércoles y Viernes) y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el  miércoles 16 de febrero.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades
 
@@ -73,7 +76,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 ||[Dashboard en R](https://pkgs.rstudio.com/flexdashboard/)
 ||[Resumen ggplot2](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)|
 ||[Resumen RMarkdown](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)|
-|Fecha  | 16 de agosto de 2022 |
+|Fecha  | 16 de febrero de 2022 |
 |Hora   | 23:59 hora local |
 
 |Actividad106   | Descripción                    | 
@@ -81,7 +84,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Trabajo individual |  Construya un **mapa mental** del *Módulo 1*   a mano  que resuma los conceptos más importantes del Modulo 1. genere un archivo pdf para entregarlo en  Bs|
 |	Recurso    |[Capitulo 1](https://github.com/dgonzalez80/presentacionespye.io/blob/main/pdf/Capitulo1.pdf), web del curso, 
 || Presentaciones y videos clases |
-|Fecha  | 16 de agosto  de 2022 |
+|Fecha  | 16 de febrero  de 2022 |
 |Hora   | 23:59 hora local |
 
 <br/><br/>
@@ -393,13 +396,30 @@ ggplot(iris, aes(Sepal.Length)) +
 
 
 ```{r, message=FALSE, warning=FALSE, fig.height=4}
-library(ggplot2)
 ggplot(bpe, aes(x=promedio, y=grup)) +
   geom_boxplot(fill="#313ae8",              # color de relleno
                color="#bf6f2e",             # color de lineas
                alpha=0.5)+
   geom_point(color="#b431e8",alpha=0.9)     # color puntos
 ```
+
+## **Gráficos con gganimate**
+
+```{r, eval=FALSE}
+ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(~continent) +
+  # especificación del la transición animada - gganimate
+  labs(title = 'AñoYear: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')
+```
+
+https://gganimate.com/
+
 
 [Anàlisis de datos con R Cap,7 ggplot2](https://rafalab.github.io/dslibro/ggplot2.html)<br/>
 [ggplot2 resumen](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)

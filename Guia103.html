@@ -513,7 +513,7 @@ div.tocify {
 </div>
 <div id="duración" class="section level2">
 <h2><strong>Duración</strong></h2>
-<p>La presente unidad será desarrollada durante la tercera semana del semestre ( 7 al 13 de febrero ). Ademas del material suministrado contaran con el acompañamiento del profesor en tres sesiones (Miércoles y Viernes) y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el miércoles 16 de febrero.</p>
+<p>La presente unidad será desarrollada durante la tercera semana del semestre ( 7 al 16 de febrero ). Ademas del material suministrado contaran con el acompañamiento del profesor en tres sesiones (Miércoles y Viernes) y de manera asincrónica. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el miércoles 16 de febrero.</p>
 <p>Para alcanzar los objetivos planteados se propone realizar las siguientes actividades</p>
 <p><br/><br/></p>
 </div>
@@ -557,7 +557,7 @@ div.tocify {
 </tr>
 <tr class="odd">
 <td align="left">Fecha</td>
-<td align="left">16 de agosto de 2022</td>
+<td align="left">16 de febrero de 2022</td>
 </tr>
 <tr class="even">
 <td align="left">Hora</td>
@@ -591,7 +591,7 @@ div.tocify {
 </tr>
 <tr class="even">
 <td align="left">Fecha</td>
-<td align="left">16 de agosto de 2022</td>
+<td align="left">16 de febrero de 2022</td>
 </tr>
 <tr class="odd">
 <td align="left">Hora</td>
@@ -916,13 +916,26 @@ ggplot(mtcars, aes(x=mpg, y=wt, colour = cyl)) +
        labs(x = &quot;cm&quot;, y = &quot;frecuencia absoluta&quot;) +
        ggtitle(&quot;Longitud del sepalo&quot;)</code></pre>
 <p><img src="Guia103_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-<pre class="r"><code>library(ggplot2)
-ggplot(bpe, aes(x=promedio, y=grup)) +
+<pre class="r"><code>ggplot(bpe, aes(x=promedio, y=grup)) +
   geom_boxplot(fill=&quot;#313ae8&quot;,              # color de relleno
                color=&quot;#bf6f2e&quot;,             # color de lineas
                alpha=0.5)+
   geom_point(color=&quot;#b431e8&quot;,alpha=0.9)     # color puntos</code></pre>
 <p><img src="Guia103_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+</div>
+<div id="gráficos-con-gganimate" class="section level2">
+<h2><strong>Gráficos con gganimate</strong></h2>
+<pre class="r"><code>ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(~continent) +
+  # especificación del la transición animada - gganimate
+  labs(title = &#39;AñoYear: {frame_time}&#39;, x = &#39;GDP per capita&#39;, y = &#39;life expectancy&#39;) +
+  transition_time(year) +
+  ease_aes(&#39;linear&#39;)</code></pre>
+<p><a href="https://gganimate.com/" class="uri">https://gganimate.com/</a></p>
 <p><a href="https://rafalab.github.io/dslibro/ggplot2.html">Anàlisis de datos con R Cap,7 ggplot2</a><br/> <a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot2 resumen</a></p>
 </div>
 <div id="graficos-con-highcharter" class="section level2">

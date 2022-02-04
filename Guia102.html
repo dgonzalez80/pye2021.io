@@ -463,6 +463,18 @@ div.tocify {
     </li>
   </ul>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Monitoria
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="monitoria1.html">monitoria1</a>
+    </li>
+  </ul>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -772,10 +784,10 @@ data.frame(table(bpe$carrera))</code></pre>
 5    Ingeniería Mecánica   15</code></pre>
 <p><br/> <br/></p>
 <pre class="r"><code>#utilizando summarytools
-library(summarytools)
-t1=freq(bpe$carrera, cumul = FALSE, headings = FALSE)
-t1</code></pre>
-<pre><code>
+carrera=as.factor(bpe$carrera)
+summarytools::freq(carrera, cumul = FALSE)</code></pre>
+<pre><code>Frequencies  
+
                                Freq   % Valid   % Total
 ---------------------------- ------ --------- ---------
                     Biología     13     19.40     19.40
@@ -812,8 +824,7 @@ t1</code></pre>
   44 | 0224680233
   46 | 25</code></pre>
 <p>Una forma de construir una tabla de freciencias por intervalos es utilizando la funcion <code>graph.freq</code> del paquete agricolae</p>
-<pre class="r"><code>library(agricolae)
-h2=with(bpe,graph.freq(promedio,plot=FALSE));t2=table.freq(h2);
+<pre class="r"><code>h2=with(bpe,graph.freq(promedio,plot=FALSE));t2=table.freq(h2);
 colnames(t2) = c(&quot;  LI  &quot;, &quot;  LS  &quot;, &quot;marca clase&#39;&quot;, &quot;Frec.Abs&quot;,&quot;Frec.Rel&quot;, &quot;Frec.Abs.Ac&quot;,&quot;Frec.Rel.Ac&quot;)
 t2</code></pre>
 <pre><code>    LI     LS   marca clase&#39; Frec.Abs Frec.Rel Frec.Abs.Ac Frec.Rel.Ac
@@ -826,10 +837,8 @@ t2</code></pre>
 7    4.5    4.7          4.6        6      9.0          67       100.0</code></pre>
 <p>Frec.Abs : Frecuencia absoluta <br/> Frec.Rel : Frecuencia relativa <br/><br/> Frec.Abs.Ac : Frecuencia Absoluta Acumuada <br/> Frec.Rel.Ac : Frecuencia Relativa Acumulada</p>
 <p><br/> <br/></p>
-<pre class="r"><code>library(stringr)
-data(&quot;iris&quot;)
-t1=freq(iris$Species, cumul = FALSE, headings = FALSE)
-t1</code></pre>
+<pre class="r"><code>data(&quot;iris&quot;)
+summarytools::freq(iris$Species, cumul = FALSE, headings = FALSE)</code></pre>
 <pre><code>
                    Freq   % Valid   % Total
 ---------------- ------ --------- ---------
@@ -858,8 +867,7 @@ t1</code></pre>
 <div id="diagrama-de-cajas" class="section level3">
 <h3><strong>Diagrama de cajas</strong></h3>
 <p><br/></p>
-<pre class="r"><code>library(ggplot2)
-ggplot(bpe, aes(x=promedio))+geom_boxplot()</code></pre>
+<pre class="r"><code>ggplot(bpe, aes(x=promedio))+geom_boxplot()</code></pre>
 <p><img src="Guia102_files/figure-html/unnamed-chunk-7-1.png" width="1027.2" /></p>
 <p><br/></p>
 <p>atípico | <span class="math inline">\(LI=Q_{1}- 1.5(Q_{3}-Q_{1})\)</span> | <span class="math inline">\(Q_{1}\)</span> | <span class="math inline">\(Q_{2}\)</span> | <span class="math inline">\(Q_{3}\)</span> | <span class="math inline">\(LS=Q_{3}+ 1.5(Q_{3}-Q_{1})\)</span> | atípico</p>
@@ -975,7 +983,8 @@ x</code></pre>
 <pre><code>media : 5.5</code></pre>
 <p><br/> <br/></p>
 <p><strong>Ejemplo 4</strong></p>
-<pre class="r"><code>x[10]=20
+<pre class="r"><code>x=1:10
+x[10]=20
 x</code></pre>
 <pre><code> [1]  1  2  3  4  5  6  7  8  9 20</code></pre>
 <pre class="r"><code>cat(&quot;media :&quot; ,mean(x))</code></pre>
@@ -1012,9 +1021,7 @@ x</code></pre>
 <h3><strong>Moda</strong></h3>
 <p><strong>Mo</strong> : Dato o valor que más se repite. Es utilizada como medida de tendencia central en variables cualitativas o o en cuantitativas discretas con pocos valores. En una tabla o gráfico se puede distinguir fácilmente.</p>
 <pre class="r"><code>#utilizando summarytools
-library(summarytools)
-t1=freq(bpe$carrera, cumul = FALSE, headings = FALSE)
-t1</code></pre>
+summarytools::freq(bpe$carrera, cumul = FALSE, headings = FALSE)</code></pre>
 <pre><code>
                                Freq   % Valid   % Total
 ---------------------------- ------ --------- ---------
@@ -1411,8 +1418,7 @@ data=data.frame(fac, nivans) # forma base de datos </code></pre>
 <li>Construya una tabla de frecuencia que le permita establecer las frecuencias en cada uno de los rangos descritos y analice los resultados obtenidos.</li>
 </ul>
 <p><strong>Primera forma</strong> : Utilizando el paquete <code>agricolae</code></p>
-<pre class="r"><code>library(agricolae)
-h2=with(data,graph.freq(nivans,plot=FALSE))
+<pre class="r"><code>h2=with(data,graph.freq(nivans,plot=FALSE))
 t2=table.freq(h2);
 colnames(t2) = c(&quot;  LI  &quot;, &quot;  LS  &quot;, &quot;marca clase&#39;&quot;, &quot;Frec.Abs&quot;,&quot;Frec.Rel&quot;, &quot;Frec.Abs.Ac&quot;,&quot;Frec.Rel.Ac&quot;)
 t2</code></pre>

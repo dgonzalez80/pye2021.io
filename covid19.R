@@ -35,4 +35,5 @@ saveRDS(Colombia22, file = "data/Colombia22.RDS")
 saveRDS(Colombia21, file = "data/Colombia21.RDS") 
 saveRDS(Colombia21, file = "data/Colombia20.RDS") 
 
-
+Colombiam=subset(Colombia, Colombia$sexo=="f")
+Vallem=subset(Colombiam, departamento=="76")

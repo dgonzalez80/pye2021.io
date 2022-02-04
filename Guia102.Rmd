@@ -16,6 +16,12 @@ knitr::opts_chunk$set(echo = TRUE,comment = NA)
 library(readr)
 library(readxl)
 library(rapportools) # miselania de estadisticas
+library(summarytools)
+library(agricolae)
+library(stringr)
+library(ggplot2)
+library(agricolae)
+
 bpe=read_delim("data/bpye20221.csv",delim = ";", escape_double = FALSE, trim_ws = TRUE)
 bpe=bpe[,c(1,2,4,5)]
 
@@ -216,11 +222,10 @@ data.frame(table(bpe$carrera))
  
  <br/> <br/>
 
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 #utilizando summarytools
-library(summarytools)
-t1=freq(bpe$carrera, cumul = FALSE, headings = FALSE)
-t1
+carrera=as.factor(bpe$carrera)
+summarytools::freq(carrera, cumul = FALSE)
 ```
 
 Nota: paquete [summarytools](https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html) 
@@ -246,7 +251,6 @@ stem(bpe$promedio)
 Una forma de construir una tabla de freciencias por intervalos es utilizando la funcion `graph.freq` del paquete agricolae
 
 ```{r,  echo=TRUE, message=FALSE, warning=FALSE}
-library(agricolae)
 h2=with(bpe,graph.freq(promedio,plot=FALSE));t2=table.freq(h2);
 colnames(t2) = c("  LI  ", "  LS  ", "marca clase'", "Frec.Abs","Frec.Rel", "Frec.Abs.Ac","Frec.Rel.Ac")
 t2
@@ -259,10 +263,8 @@ Frec.Rel.Ac : Frecuencia Relativa Acumulada
  <br/> <br/>
 
 ```{r}
-library(stringr)
 data("iris")
-t1=freq(iris$Species, cumul = FALSE, headings = FALSE)
-t1
+summarytools::freq(iris$Species, cumul = FALSE, headings = FALSE)
 ```
 
  <br/> <br/> <br/>
@@ -298,10 +300,7 @@ Es un número que divide la muestra en dos partes. $x$ % de los datos de la mues
  <br/>
  
 ```{r, warning=FALSE, message=FALSE, fig.height=2, fig.width=10.7} 
-library(ggplot2)
 ggplot(bpe, aes(x=promedio))+geom_boxplot()
-
-
 ```
 
  <br/>
@@ -313,7 +312,7 @@ atípico | $LI=Q_{1}- 1.5(Q_{3}-Q_{1})$ | $Q_{1}$ | $Q_{2}$ | $Q_{3}$ | $LS=Q_{3
  
  Con ayuda del diagrama de tallos y hojas es posible ubicar los percentiles en un conjunto de datos
  
- ```{r}
+```{r}
 stem(bpe$promedio)
 ```
 
@@ -406,6 +405,7 @@ cat("media :",mean(x))
  **Ejemplo 4**
 
 ```{r}
+x=1:10
 x[10]=20
 x
 cat("media :" ,mean(x))
@@ -460,9 +460,7 @@ cat("media :" ,median(x))
 
 ```{r, message=FALSE}
 #utilizando summarytools
-library(summarytools)
-t1=freq(bpe$carrera, cumul = FALSE, headings = FALSE)
-t1
+summarytools::freq(bpe$carrera, cumul = FALSE, headings = FALSE)
 ```
 
 moda : **Ingeniería de Sistemas**
@@ -760,7 +758,6 @@ data=data.frame(fac, nivans) # forma base de datos
 **Primera forma** : Utilizando el paquete  `agricolae` 
 
 ```{r}
-library(agricolae)
 h2=with(data,graph.freq(nivans,plot=FALSE))
 t2=table.freq(h2);
 colnames(t2) = c("  LI  ", "  LS  ", "marca clase'", "Frec.Abs","Frec.Rel", "Frec.Abs.Ac","Frec.Rel.Ac")
@@ -819,11 +816,7 @@ summarytools::freq(data$fac, cumul = FALSE)
 Los reultados indican una mayor proporción de estudiantes de la Facultad de Ingenieria y Ciencias (34%), mientras que la Facultad de Salud la menor (11.3%)
 
 
-
 <br/><br/>
-
-
-
 
 <img src="img/person-1245959_1920.jpg" width="1000">
 

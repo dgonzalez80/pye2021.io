@@ -1,0 +1,132 @@
+---
+title: "**Monitoria 1**"
+author: "dgonzalez "
+subtitle: "Módulo 1" 
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+```
+
+<br/><br/>
+
+## **Problema 1**:
+
+Los pesos en libra de 54 paquetes de hamburguesas fueron obtenidos en el mostrador de un supermercado de cadena de la ciudad:
+
+```{r}
+peso=c(1.08,0.99,0.97,1.18,1.41,1.28,0.83,1.06,1.14,1.38,
+       0.75,0.96,1.08,0.87,0.89,0.89,0.96,1.12,1.12,0.97,
+       1.24,0.89,0.98,1.14,0.92,1.18,1.17,0.75,0.83,0.87,
+       0.86,0.89,0.89,0.92,0.93,0.96,0.96,0.97,0.98,0.99,
+       1.06,1.08,1.08,1.12,1.12,1.14,1.14,1.17,1.18,1.18,
+       1.24,1.28,1.38,1.41)
+
+stem(peso)
+```
+<br/><br/>
+
+```{r, eval=FALSE}
+sum(peso)
+sum((peso-mean(peso))^2)
+sum(peso^2)
+```
+
+<br/><br/>
+$\displaystyle\sum_{i=1}^{54}(x_{i}-\bar{x})=0$
+<br/>
+
+$\displaystyle\sum_{i=1}^{54}x_{i} =56.83$
+<br/>
+
+$\displaystyle\sum_{i=1}^{54}(x_{i}-\bar{x})^{2}=1.429387$
+<br/>
+
+$\displaystyle\sum_{i=1}^{54}x_{i}^2 = 61.2377$
+<br/><br/>
+
++ Construya un  diagrama de cajas y a partir de este resultado determine si su forma es simétrica
++ Se puede afirmar que existen datos atípicos?
++ Podría afirmarse que más del 20% de los paquetes tienen un peso superior a 1.11 libras?
++ Realice un breve descripción de la información obtenida
+
+(Tomado de Mendenhall 2006)
+
+<br/><br/><br/>
+
+## **Problema 2**:
+
+El puntaje alcanzado por estudiantes en un test para medir el razonamiento deductivo mediante una prueba de personalidad de Millon (MPIS) se presenta en la siguiente tabla:
+
+| Edad     |Marca de clase   |Frecuencia Absoluta |Frecuencia Relativa | Frec. Acum. Absoluta  |Frec. Acum. Relativa |
+:----------|:----------------|:------------------:|--------------------|-----------------------|:--------------------|
+|[0-10)    |                 | 3                  |                    |                       |                     |         
+|[10-20)   |                 | 6                  |                    |                       |                     |
+|[20-30)   |                 | 7                  |                    |                       |                     |
+|[30-40)   |                 | 12                 |                    |                       |                     |
+|[40-50)   |                 | 3                  |                    |                       |                     |
+A partir de la información responda los siguientes interrogantes:
+
++ Los valores obtenidos se pueden considerar como valores homogéneos?
++ La distribución representada por la tabla se puede considerar como simetrica?
++ Qué indiador de centro podría ser más apropiado para representar los datos? Justifique su respuesta.
++  Describa los resultados obtenidos en la medición.
+
+<br/><br/><br/>
+
+## **Problema 3**:
+
+Los tiempo en minutos de demora en la entrega de pedidos por parte de dos proveedores de insumos para laboratorio que llamaremos $P_{A}$ y $P_{B}$ sun los siguentes
+
+
+```{r}
+PA=c(13,44,10,11,20,29,30,44,56,63,70,82)
+PB=c(25,14,20,22,30,33,40,45,49,52,55,58)
+```
+
+Con base en la información, cuál proveedor escogería? Justifique su respuesta
+
+(Tomado de Arroyo(2012))
+
+<br/><br/><br/>
+
+## **Problema 4**:
+
+Determine el concepto referido en cada uno de los siguientes enunciados
+
+1. Divide la distribución de los datos en dos partes de igual proporción
+2. Describe la variabilidad de los datos con respecto a la media y tiene las mismas unidades que el promedio
+3. Los valores de  la variable se pueden ordenar en sentido lógico, pero no es  posible establecer diferencias entre un par de valores
+4. Se obtien al promediar el cuadrado de las desviaciones al cuadrado en un conjuno de datos
+5. Medida de centramiento que es muy sencible a los valores extremos
+6. Estadístico que conlleva al centramiento por mayoria de datos
+7. Estima el número de datos que pertenecen a un intervalo en una tabla de frecuencias
+8. Brinda información sobre la amplitud de un conjunto de datos
+9. Con respecto a este valor la suma de las desviaciones es igual a cero
+10. Permite comparar  el nivel de dispersión para diferentes grupos de datos y para diferentes variables
+
+<br/><br/><br/>
+
+## **Problema 5**
+
+Defina para cada una de las siguientes variables, el tipo de variable y su escala de medición
+
+1. Número de botellas plásticas producidas diariamente en un proceso de modelado, en  Agua Limpia S.A.
+2. Número de defectos observados por gabinete para equipos de computo de una comercializadora de equipos
+3. Tiempo de respuesta de los pedidos realizados por wapp en una pizzeria
+4. Perdidas de hojas de papel por dia en la fotocopiadora Copiamenos S.A.
+5. Tipo de defecto en una tarjeta de circuito impreso de un lote de producción
+6. Temperatura de cocción de la meladura en un proceso de producción de azúcar
+7. Espesor de las piezas de metal producidas en la empresa Tornos del Norte
+8. Técnica de mezclado del cemento tipo A 
+9. Cantidad de corriente en microamprerios por cada medición en un cinescopio
+10. Grado de satisfación de los clientes ante el servicio prestado en la Mercateria
+
+
+

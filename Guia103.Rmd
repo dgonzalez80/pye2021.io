@@ -68,7 +68,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 ## **Cronograma de trabajo**
 
 
-|Actividad105   | Descripción                    | 
+|Actividad 106   | Descripción                    | 
 |:--------------|:-----------------------------  |
 |Trabajo individual | A partir de la base de datos trabajada en las dos unidades anteriores construya un **tablero** (Dashboard)  que contenga gráficos e indicadores estaísticos  de las variables contenidas  en la base de datos seleccionada en la Actividad 102 de la unidad 1.1. Realice una descripción con los resultados obtenidos en el tablero. |
 | Recurso       |  Código 103.R  y TableroM1 |
@@ -79,7 +79,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Fecha  | 16 de febrero de 2022 |
 |Hora   | 23:59 hora local |
 
-|Actividad106   | Descripción                    | 
+|Actividad 107   | Descripción                    | 
 |:--------------|:-----------------------------  |
 |Trabajo individual |  Construya un **mapa mental** del *Módulo 1*   a mano  que resuma los conceptos más importantes del Modulo 1. genere un archivo pdf para entregarlo en  Bs|
 |	Recurso    |[Capitulo 1](https://github.com/dgonzalez80/presentacionespye.io/blob/main/pdf/Capitulo1.pdf), web del curso, 
@@ -103,8 +103,8 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |               | Descripción                   | 
 |:--------------|:------------------------------|
-|**Entregable 1** | Actividad105.Rmd Tablero Acompañado de descripción de los resultados |
-|**Entregable 2** | Actividad106.pdf Mapa mental |
+|**Entregable 1** | Actividad106.html Tablero Acompañado de descripción de los resultados |
+|**Entregable 2** | Actividad107.pdf Mapa mental |
 |||
 |Fecha       | Miercoles 16 de febrero de 2022 |
 |Hora límite | 23:59  hora  local |

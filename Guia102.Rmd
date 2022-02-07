@@ -166,6 +166,10 @@ Finalmente adjunte un análisis de los resultados obtenidos.
 
 [DATOS: beer.csv](https://github.com/dgonzalez80/pye20221.io/blob/main/beer.csv)
 
+Video : Como etiquetar una variable en RStudio
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IUaEOmKRmUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <br/><br/> <br/>
 
 # **Recursos**

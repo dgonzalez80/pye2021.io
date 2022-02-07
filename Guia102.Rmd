@@ -170,11 +170,27 @@ Video : Como etiquetar una variable en RStudio
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IUaEOmKRmUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+```{r, eval=FALSE}
+# Cargar la base de datos
+library(readr)
+beer <- read_delim("beer.csv", 
+                   delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+# Recodificar variable origen
+beer$origen[beer$origen==0]="nacional"
+beer$origen[beer$origen==1]="importada"
+
+# Construir tablas de frecuencia
+table(beer$origen)
+summarytools::freq(beer$origen, cumul = FALSE)
+```
 <br/><br/> <br/>
 
 # **Recursos**
 
 <br/> <br/>
+
 
 ### **¿Que es un indicador?**
 

@@ -730,6 +730,18 @@ div.tocify {
 <p>Video : Como etiquetar una variable en RStudio</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IUaEOmKRmUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+<pre class="r"><code># Cargar la base de datos
+library(readr)
+beer &lt;- read_delim(&quot;beer.csv&quot;, 
+                   delim = &quot;;&quot;, escape_double = FALSE, trim_ws = TRUE)
+
+# Recodificar variable origen
+beer$origen[beer$origen==0]=&quot;nacional&quot;
+beer$origen[beer$origen==1]=&quot;importada&quot;
+
+# Construir tablas de frecuencia
+table(beer$origen)
+summarytools::freq(beer$origen, cumul = FALSE)</code></pre>
 <p><br/><br/> <br/></p>
 </div>
 </div>
@@ -871,7 +883,7 @@ summarytools::freq(iris$Species, cumul = FALSE, headings = FALSE)</code></pre>
 <h3><strong>Diagrama de cajas</strong></h3>
 <p><br/></p>
 <pre class="r"><code>ggplot(bpe, aes(x=promedio))+geom_boxplot()</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-7-1.png" width="1027.2" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-8-1.png" width="1027.2" /></p>
 <p><br/></p>
 <p>atípico | <span class="math inline">\(LI=Q_{1}- 1.5(Q_{3}-Q_{1})\)</span> | <span class="math inline">\(Q_{1}\)</span> | <span class="math inline">\(Q_{2}\)</span> | <span class="math inline">\(Q_{3}\)</span> | <span class="math inline">\(LS=Q_{3}+ 1.5(Q_{3}-Q_{1})\)</span> | atípico</p>
 <p><br/> <br/> <br/></p>
@@ -1003,7 +1015,7 @@ x</code></pre>
 <pre><code>[1] 4.12</code></pre>
 <p><br/> <br/></p>
 <pre class="r"><code>boxplot(bpe$promedio, las=1, horizontal = TRUE, col = c1)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p><br/> <br/></p>
 <p>La <strong>Me</strong> corresponde a la linea central de a caja en el diagrama de cajas</p>
 <p>La mediana es mas robusta a los cambio en los datos extremos. En presencia de datos atípicos es mejor utilizar la mediana en lugar que la media.</p>
@@ -1243,10 +1255,10 @@ N: 32
           N.Valid    32.00
         Pct.Valid   100.00</code></pre>
 <pre class="r"><code>d1=density(bpe$promedio, na.rm=TRUE); plot(d1)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <pre class="r"><code>data(&quot;mtcars&quot;)
 d2=density(mtcars$mpg); plot(d2)</code></pre>
-<p><img src="Guia102_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="Guia102_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p><br/> <br/></p>
 </div>
 </div>

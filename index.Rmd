@@ -29,8 +29,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ![](img/curso03.png)
 <br/><br/><br/>
 
-**Calendario 2022-1**
+<H1> 
+<span style="color:#0036b1">**Calendario 2022-1**</span>
+</H1>
 
 ![](img/calendario20221.png)
+<br/><br/><br/>
 
+<H1> 
+<span style="color:#0036b1">**Atención a Estudiantes**</span>
+</H1>
+
+
+![](img/atencion_estudiantes_estadistica.png)
 

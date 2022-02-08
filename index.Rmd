@@ -17,6 +17,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br/><br/>
 
+<H1> 
+<span style="color:#0036b1">**Descripción del curso**</span>
+</H1>
+
 ![](img/curso01.png)
 <br/><br/>
 

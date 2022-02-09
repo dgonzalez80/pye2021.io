@@ -12,9 +12,15 @@ Colombia$estado=str_to_lower(Colombia$estado)
 Colombia$estado[Colombia$estado=="n/a"]=NA
 Colombia$recuperado=str_to_lower(Colombia$recuperado)
 Colombia$recuperado[Colombia$recuperado=="n/a"]=NA
+
+# seleccion de bases
 Colombia22=subset(Colombia, Colombia$fecha_reporte_web>="2022-01-01")
 Colombia21=subset(Colombia, Colombia$fecha_reporte_web>="2021-01-01" & Colombia$fecha_reporte_web<"2022-01-01")
 Colombia20=subset(Colombia, Colombia$fecha_reporte_web>="2020-01-01" & Colombia$fecha_reporte_web<"2021-01-01")
+
+Colombiam=subset(Colombia, Colombia$sexo=="f")
+Valle=subset(Colombiam, departamento=="76")
+Cali= subset(Colombia, ciudad_municipio_nom=="CALI")
 
 table(Colombia22$estado)
 table(Colombia21$estado)
@@ -35,5 +41,15 @@ saveRDS(Colombia22, file = "data/Colombia22.RDS")
 saveRDS(Colombia21, file = "data/Colombia21.RDS") 
 saveRDS(Colombia21, file = "data/Colombia20.RDS") 
 
-Colombiam=subset(Colombia, Colombia$sexo=="f")
-Vallem=subset(Colombiam, departamento=="76")
+
+
+
+
+
+
+
+
+
+
+
+

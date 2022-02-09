@@ -12,7 +12,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,comment = NA)
-
+library(ggplot2)
 library(readr)
 library(readxl)
 library(rapportools) # miselania de estadisticas
@@ -124,17 +124,17 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 Wikipedia
 
-## **Paquetes de R para graficos**
+## **Paquetes de R para gráficos**
 
 R posee una serie de paquetes construido para la visualización de datos que hacen que tengan una excelente presentación. Empezando por funciones del núcleo base, hasta paquetes que elaboran gráficos interactivos
 
 
-<img src="img/RStudio.jpeg" width="110">
-<img src="img/ggplot2.png" width="100"> 
-<img src="img/highcharter.png" width="100">
-<img src="img/shiny.png" width="100">
-<img src="img/plotly.png" width="100">
-
+<img src="img/RStudio.jpeg" width="90">
+<img src="img/ggplot2.png" width="80"> 
+<img src="img/highcharter.png" width="80">
+<img src="img/shiny.png" width="80">
+<img src="img/plotly.png" width="80">
+<img src="img/dashboard.png" width="80">
 
 Elegir el gráfico adecuado es muy importante pues existen diferentes alternativos  y se debe escoger el apropiado para representar los datos. El tipo de dato determina el tipo de grafico asi:
 
@@ -406,6 +406,9 @@ ggplot(bpe, aes(x=promedio, y=grup)) +
 ## **Gráficos con gganimate**
 
 ```{r, eval=FALSE}
+library(gapminder) # paquete contiene data Gapminder
+library(gganimate) # paquete para animacion grafica
+
 ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
   geom_point(alpha = 0.7, show.legend = FALSE) +
   scale_colour_manual(values = country_colors) +

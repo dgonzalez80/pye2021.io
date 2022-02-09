@@ -45,6 +45,13 @@ Algunas consideraciones
 |                 |                  |  diagrama de linea          | plot(x, type="l")    |
 |                 |                  |                             |                      |
  
+ **Nota**: Además de estas formas de representación gráfica existen otras formas que combinan variables como:
+ 
+ + Mapas
+ + Diagrama de Mosaico
+ + Diagramas de radar
+ 
+ 
 <br/><br/><br/>
 
 # **Variable cualitativa-nominal**

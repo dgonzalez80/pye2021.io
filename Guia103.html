@@ -664,10 +664,10 @@ div.tocify {
 <p><em>Una gráfica o una representación gráfica o un gráfico, es un tipo de representación de datos, generalmente cuantitativos, mediante recursos visuales (líneas, vectores, superficies o símbolos), para que se manifieste visualmente la relación matemática o correlación estadística que guardan entre sí.</em></p>
 <p>Wikipedia</p>
 </div>
-<div id="paquetes-de-r-para-graficos" class="section level2">
-<h2><strong>Paquetes de R para graficos</strong></h2>
+<div id="paquetes-de-r-para-gráficos" class="section level2">
+<h2><strong>Paquetes de R para gráficos</strong></h2>
 <p>R posee una serie de paquetes construido para la visualización de datos que hacen que tengan una excelente presentación. Empezando por funciones del núcleo base, hasta paquetes que elaboran gráficos interactivos</p>
-<p><img src="img/RStudio.jpeg" width="110"> <img src="img/ggplot2.png" width="100"> <img src="img/highcharter.png" width="100"> <img src="img/shiny.png" width="100"> <img src="img/plotly.png" width="100"></p>
+<p><img src="img/RStudio.jpeg" width="90"> <img src="img/ggplot2.png" width="80"> <img src="img/highcharter.png" width="80"> <img src="img/shiny.png" width="80"> <img src="img/plotly.png" width="80"> <img src="img/dashboard.png" width="80"></p>
 <p>Elegir el gráfico adecuado es muy importante pues existen diferentes alternativos y se debe escoger el apropiado para representar los datos. El tipo de dato determina el tipo de grafico asi:</p>
 <table>
 <thead>
@@ -925,7 +925,10 @@ ggplot(mtcars, aes(x=mpg, y=wt, colour = cyl)) +
 </div>
 <div id="gráficos-con-gganimate" class="section level2">
 <h2><strong>Gráficos con gganimate</strong></h2>
-<pre class="r"><code>ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+<pre class="r"><code>library(gapminder) # paquete contiene data Gapminder
+library(gganimate) # paquete para animacion grafica
+
+ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
   geom_point(alpha = 0.7, show.legend = FALSE) +
   scale_colour_manual(values = country_colors) +
   scale_size(range = c(2, 12)) +

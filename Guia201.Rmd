@@ -96,13 +96,14 @@ El **taller201** de la unidad 2.1 recoge los elementos estudiados y por tanto  t
 # **Recursos**
 
 ![](img/dados.gif)
+
 Tomada : película El dorado 
 
-Muchos relacionamos el concepto de probabilidad con los dados, pues forma parte de su origen y de su desarrollo inicial a traves de preguntas y situaciones imaginarias y de alguna forma modelables desde la matematicas. Peor este concepto va mucho mas alla como lo veremos en esta unidad.
+Muchos relacionamos el concepto de probabilidad con los dados, pues forma parte de su origen y de su desarrollo inicial a través de preguntas y situaciones imaginarias y de alguna forma modelables desde la matemáticas. Pero este concepto va mucho mas alla como lo veremos en esta unidad.
 
-La probabilidad es un concepto que se empieza a trabajar en los años   cuando  , caballero de Mered solicita a b. Pascal le ayude a resolver un problema relacionado con juegos de mesa. En particular este callero manifestaba que las Matemáticas presentaban un vacio, pues sus calculos no coincidian con lo que pasaba en la realidad y como consecuencia de ellos perdia dinero en las apuestas que se presentaban en el juego. 
+La probabilidad es un concepto que se empieza a trabajar en 1654 cuando, caballero de Mered solicita a B. Pascal le ayude a resolver un problema relacionado con juegos de mesa. En particular este caballero manifestaba que las Matemáticas presentaban un vacio, pues sus cálculos no coincidían con lo que pasaba en la realidad y como consecuencia de ellos perdía dinero en las apuestas que se presentaban en el juego. 
 
-Encomendado Pascal de esta tarea empieza a compartir su trabajo con Fermat, matematico y de la correspondencia de estos dos brillantes matematicos nace los principios y fundamentos de  lo que hoy conocemos como probabilidad
+Encomendado Pascal de esta tarea empieza a compartir su trabajo con Fermat, matemático y de la correspondencia de estos dos brillantes matemáticos nace los principios y fundamentos de  lo que hoy conocemos como probabilidad
 
 <br/><br/>
 ![](img/pascal.png)
@@ -122,7 +123,9 @@ El caballero  afirmaba que este problema generaba una solución matemática que 
 
 Este problema se retoma mas adelante
 
-Iniciaremos con algunos conceptos basicos que nos permiten la contrucion de sus funtamentos.
+Iniciaremos con algunos conceptos básicos que nos permiten la contribución de sus fundamentos.
+[El problema de los dados del caballero de
+Méré: soluciones publicadas en el siglo XVII](http://materias.df.uba.ar/estadisticaa2019v/files/2019/02/El_caballero_de_Mere.pdf)
 
 <br/><br/>
 

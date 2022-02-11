@@ -37,16 +37,24 @@ $$S=\{ 2,3,4,5,6,7,8,9,10,11,12 \}$$
 
 ## **Lanzamiento de un dados**
 
+Para simular el lanzamiento de un dado utilizaremos la función `sample(x, size, replace = FALSE, prob = NULL)`, con parámetros: `x` : valores del espacio muestral; `size` : tamaño de la muestra y `replace` : para determinar si la selección se realiza con remplazo o sin remplazo.
 
+`sample(1:6,200, replace = TRUE)`, da un resultado una muestra de 200 valores enteros entre 1 y 6, con repetición.
 
 ```{r}
-n=20000000
+n=200
 x=sample(1:6,n, replace = TRUE)
 td1=prop.table(table(x))
 barplot(td1, las=1)
 ```
 
 ## **Lanzamiento de dos dados**
+
+En este caso utilizamos la función `sample` dos veces y se obtienen dos vectores que representan los resultados del dado1 y del dado2 respectivamente. Con estos resultados se construye una `data.frame` de dos columnas por n filas. En ella cada fila de dos componentes conforma una muestra con dos valores.
+
+Para obtener la suma de los valores de los dos dados, utilizamos la función `apply(X, MARGIN, FUN, ..., simplify = TRUE)`
+indicando con `MARGIN=1` que la operación (siguiente parámetro) se realizará por filas. Por último en el parámetro `FUN` se asigna la función a realizar. En resumen : `suma=apply(dados, 1, sum)`
+
 
 ```{r}
 n=20000000
@@ -63,7 +71,7 @@ data.frame(prop.table(table(suma)))
 Procedimiento alternativo
 
 ```{r}
-t=sapply(1:200000, function(x){sum(sample(1:6,2,rep=T))})
+t=sapply(1:200, function(x){sum(sample(1:6,2,rep=T))})
 barplot(table(t), las=1, cex.axis=0.7)
 ```
 
@@ -72,11 +80,12 @@ barplot(table(t), las=1, cex.axis=0.7)
 
 ##  **Urna** 
 
-Simulación de urna con:  3 bolas Blancas, 5 Rojas y 4 Azules
+Para simular la extracción de bolas de una urna, se utilizan las funciones sample y rep mostradas en el siguiente ejemplo :
 
-1 representa las bolas blancas
-2 representa las bolas rojas
-3 representa las bolas azules
++  Simulación de urna con:  3 bolas Blancas, 5 Rojas y 4 Azules
+    + 1 representa las bolas blancas
+    + 2 representa las bolas rojas
+    + 3 representa las bolas azules
 
 ```{r}
 sample(c(1,2,3),2,rep=T,prob=c(3,5,4))
@@ -104,20 +113,19 @@ x=c(20,60,100,30,140,50)
 	m
 ```
 
-
 En este caso se adicionan las frecuencias relativas marginales
 
 ```{r}
 addmargins(m)
 ```
 
-Para convertirlas en probabilidades utilizamos la función **prop.table()**
+Para convertirlas en probabilidades utilizamos la función `prop.table()`
 
 ```{r}
 prop.table(m)
 ```
 
-Esta funcion tambien se utiliza para calcular las probabilidades condicionales por filas
+Esta función también se utiliza para calcular las probabilidades condicionales por filas
 
 ```{r}
 prop.table(m,1)

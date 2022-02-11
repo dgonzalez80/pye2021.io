@@ -657,13 +657,40 @@ div.tocify {
 <p><strong>Evento aleatorio</strong></p>
 <p>Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto se nombra con una letra mayúscula por lo general las primeras letras del alfabeto</p>
 </div>
-<ul>
-<li><p><span class="math inline">\(A_{1}\)</span>: Obtiener solo caras</p></li>
-<li><p><span class="math inline">\(A_{2}\)</span>: Sacar un resultados es inferior a 6</p></li>
-<li><p><span class="math inline">\(A_{3}\)</span>: Ganar el examen</p></li>
-<li><p><span class="math inline">\(A_{4}\)</span>: Cumplir el objetivo de la salida</p></li>
-<li><p><span class="math inline">\(A_{5}\)</span>: Obtener más de 5 ensayos éxitos</p></li>
-</ul>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="54%" />
+<col width="30%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_{1}\)</span></td>
+<td align="left">Obtener solo caras</td>
+<td align="left"><span class="math inline">\(A_{1}=\{ (c,c)\}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(A_{2}\)</span></td>
+<td align="left">Sacar un resultados es inferior a 4</td>
+<td align="left"><span class="math inline">\(A_{2}=\{(1,1),(1,2)(2,1)\}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_{3}\)</span></td>
+<td align="left">Ganar el examen</td>
+<td align="left"><span class="math inline">\(A_{3}=\{ x \in \mathbb{R} | 3.0 \leq x \leq 5.0 \}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(A_{4}\)</span></td>
+<td align="left">Cumplir el objetivo de la salida</td>
+<td align="left"><span class="math inline">\(A_{4} =\{ 1 \}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(A_{5}\)</span></td>
+<td align="left">Obtener más de 5 ensayos éxitos</td>
+<td align="left"><span class="math inline">\(A_{5}\)</span>= <span class="math inline">\(\{ x \in \mathbb{N}| 6 \leq x \leq 20 \}\)</span></td>
+</tr>
+</tbody>
+</table>
 <p><br/><br/></p>
 <p>Resumiendo:</p>
 <table style="width:100%;">
@@ -719,7 +746,7 @@ div.tocify {
 <p>En el caso del evento <span class="math inline">\(A_{1}=\{(c,c)\}\)</span>, su probabilidad se obtiene como:</p>
 <p><span class="math inline">\(P(A_{1}=\dfrac{n(A_{1})}{n(S_{1})}=\dfrac{1}{4}=0.25\)</span></p>
 <p>Para <span class="math inline">\(A_{2}\)</span>, la suma de los resultados es inferior a 6, se obtiene de la siguiente forma</p>
-<p>$P(A_{2})===0.25 $ <br/><br/></p>
+<p><span class="math inline">\(P(A_{2})=\dfrac{n(A_{2})}{n(S_{2})}=\dfrac{9}{36}=0.25\)</span> <br/><br/></p>
 <p>En la gran mayoria de casos no se cumplen los supuestos anteriores, pues se tienen eventos que no son igualmente probables, lo cual impide que podamos utilizar el enfoque frecuentista.</p>
 <p>Ahora suponemos que lo ocurrió en el pasado segirá pasando y asi estudiando la información recogida podemos predecir la posibilidad de ocurrencia de un evento futuro</p>
 <div id="enfoque-frecuentista" class="section level3" style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -733,7 +760,8 @@ div.tocify {
 <p>Para calcular la probabilidad de que un jugador ejecute y convierta gol, debemos utilizar el enfoque frecuentista, contando para ello información pasada y realizando una división entre el numero de aciertos sobre el numero total de cobros.</p>
 <p>Otro ejemplo puede estar relacionado con la probabilidad de muerte por Covid en Colombia. Es de aclarar que esta probabilidad no se mantiene constante a través del tiempo pues los efectos causados por la vacunación y su evolución hacen que esta probabilidad cambie. Por fines prácticos tomaremos la base total de colombianos infectados desde marzo del 2019 como denominador y como numerador el numero total de muertos</p>
 <pre class="r"><code>Colombia=readRDS(&quot;data/Colombia.RDS&quot;)
-summarytools::freq(Colombia$ubicacion, cumul = FALSE)</code></pre>
+tabla=summarytools::freq(Colombia$ubicacion, cumul = FALSE)
+tabla</code></pre>
 <pre><code>Frequencies  
 
                         Freq   % Valid   % Total
@@ -744,7 +772,7 @@ summarytools::freq(Colombia$ubicacion, cumul = FALSE)</code></pre>
       hospital uci      1357     0.023     0.023
               &lt;NA&gt;     24096               0.408
              Total   5901715   100.000   100.000</code></pre>
-<p>Con base en esta tabla podríamos pensar que la probabilidad de que una persona muera a causa del Covid es de 0.02525. Valor que se obtiene al dividir el número de personas fallecidas y el número total de personas que se han contraído covid. Claro bajo el supuesto de que todos las personas tenemos la misma probabilidad de fallecer. Hecho que se discutirá mas adelante.</p>
+<p>Con base en esta tabla podríamos pensar que la probabilidad de que una persona muera a causa del Covid-19 es del <code>0.0289</code>. Valor que se obtiene al dividir el número de personas fallecidas y el número total de personas que se han contraído covid. Claro bajo el supuesto de que todos las personas tenemos la misma probabilidad de fallecer. Hecho que se discutirá mas adelante.</p>
 <p><br/><br/></p>
 <div id="enfoque-subjetivo" class="section level3" style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 <h3><strong>Enfoque subjetivo</strong></h3>
@@ -768,7 +796,7 @@ summarytools::freq(Colombia$ubicacion, cumul = FALSE)</code></pre>
 <div id="tipos-de-probabilidad" class="section level2">
 <h2><strong>Tipos de probabilidad</strong></h2>
 <p><br/><br/></p>
-<p><img src="img/tabla1.png" style="width:60.0%" /></p>
+<p><img src="img/tabla1.png" style="width:80.0%" /></p>
 <p><br/><br/></p>
 <div id="probabilidad-simple-o-marginal" class="section level3">
 <h3><strong>Probabilidad simple o marginal</strong></h3>
@@ -790,22 +818,9 @@ summarytools::freq(Colombia$ubicacion, cumul = FALSE)</code></pre>
 </ul>
 <p><br/><br/></p>
 </div>
-<div id="probabilidad-condicional" class="section level3">
-<h3><strong>Probabilidad condicional</strong></h3>
-<p><span class="math inline">\(P(B|A)=\dfrac{P(A \cap B)}{P(A)}\)</span></p>
-<p><br/><br/></p>
 </div>
-<div id="probabilidad-total" class="section level3">
-<h3><strong>Probabilidad total</strong></h3>
-<p><span class="math inline">\(P(B) = P(A_{1} \cap B) + P(A_{1} \cap B) + \dots +P(A_{m} \cap B)\)</span></p>
-<p><span class="math inline">\(P(B) = P(A_{1})\times P(B|A_{1}) + \dots+P(A_{1})\times P(B|A_{m})\)</span></p>
-<p><span class="math inline">\(P(B) = \sum\limits_{i=1}^{m} P(A_{i}) \times P(B|A_{i})\)</span></p>
-<p><br/><br/></p>
-</div>
-<div id="teorema-de-bayes" class="section level3">
-<h3><strong>Teorema de Bayes</strong></h3>
-<p><span class="math inline">\(P(A_{i}|B)=\dfrac{P(A_{i}\cap B)}{P(B)}= \dfrac{P(A_{1}) \times P(B|A_{1})}{\sum\limits_{i=1}^{m} P(A_{i}) \times P(B|A_{i})}\)</span></p>
-</div>
+<div id="problemas-propuestos" class="section level2">
+<h2><strong>Problemas propuestos</strong></h2>
 </div>
 </div>
 

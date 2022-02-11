@@ -199,15 +199,13 @@ Subconjunto del espacio muestral que es de nuestro interés. Como todo conjunto 
 
 </div>
 
-+ $A_{1}$: Obtiener solo caras 
-
-+ $A_{2}$: Sacar un resultados es inferior a 6 
-
-+ $A_{3}$: Ganar el examen 
-
-+ $A_{4}$: Cumplir el objetivo de la salida 
-
-+ $A_{5}$: Obtener más de 5 ensayos éxitos
+|           |                                       |                      |
+|:----------|:--------------------------------------|:---------------------|
+|$A_{1}$    | Obtener solo caras                    | $A_{1}=\{ (c,c)\}$
+| $A_{2}$   | Sacar un resultados es inferior a 4   | $A_{2}=\{(1,1),(1,2)(2,1)\}$
+| $A_{3}$   | Ganar el examen                       | $A_{3}=\{ x \in \mathbb{R} | 3.0 \leq x \leq 5.0 \}$
+| $A_{4}$   | Cumplir el objetivo de la salida      | $A_{4} =\{ 1 \}$
+| $A_{5}$   | Obtener más de 5 ensayos éxitos       | $A_{5}$= $\{ x \in \mathbb{N}| 6 \leq x \leq 20 \}$
 
 <br/><br/>
 
@@ -242,7 +240,7 @@ $P(A_{1}=\dfrac{n(A_{1})}{n(S_{1})}=\dfrac{1}{4}=0.25$
 
 Para $A_{2}$, la suma de los resultados es inferior a 6, se obtiene de la siguiente forma
 
-$P(A_{2})=\dfrac{n(A_{2})}{n(S_{2})}=\dfrac{9}{36}=0.25 $
+$P(A_{2})=\dfrac{n(A_{2})}{n(S_{2})}=\dfrac{9}{36}=0.25$
 <br/><br/> 
 
 
@@ -275,10 +273,11 @@ Otro ejemplo puede estar relacionado con la probabilidad de muerte por Covid en 
 
 ```{r}
 Colombia=readRDS("data/Colombia.RDS")
-summarytools::freq(Colombia$ubicacion, cumul = FALSE)
+tabla=summarytools::freq(Colombia$ubicacion, cumul = FALSE)
+tabla
 ```
 
-Con base en esta tabla podríamos pensar que la probabilidad de que una persona muera a causa del Covid es de 0.02525. Valor que se obtiene al dividir el número de personas fallecidas y el número total de personas que se han contraído covid. Claro bajo el supuesto de que todos las personas tenemos la misma probabilidad de fallecer. Hecho que se discutirá mas adelante.
+Con base en esta tabla podríamos pensar que la probabilidad de que una persona muera a causa del Covid-19 es del `0.0289`. Valor que se obtiene al dividir el número de personas fallecidas y el número total de personas que se han contraído covid. Claro bajo el supuesto de que todos las personas tenemos la misma probabilidad de fallecer. Hecho que se discutirá mas adelante.
 
 <br/><br/>
 
@@ -314,7 +313,7 @@ En este caso la probabilidad es valorada y asignada por un EXPERTO, como un méd
 
 <br/><br/>
 
-![](img/tabla1.png){width=60%}
+![](img/tabla1.png){width=80%}
 
 <br/><br/>
 
@@ -342,23 +341,6 @@ En este caso la probabilidad es valorada y asignada por un EXPERTO, como un méd
 
 <br/><br/>
 
-### **Probabilidad condicional** 
 
-$P(B|A)=\dfrac{P(A \cap B)}{P(A)}$ 
-	
-<br/><br/>
-
-### **Probabilidad total**
-
-$P(B) = P(A_{1} \cap B) + P(A_{1} \cap B) + \dots +P(A_{m} \cap B)$ 
-
-$P(B) = P(A_{1})\times P(B|A_{1}) + \dots+P(A_{1})\times P(B|A_{m})$
-
-$P(B)  = \sum\limits_{i=1}^{m} P(A_{i}) \times P(B|A_{i})$
-
-<br/><br/>
-
-### **Teorema de Bayes** 
-
-$P(A_{i}|B)=\dfrac{P(A_{i}\cap B)}{P(B)}= \dfrac{P(A_{1}) \times P(B|A_{1})}{\sum\limits_{i=1}^{m} P(A_{i}) \times P(B|A_{i})}$
+## **Problemas propuestos**
 

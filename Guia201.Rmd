@@ -124,6 +124,7 @@ El caballero  afirmaba que este problema generaba una solución matemática que 
 Este problema se retoma mas adelante
 
 Iniciaremos con algunos conceptos básicos que nos permiten la contribución de sus fundamentos.
+
 [El problema de los dados del caballero de
 Méré: soluciones publicadas en el siglo XVII](http://materias.df.uba.ar/estadisticaa2019v/files/2019/02/El_caballero_de_Mere.pdf)
 

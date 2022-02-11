@@ -358,6 +358,3 @@ $P(B)  = \sum\limits_{i=1}^{m} P(A_{i}) \times P(B|A_{i})$
 
 $P(A_{i}|B)=\dfrac{P(A_{i}\cap B)}{P(B)}= \dfrac{P(A_{1}) \times P(B|A_{1})}{\sum\limits_{i=1}^{m} P(A_{i}) \times P(B|A_{i})}$
 
-<br/><br/>
-
-## **Ejercicios propuestos**

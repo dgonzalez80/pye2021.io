@@ -24,8 +24,6 @@ c5="#BC2B6A" # MORADO
 ```
 
 
-<span style="color:#E77C00">**En construcción**</span>
-
 # **Guía 0.2**
 
 <br/>
@@ -109,86 +107,7 @@ $B-A =\{ 8,10,12,14,16,18,20 \}$
 
 ##  **Problemas propuestos** 
 
-1. **Lanzamiento de un dado**: Un experimento consiste en lanzar un dado. Algunos eventos que se pueden definir a partir del experimento pueden ser:
 
-+ **A** : observar un 2
-+ **B** : observar un número par
-+ **C** : observar un número mayor que 2
-+ **D** : observar $A$ y $B$
-+ **E** :  observar $A$ o $B$ o ambos
-+ **F** : observar $A$ y $C$ 
-
-a. Liste los eventos simples del espacio muestral
-b. Liste los eventos de cada uno de los eventos $A$ a $F$
-c. Calcule la probabilidad de los seis eventos de $A$ hasta $F$  
-d. En cada caso representelos en un diagrama de Venn
-
-<br/><br/>
-
-2.	**Lanzamiento de monedas** :Calcule la probabilidad de sacar más de una cara en el lanzamiento de una moneda tres veces. Utilice un diagrama de árbol para realizar el calculo.
-
-<br/><br/>
-
-3. **Eventos equiprobables** :Un experimento da como resultado uno de cinco eventos simples equiprobables : $E_{1}, E_{2}, E_{3}, E_{4}, E_{5}$. A partir de ellos se definen los sigueintes eventos:
-
-+ A: $E_{1},E_{3}$            
-+ B: $E_{1},E_{2},E_{4},E_{5}$  
-+ C: $E_{3},E_{4}$             
-+ $P(A)=0.4$ 
-+ $P(B)=0.8$
-+ $P(C)=0.4$ 
-<br/><br/>
-
-Encuentre a las probabilidades asociadas a estos eventos compuestos listando los eventos simples de cada uno:
-
-a. $A^{c}$           
-b. $A\cap B$        
-c. $\overline{A} \cup C$ 
-d. $A\cup B$       
-e. $B\cap C$        
-f. $A\cup B\cup C$  
-g. $(A\cap \overline{B})$  
-
-<br/><br/>
-
-3. Un estudio sobre la conducta realizado a 1000  delincuentes adictos a las drogas hace pensar que la probabilidad de una condena de dos años después de un tratamiento podría depender del nivel de educación del delincuente. Las proporciones del número total de casos que caen en cuatro categorías de educación y condena que se muestra a continuación: 
-
-|               | Condiciones dos años |después del tratamiento| 
-|:--------------|:-----------:|:-------------:|
-|Educación      | Condenado            | No condenado |
-|	10 años o más |  100       |   300       |     
-|	9 años o menos|  270       |   330       |     
-
-Se definen los siguientes eventos de interés:
-**A** : El delincuente tiene 10 años de educación o más
-**B** : El delincuente es condenado dos años después de completar el tratamiento
-
-Suponga que se selecciona un delincuente del programa de tratamiento. Encuentre la probabilidad de que: 
-
-a. $A$
-b. $A \cup B$
-c. $(A \cap \overline{B})$
-d. $\overline{A} \cup \overline{B}$
-
-<br/><br/>
-
-4. Suponga que cierta enfermedad está presente en 10 por ciento de la población y que hay una prueba diseñada para detectarla. La prueba no siempre funciona de modo perfecto. Algunas veces la prueba es negativa cuando la enfermedad está presente, y otras positivas cuando no hay la enfermedad. En la siguiente tabla se muestra los resultados obtenidos en un estudio realizado:
-
-|                                 |                             |                             |
-|:--------------------------------|----------------------------:|----------------------------:|
-|   		                          | La prueba es positiva ($P$) | La prueba es negativa ($N$) |       
-|La enfermedad está presente ($D$)|                       0.08  |               0.22          |
-|La enfermedad está ausente  ($\overline{D}$) | 0.05            |0.65                         |
-||||
-
-A partir de esta información construya por lo menos tres eventos simples y tres eventos compuestos. En cada caso determine su probabilidad
-
-<br/><br/>
-
-5. En un experimento sobre preferencia de colores en los niños, se colocan quince juguetes en un recipiente. Los juguetes son idénticos excepto por el color. Seis son rojos, cuatro son blancos y cinco son azules. Se le pide a un niño elegir un juguete **al azar** ¿cuál es la probabilidad de que el niño elija el rojo?. ¿cuál de que sea el blanco? ¿cuál el que sea el azul?. ¿que no sea rojo ? ¿que no sea rojo ni azul?
-
-
-Ejercicios tomados de Introducción a la Probabilidad y Estadística, Mendenhall-Bearver-Beaver. Editorial Thomson (2008) 
 
 
 <br/><br/>

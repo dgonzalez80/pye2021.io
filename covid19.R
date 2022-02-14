@@ -18,9 +18,8 @@ Colombia22=subset(Colombia, Colombia$fecha_reporte_web>="2022-01-01")
 Colombia21=subset(Colombia, Colombia$fecha_reporte_web>="2021-01-01" & Colombia$fecha_reporte_web<"2022-01-01")
 Colombia20=subset(Colombia, Colombia$fecha_reporte_web>="2020-01-01" & Colombia$fecha_reporte_web<"2021-01-01")
 
-Colombiam=subset(Colombia, Colombia$sexo=="f")
-Valle=subset(Colombiam, departamento=="76")
-Cali= subset(Colombia, ciudad_municipio_nom=="CALI")
+Valle22=subset(Colombia22, departamento=="76")
+Cali22= subset(Colombia22, ciudad_municipio_nom=="CALI")
 
 table(Colombia22$estado)
 table(Colombia21$estado)
@@ -40,7 +39,8 @@ saveRDS(Colombia, file = "data/Colombia.RDS")
 saveRDS(Colombia22, file = "data/Colombia22.RDS") 
 saveRDS(Colombia21, file = "data/Colombia21.RDS") 
 saveRDS(Colombia21, file = "data/Colombia20.RDS") 
-
+saveRDS(Valle22, file = "data/Valle22.RDS") 
+saveRDS(Cali22, file = "data/Cali22.RDS") 
 
 
 

@@ -76,9 +76,8 @@ navbar:
       menu:
         - text: "monitoria1"
           href: monitoria1.html 
-        - text: "monitoria2"
+        - bntext: "monitoria2"
           href: monitoria2.html 
-          
 output:
   html_document:
     theme: cosmos

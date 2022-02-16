@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="dgonzalez" />
+<meta name="author" content="dgonzalez80" />
 
 
-<title>Código 4</title>
+<title>Monitoria 2</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -493,142 +493,71 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Código 4</h1>
-<h3 class="subtitle">Módulo 2- Unidad 2.1</h3>
-<h4 class="author">dgonzalez</h4>
+<h1 class="title toc-ignore">Monitoria 2</h1>
+<h4 class="author">dgonzalez80</h4>
+<h4 class="date">16/2/2022</h4>
 
 </div>
 
 
-<div id="experimentos-aleatorios" class="section level1">
-<h1><strong>Experimentos aleatorios</strong></h1>
-<p>Como se menciona en la Guía 2.1, un <strong>Experimento aleatorio</strong> se puede definir como una acción que podemos repetir en iguales condiciones muchas veces y cuyo resultado no conocemos anticipadamente</p>
-<p>Un ejemplo de ello es cuando estamos jugando parques y un jugador lanza dos dados, el resultado solo es posible de observar después de haber realizado la acción de lanzarlos.</p>
-<p>Al conjunto de todos los posibles valores que puede tomar el experimento aleatorio se le denomina <strong>Espacio muestral</strong>, que se denota por la letra mayuscula <strong>S</strong>.</p>
-<p><img src="img/dados.gif" /></p>
-<p><br/></p>
-<p>Para este ejemplo :</p>
-<p><span class="math display">\[S=\{ 2,3,4,5,6,7,8,9,10,11,12 \}\]</span></p>
-<div id="lanzamiento-de-un-dados" class="section level2">
-<h2><strong>Lanzamiento de un dados</strong></h2>
-<p>Para simular el lanzamiento de un dado utilizaremos la función <code>sample(x, size, replace = FALSE, prob = NULL)</code>, con parámetros: <code>x</code> : valores del espacio muestral; <code>size</code> : tamaño de la muestra y <code>replace</code> : para determinar si la selección se realiza con remplazo o sin remplazo.</p>
-<p><code>sample(1:6,200, replace = TRUE)</code>, da un resultado una muestra de 200 valores enteros entre 1 y 6, con repetición.</p>
-<pre class="r"><code>n=200
-x=sample(1:6,n, replace = TRUE)
-td1=prop.table(table(x))
-barplot(td1, las=1)</code></pre>
-<p><img src="codigo201_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<hr />
+<div id="prunto-1" class="section level2">
+<h2>Prunto 1:</h2>
+<p>Un cargamento de 1500 lavadoras contiene 400 defectuosas y 1100 no defectuosas. Se eligen al azar doscientas lavadoras (sin sustitución) y se clasifican. a. ¿Cual es la probabilidad de que se encuentren exactamente 50 artículos defectuosos?, b. ¿?Cual es la probabilidad de que se encuentren al menos 50 artículos defectuosos? c. ¿ entre 50 y 60 artículos defectuosos?</p>
+<p><br/><br/></p>
 </div>
-<div id="lanzamiento-de-dos-dados" class="section level2">
-<h2><strong>Lanzamiento de dos dados</strong></h2>
-<p>En este caso utilizamos la función <code>sample</code> dos veces y se obtienen dos vectores que representan los resultados del dado1 y del dado2 respectivamente. Con estos resultados se construye una <code>data.frame</code> de dos columnas por n filas. En ella cada fila de dos componentes conforma una muestra con dos valores.</p>
-<p>Para obtener la suma de los valores de los dos dados, utilizamos la función <code>apply(X, MARGIN, FUN, ..., simplify = TRUE)</code> indicando con <code>MARGIN=1</code> que la operación (siguiente parámetro) se realizará por filas. Por último en el parámetro <code>FUN</code> se asigna la función a realizar. En resumen : <code>suma=apply(dados, 1, sum)</code></p>
-<pre class="r"><code>n=20000000
-d1=sample(1:6,n, replace = TRUE)
-d2=sample(1:6,n, replace = TRUE)
-dados=data.frame(d1,d2)
-suma=apply(dados, 1, sum)
-barplot(table(suma), las=1,cex.axis=0.7)</code></pre>
-<p><img src="codigo201_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre class="r"><code>data.frame(prop.table(table(suma)))</code></pre>
-<pre><code>   suma       Freq
-1     2 0.02776405
-2     3 0.05555970
-3     4 0.08336950
-4     5 0.11119800
-5     6 0.13888460
-6     7 0.16670875
-7     8 0.13888855
-8     9 0.11108205
-9    10 0.08330795
-10   11 0.05552120
-11   12 0.02771565</code></pre>
-<p>Procedimiento alternativo</p>
-<pre class="r"><code>t=sapply(1:200, function(x){sum(sample(1:6,2,rep=T))})
-barplot(table(t), las=1, cex.axis=0.7)</code></pre>
-<p><img src="codigo201_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="punto-2" class="section level2">
+<h2>Punto 2:</h2>
+<p>Diez fichas numeradas del 1 al 10 se mezclan en una urna. Se sacan de la urna dos fichas numeradas <span class="math inline">\((X,Y)\)</span> una y otra a la vez sin sustitución. ¿Cuál es la probabilidad de que <span class="math inline">\(X+Y=10\)</span> ?</p>
+<p><br/><br/></p>
 </div>
-<div id="urna" class="section level2">
-<h2><strong>Urna</strong></h2>
-<p>Para simular la extracción de bolas de una urna, se utilizan las funciones sample y rep mostradas en el siguiente ejemplo :</p>
-<ul>
-<li>Simulación de urna con: 3 bolas Blancas, 5 Rojas y 4 Azules
-<ul>
-<li>1 representa las bolas blancas</li>
-<li>2 representa las bolas rojas</li>
-<li>3 representa las bolas azules</li>
-</ul></li>
-</ul>
-<pre class="r"><code>sample(c(1,2,3),2,rep=T,prob=c(3,5,4))</code></pre>
-<pre><code>[1] 2 2</code></pre>
-<p>La misma simulación con palabras</p>
-<pre class="r"><code>sample(c(&quot;Blanca&quot;,&quot;Roja&quot;,&quot;Azul&quot;),2,rep=T,prob=c(3,5,4))</code></pre>
-<pre><code>[1] &quot;Blanca&quot; &quot;Roja&quot;  </code></pre>
+<div id="punto-3" class="section level2">
+<h2>Punto 3:</h2>
+<p>Un lote consta de 10 artículos buenos, 4 con pequeños defectos y 2 con defectos graves. Se elige un artículo al azar. Encontrar la probabilidad de que : a. No tenga defectos, b. Tenga un defecto grave, c. Que sea bueno o tenga un defecto grave</p>
+<p><br/><br/></p>
 </div>
+<div id="punto-4" class="section level2">
+<h2>Punto 4:</h2>
+<p>Un mecanismo puede ponerse en cuatro posiciones digamos <span class="math inline">\(a\)</span>,<span class="math inline">\(b\)</span>,<span class="math inline">\(c\)</span> y <span class="math inline">\(d\)</span> . Hay 8 de tales mecanismos en un sistema. a. ¿De cuántas maneras diferentes se puede instalar el sistema ?, b. ¿Cuantas maneras son posibles si sólo se usan las posiciones <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> con la misma frecuencia?</p>
+<p><br/><br/></p>
 </div>
-<div id="tablas-de-contingencia" class="section level1">
-<h1><strong>Tablas de contingencia</strong></h1>
-<p>Las tablas de contingencia o tablas cruzadas se basan en las tablas de frecuencia para dos variables cualitativas o cuantitativas con pocos valores. En ellas se representan probabilidades conjuntas, marginales y condicionales</p>
-<p>Inicialmente construimos una tabla con los valores de las frecuencias relativas conjuntas</p>
-<pre class="r"><code>x=c(20,60,100,30,140,50)
-    m=matrix(x,ncol=2)
-    rownames(m)=c(&quot;Adminitrativo&quot;,&quot;Operativo&quot;,&quot;Vendedor&quot;)
-    colnames(m)=c(&quot;Mujer&quot;,&quot;Hombre&quot;)
-    m</code></pre>
-<pre><code>              Mujer Hombre
-Adminitrativo    20     30
-Operativo        60    140
-Vendedor        100     50</code></pre>
-<p>En este caso se adicionan las frecuencias relativas marginales</p>
-<pre class="r"><code>addmargins(m)</code></pre>
-<pre><code>              Mujer Hombre Sum
-Adminitrativo    20     30  50
-Operativo        60    140 200
-Vendedor        100     50 150
-Sum             180    220 400</code></pre>
-<p>Para convertirlas en probabilidades utilizamos la función <code>prop.table()</code></p>
-<pre class="r"><code>prop.table(m)</code></pre>
-<pre><code>              Mujer Hombre
-Adminitrativo  0.05  0.075
-Operativo      0.15  0.350
-Vendedor       0.25  0.125</code></pre>
-<p>Esta función también se utiliza para calcular las probabilidades condicionales por filas</p>
-<pre class="r"><code>prop.table(m,1)</code></pre>
-<pre><code>                  Mujer    Hombre
-Adminitrativo 0.4000000 0.6000000
-Operativo     0.3000000 0.7000000
-Vendedor      0.6666667 0.3333333</code></pre>
-<p>o las probabilidades condicionales por columnas</p>
-<pre class="r"><code>prop.table(m,2)</code></pre>
-<pre><code>                  Mujer    Hombre
-Adminitrativo 0.1111111 0.1363636
-Operativo     0.3333333 0.6363636
-Vendedor      0.5555556 0.2272727</code></pre>
-<div id="ejemplo" class="section level2">
-<h2><strong>Ejemplo</strong></h2>
-<div id="ubicación-por-estado-contagiados-de-covid-en-colombia" class="section level3">
-<h3>Ubicación por estado contagiados de Covid en Colombia</h3>
-<pre class="r"><code>Colombia= readRDS(&quot;data/Colombia.RDS&quot;)
-t21=table(Colombia$ubicacion, Colombia$estado)
-(t22=addmargins(t21))</code></pre>
-<pre><code>              
-               fallecido   grave    leve moderado     Sum
-  casa                 0       0 5735613        0 5735613
-  fallecido       134551       0       0        0  134551
-  hospital             0       0       0     6098    6098
-  hospital uci         0    1357       0        0    1357
-  Sum             134551    1357 5735613     6098 5877619</code></pre>
-<p>La tabla de frecuencias la convertimos en tabla de probabilidades</p>
-<pre class="r"><code>t23=prop.table(t21)
-round(t23, 4)</code></pre>
-<pre><code>              
-               fallecido  grave   leve moderado
-  casa            0.0000 0.0000 0.9758   0.0000
-  fallecido       0.0229 0.0000 0.0000   0.0000
-  hospital        0.0000 0.0000 0.0000   0.0010
-  hospital uci    0.0000 0.0002 0.0000   0.0000</code></pre>
+<div id="punto-5" class="section level2">
+<h2>Punto 5:</h2>
+<p>Entre los números <span class="math inline">\(1,2,3 .... 50\)</span> se escoge un número al azar. ¿Cuál es la probabilidad de que el número escogido sea divisible por <span class="math inline">\(6\)</span> o por <span class="math inline">\(8\)</span>?</p>
+<p><br/><br/></p>
 </div>
+<div id="punto-6" class="section level2">
+<h2>Punto 6:</h2>
+<p>La urna 1 contiene <span class="math inline">\(x\)</span> bolas blancas e <span class="math inline">\(y\)</span> bolas rojas. LA urna 2 contiene <span class="math inline">\(z\)</span> bolas blancas y <span class="math inline">\(v\)</span> bolas rojas. Se escoge una bola al azar de la urna 1 y se pone en la urna 2. Entonces se escoge una bola al azar de la urna 2. ¿Cuál es la probabilidad de que esta bola sea blanca?</p>
+<p><br/><br/></p>
 </div>
+<div id="punto-7" class="section level2">
+<h2>Punto 7:</h2>
+<p>En las siguientes figuras (a) y (b) se supone que la probabilidad de que cada interruptor este cerrado es <span class="math inline">\(p\)</span> y que cada interruptor se abre o se cierra independientemente de cualquier otro. Encontrar en cada caso la probabilidad de la corriente pase de <em>Izquierda</em> a <em>Derecha</em></p>
+<p><img src="img/circuitos2.png" /></p>
+<p><em>Ejercicios tomados de Meyer( 1986) </em></p>
+<p><br/><br/></p>
+</div>
+<div id="punto-8" class="section level2">
+<h2>Punto 8:</h2>
+<p>Los contaminantes más comunes de las aguas son de origen orgánico. Puesto que la mayor parte de los materiales orgánicos se descompone por acción de bacterias que requieren oxígeno, un exceso de materia orgánica puede significar una disminución en la cantidad de oxígeno disponible. Ello afecta eventualmente a otros organismos presentes en el agua. La demanda de oxígeno por parte de una bacteria se llama demanda biológica de oxígeno (DBO). Un estudio de las corrientes acuáticas que circulan en las proximidades de un complejo industrial revela que el 35% tiene una alta DBO, el 10% muestra una acidez elevada y un 4% presenta ambas características. ¿Son independientes los sucesos «la corriente tiene una alta DBO» y «la corriente posee una acidez elevada»? Calcular la probabilidad de que la corriente tenga una acidez elevada, dado que presenta una alta DBO.</p>
+<p><br/><br/></p>
+</div>
+<div id="punto-9" class="section level2">
+<h2>Punto 9:</h2>
+<p>Suponga que una familia tiene cuatro hijos.<br />
+a. Hallar la probabilidad de que exactamente dos sean varones. b. Cuál es la probabilidad de que dos sean varones si el nacido en primer lugar es un varón?. c. ¿Cuál es la probabilidad de que el último hijo nazca varón si los tres primeros son mujeres?</p>
+<p><br/><br/></p>
+</div>
+<div id="punto-10" class="section level2">
+<h2>Punto 10:</h2>
+<p>Unos estudios muestran que los ejemplares de una cierta raza de liebres de alta montaña (liebre esquiadora) mueren antes de lo normal, aun en ausencia de depredadores o de enfermedad conocida alguna. Dos de las causas de muerte identificadas son: baja cantidad de azúcar en sangre y convulsiones. Se estima que el 7% de los animales presenta ambos síntomas, el 40% tiene bajo nivel de azúcar en sangre, y el 25% sufre convulsiones. a.¿Cuál es el porcentaje de muertes producidas por causas que no sean las que hemos mencionado? b.¿Cuál es la probabilidad de que un animal elegido aleatoriamente que tiene bajo nivel de azúcar en sangre sufra también convulsiones?</p>
+<p><br/><br/></p>
+</div>
+<div id="punto-11" class="section level2">
+<h2>Punto 11:</h2>
+<p>Se cree que la distribución de los grupos sanguíneos en Estados Unidos en la Segunda Guerra Mundial era: tipo A, 41%; tipo B, 9%; tipo AB, 4%; y tipo O, 46%. Se estima que en esa época, el 4% de las personas pertenecientes al tipo O fue clasificado como del tipo A; el 88% de los del tipo A fue correctamente clasificado; el 4% de los del tipo B se clasificó como del tipo A, y el 10% de los del tipo AB fue, igualmente, clasificado como del tipo A. Un soldado fue herido y conducido a la enfermería. Se le clasificó como del tipo A. ¿Cuál es la probabilidad de que tal grupo sea ciertamente el suyo?</p>
+<p><em>Tomados de J. Susan Milto (2001)</em></p>
 </div>
 
 

@@ -143,7 +143,7 @@ prop.table(m,2)
 ### Ubicación por estado contagiados de Covid en Colombia
 
 ```{r}
-# Colombia= read.csv("data/Colombia.csv")
+Colombia= readRDS("data/Colombia.RDS")
 t21=table(Colombia$ubicacion, Colombia$estado)
 (t22=addmargins(t21))
 

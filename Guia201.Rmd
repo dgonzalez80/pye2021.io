@@ -23,6 +23,7 @@ c4="#E09600" # AMARILLO
 c5="#BC2B6A" # MORADO  
 
 Colombia=readRDS("data/Colombia.RDS")
+Colombia22=readRDS("data/Colombia22.RDS")
 ```
 
 

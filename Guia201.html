@@ -479,6 +479,9 @@ div.tocify {
     <li>
       <a href="monitoria1.html">monitoria1</a>
     </li>
+    <li>
+      <a href="monitoria2.html"></a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -759,19 +762,15 @@ div.tocify {
 <p>Si observamos el cobro de un penalti en un partido de fútbol, el cobrador tiene un gran número de posibilidades (lugares) para colocar el balón que podemos simplificar en 6 : parte baja derecha, parte alta derecha, parte baja al centro, parte alta central, parte baja izquierda y parte alta izquierda. Por su parte el arquero piensa también es estos lograres para evitar que el disparo termine en gol. Hoy en dia ambos jugadores estudian las frecuencias para determinar cual lugar ofrece mayores probabilidades de obtener éxito desde su rol.</p>
 <p>Para calcular la probabilidad de que un jugador ejecute y convierta gol, debemos utilizar el enfoque frecuentista, contando para ello información pasada y realizando una división entre el numero de aciertos sobre el numero total de cobros.</p>
 <p>Otro ejemplo puede estar relacionado con la probabilidad de muerte por Covid en Colombia. Es de aclarar que esta probabilidad no se mantiene constante a través del tiempo pues los efectos causados por la vacunación y su evolución hacen que esta probabilidad cambie. Por fines prácticos tomaremos la base total de colombianos infectados desde marzo del 2019 como denominador y como numerador el numero total de muertos</p>
-<pre class="r"><code>Colombia=readRDS(&quot;data/Colombia.RDS&quot;)
-tabla=summarytools::freq(Colombia$ubicacion, cumul = FALSE)
+<pre class="r"><code>Colombia=readRDS(&quot;data/Colombia22.RDS&quot;)
+tabla=summarytools::freq(Colombia22$ubicacion, cumul = FALSE)
 tabla</code></pre>
 <pre><code>Frequencies  
 
-                        Freq   % Valid   % Total
------------------- --------- --------- ---------
-              casa   5735613    97.584    97.186
-         fallecido    134551     2.289     2.280
-          hospital      6098     0.104     0.103
-      hospital uci      1357     0.023     0.023
-              &lt;NA&gt;     24096               0.408
-             Total   5901715   100.000   100.000</code></pre>
+              Freq   % Valid   % Total
+----------- ------ --------- ---------
+       &lt;NA&gt;      0                    
+      Total      0      0.00    100.00</code></pre>
 <p>Con base en esta tabla podríamos pensar que la probabilidad de que una persona muera a causa del Covid-19 es del <code>0.0289</code>. Valor que se obtiene al dividir el número de personas fallecidas y el número total de personas que se han contraído covid. Claro bajo el supuesto de que todos las personas tenemos la misma probabilidad de fallecer. Hecho que se discutirá mas adelante.</p>
 <p><br/><br/></p>
 <div id="enfoque-subjetivo" class="section level3" style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
@@ -819,8 +818,9 @@ tabla</code></pre>
 <p><br/><br/></p>
 </div>
 </div>
-<div id="problemas-propuestos" class="section level2">
-<h2><strong>Problemas propuestos</strong></h2>
+<div id="reto" class="section level2">
+<h2><strong>RETO</strong></h2>
+<p>Con base en el enfoque frecuentista y la base de las personas contagiadas de COVID-19 durante el 2022 en Cali , determine la probabilidad de morir si se contagia de Covid19</p>
 </div>
 </div>
 

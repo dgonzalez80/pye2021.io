@@ -1,5 +1,5 @@
 ---
-title: "Monitoria 2"
+title: "**Monitoria 2**"
 author: "dgonzalez80"
 date: "16/2/2022"
 output:
@@ -53,7 +53,7 @@ Entre los números $1,2,3 .... 50$ se escoge un número al azar. ¿Cuál es la p
 	
 <br/><br/>
 
-## **Punto 6*:
+## **Punto 6**:
 
 La urna 1 contiene $x$ bolas blancas e $y$ bolas rojas. LA urna 2 contiene $z$ bolas blancas y $v$ bolas rojas. Se escoge una bola al azar de la urna 1 y se pone en la urna 2. Entonces se escoge una bola al azar de la urna 2. ¿Cuál es la  probabilidad de que esta bola sea blanca?
 	

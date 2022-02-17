@@ -349,7 +349,7 @@ En este caso la probabilidad es valorada y asignada por un EXPERTO, como un méd
 
 Con base en el enfoque frecuentista y la base de las personas contagiadas de COVID-19 durante el 2022 en Cali , determine la probabilidad de morir si se contagia de Covid19
 
-
+PISTAS : código 2.1
 <br/><br/><br/>
 
 ## **PROBLEMAS PROPUESTOS**

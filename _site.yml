@@ -8,12 +8,16 @@ navbar:
       href: index.html
     - text: "Módulo 0"
       menu:
-        - text: "Módulo 0"
-          href: Modulo0.html
-        - text: "Guía 001"
-          href: Guia001.html    
-        - text: "Guía 002"
-          href: Guia002.html 
+         - text: "Módulo 0"
+           href: Modulo0.html
+         - text: "Guía 0.1"
+           href: Guia001.html  
+         - text: "Guía 0.2"
+           href: Guia002.html  
+         - text: "Guía 0.3"
+           href: Guia003.html  
+         - text: "Guía 0.4"
+           href: Guia004.html  
     - text: "Módulo 1"
       menu:
         - text: "Módulo 1"
@@ -60,25 +64,49 @@ navbar:
           href: Guia501.html  
         - text: "Guía 5.2"
           href: Guia502.html
-    - text: "<Código R>"
+    - text: "Código R"
+      icon: fa-code
       menu:
         - text: "Introducción a R"
           href: introduccionR.html
-        - text: "Código 1.1"
-          href: codigo101.html  
-        - text: "Código 1.2"
-          href: codigo102.html   
-        - text: "Código 1.3"
-          href: codigo103.html 
-        - text: "Código 2.1"
-          href: codigo201.html  
+        - text: "Código u1.1"
+          href: codigo101.html
+        - text: "Código u1.2"
+          href: codigo102.html  
+        - text: "Código u1.3"
+          href: codigo103.html
+        - text: "Código u2.1"
+          href: codigo201.html
+        - text: "Código u3.1"
+          href: codigo301.html
+        - text: "Código u3.2"
+          href: codigo302.html
+        - text: "Simulación"
+          href: simulacion.html
+        - text: "Código u4.1"
+          href: codigo401.html   
+        - text: "Código u4.2"
+          href: codigo402.html 
+        - text: "Código u4.3"
+          href: codigo403.html
+        - text: "Código u5.1"
+          href: codigo501.html     
+        - text: "Código u5.2"
+          href: codigo502.html           
     - text: "Monitoria"
-      menu:
-        - text: "monitoria1"
-          href: monitoria1.html 
-        - text: "monitoria2"
-          href: monitoria2.html 
-          
+      icon: fa-chess-pawn
+      menu: 
+        - text: "monitoria 1"
+          href: monitoria1.html
+        - text: "monitoria 2"
+          href: monitoria2.html
+        - text: "monitoria 3"
+          href: monitoria3.html
+        - text: "monitoria 4"
+          href: monitoria4.html
+        - text: "monitoria 5"
+          href: monitoria5.html
+        
 output:
   html_document:
     theme: cosmos

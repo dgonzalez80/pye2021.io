@@ -1,0 +1,18 @@
+---
+title: "**Monitoria **"
+author: "dgonzalez80"
+date: " "
+output:
+  html_document:
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    theme: cosmo
+---
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### <span style="color:#BC2B6A">**Introducción**</span>

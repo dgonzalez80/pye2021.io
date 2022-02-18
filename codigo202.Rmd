@@ -336,6 +336,7 @@ $P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \
 
 ## **Reto**
 
+
 <br/><br/>
 Entre las ciudades: Bogotá D.E., Medellín y Cali, cuál de ellas es la que tiene la mayor probabilidad de contraer Covid? (tome como referencia la información suministrada en la base de datos - Datos Abiertos - para el més de febrero de 2022)
 Indique los cálculos realizados.
@@ -347,8 +348,39 @@ Indique los cálculos realizados.
 ## **Aplicaciones** :
 
 **Árboles de decisión**
+
+```{r}
+# install.packages("titanic") # instalar paquete
+library(titanic) # cargar pauqete
+library(tidyverse) # paquete para manejo de datos
+data("titanic_train") # cargar la base
+# head(titanic_train) # ver la estructura de la base
+ # modelo necesario para constuir el arbol
+#installed.packages("rpart")
+#install.packages("rattle")
+#installed.packages("rpart.plot")
+library(rpart)
+library(rattle)
+library(rpart.plot)
+
+arbol= rpart(formula = Survived ~ Sex + Age,
+             data = titanic_train,
+             method = "class")
+fancyRpartPlot(arbol)
+
+```
+<br/>
+Tomado de : https://www.youtube.com/watch?v=t0lmtrm_aa0
+
+<br/><br/>
+
+
 https://rpubs.com/jboscomendoza/arboles_decision_clasificacion
 
+<br/>
+
 https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html
+
+<br/><br/><br/><br/>
 
 ## **Problemas sugeridos **

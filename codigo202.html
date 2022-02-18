@@ -780,8 +780,30 @@ B* 140 260</code></pre>
 </div>
 <div id="aplicaciones" class="section level2">
 <h2><strong>Aplicaciones</strong> :</h2>
-<p><strong>Árboles de decisión</strong> <a href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion" class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p>
+<p><strong>Árboles de decisión</strong></p>
+<pre class="r"><code># install.packages(&quot;titanic&quot;) # instalar paquete
+library(titanic) # cargar pauqete
+library(tidyverse) # paquete para manejo de datos
+data(&quot;titanic_train&quot;) # cargar la base
+# head(titanic_train) # ver la estructura de la base
+ # modelo necesario para constuir el arbol
+#installed.packages(&quot;rpart&quot;)
+#install.packages(&quot;rattle&quot;)
+#installed.packages(&quot;rpart.plot&quot;)
+library(rpart)
+library(rattle)
+library(rpart.plot)
+
+arbol= rpart(formula = Survived ~ Sex + Age,
+             data = titanic_train,
+             method = &quot;class&quot;)
+fancyRpartPlot(arbol)</code></pre>
+<p><img src="codigo202_files/figure-html/unnamed-chunk-2-1.png" width="672" /> <br/> Tomado de : <a href="https://www.youtube.com/watch?v=t0lmtrm_aa0" class="uri">https://www.youtube.com/watch?v=t0lmtrm_aa0</a></p>
+<p><br/><br/></p>
+<p><a href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion" class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p>
+<p><br/></p>
 <p><a href="https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html" class="uri">https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html</a></p>
+<p><br/><br/><br/><br/></p>
 </div>
 <div id="problemas-sugeridos" class="section level2">
 <h2><strong>Problemas sugeridos </strong></h2>

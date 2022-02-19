@@ -89,10 +89,6 @@ El taller del Modulo 2 recoge los elementos estudiados y por tanto  tiene objeti
 
 <br/><br/><br/><br/>
 
-## **Presentaciones**
-
-[**Presentación 202**](https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/presentacion202.pdf)
-<br/><br/>
 
 # **Recursos**
 <br/><br/>
@@ -336,6 +332,9 @@ $P(E|+5) = \dfrac{P(E \cap +5)}{P(+5)} = \dfrac{P(E)P(+5|E)}{P(E)P(+5|E) + P(TC)
 $P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58} = 0.1034$
 
 <br/><br/>
+
+**Video** : https://www.youtube.com/watch?v=RvxjyKIKI5s
+
 
 ## **Reto**
 

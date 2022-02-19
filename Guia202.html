@@ -564,7 +564,7 @@ div.tocify {
 </div>
 <div id="duración" class="section level2">
 <h2><strong>Duración</strong></h2>
-<p>La presente unidad será desarrollada durante la semana comprendida entre el 21 y 27 de febrero de 2022. Ademas del material suministrado contaran con el acompañamiento del profesor en dos sesiones (Lunes y Viernes) y de un monitor (Miercoles) y espacio de Atencion a estudiantes y manera asincrónica de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el 29 de agosto de 2021</p>
+<p>La presente unidad será desarrollada durante la semana comprendida entre el 25 y 29 de agosto de 2021. Ademas del material suministrado contaran con el acompañamiento del profesor en dos sesiones (Lunes y Viernes) y de un monitor (Miercoles) y espacio de Atencion a estudiantes y manera asincrónica de actividades académicas. Los entregables para esta unidad podrán enviarse a través de la plataforma Brightspace hasta el 29 de agosto de 2021</p>
 <p>Para alcanzar los objetivos planteados se propone realizar la siguiente actividad</p>
 <p><br/><br/></p>
 </div>
@@ -587,18 +587,14 @@ div.tocify {
 <td align="left">A partir de los conceptos vistos en las Unidades 2.1 y 2.2 deberá resolver los problemas propuestos en el <a href="https://github.com/dgonzalez80/probabilidad20212.io/blob/main/talleres/Taller_202.pdf"><strong>Taller 202</strong></a> y entregue su solución en formato <strong>pdf</strong> en el enlace correspondiente de Brightspace.</td>
 </tr>
 <tr class="even">
-<td align="left">Trabajo en parejas</td>
-<td align="left"></td>
+<td align="left">Fecha</td>
+<td align="left">29 de agosto de 2021</td>
 </tr>
 <tr class="odd">
-<td align="left">Fecha</td>
-<td align="left">27 de febrero de 2022</td>
-</tr>
-<tr class="even">
 <td align="left">Hora</td>
 <td align="left">23:59 hora local</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -618,10 +614,6 @@ div.tocify {
 <div id="entregables" class="section level2">
 <h2><strong>Entregables</strong></h2>
 <table>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Entregable</th>
@@ -631,11 +623,11 @@ div.tocify {
 <tbody>
 <tr class="odd">
 <td align="left">Actividad202</td>
-<td align="left">Actividad202.pdf : Solucionario taller 202. Cada uno de los integrantes debe subir a la plataforma el resultado del trabajo en formato pdf</td>
+<td align="left">Actividad202.pdf : Solucionario taller 202</td>
 </tr>
 <tr class="even">
 <td align="left">Fecha</td>
-<td align="left">Domongo 27 de febrero de 2022</td>
+<td align="left">Domongo 29 de agosto de 2021</td>
 </tr>
 <tr class="odd">
 <td align="left">Hora límite</td>
@@ -787,14 +779,47 @@ B* 140 260</code></pre>
 <p><br/><br/><br/><br/></p>
 <p>Aplicaciones :</p>
 <p><strong>Árboles de decisión</strong></p>
-<pre class="r"><code># install.packages(&quot;titanic&quot;)  # instalacion paquete con datos
-library(titanic)               #  cargar paquete titanic
-library(tidyverse)             #  cargar  paquete manejo de datos
+<pre class="r"><code>#  install.packages(&quot;titanic&quot;)  # instalar paquete titatic
+library(titanic) #  cargar paquete
+data(titanic_train)  # cargar los datos
 
-data(&quot;Titanic_train&quot;)          # cargar datos</code></pre>
-<pre><code>Warning in data(&quot;Titanic_train&quot;): data set &#39;Titanic_train&#39; not found</code></pre>
-<p><a href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion" class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p>
-<p><a href="https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html" class="uri">https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html</a></p>
+# install.packages(&quot;rpart&quot;)
+# install.packages(&quot;rattle&quot;)
+#install.packages(&quot;rpart.plot&quot;)
+
+library(rpart)
+library(rattle)</code></pre>
+<pre><code>Loading required package: tibble</code></pre>
+<pre><code>Loading required package: bitops</code></pre>
+<pre><code>Rattle: A free graphical interface for data science with R.
+Versión 5.4.0 Copyright (c) 2006-2020 Togaware Pty Ltd.
+Escriba &#39;rattle()&#39; para agitar, sacudir y  rotar sus datos.</code></pre>
+<pre class="r"><code>library(rpart.plot)
+
+arbol=rpart( formula = Survived ~ Sex + Age,
+             data = titanic_train,
+             method = &quot;class&quot;)
+fancyRpartPlot(arbol)</code></pre>
+<p><img src="Guia202_files/figure-html/unnamed-chunk-2-1.png" width="672" /> <br/> Código tomado de : <a href="https://www.youtube.com/watch?v=t0lmtrm_aa0" class="uri">https://www.youtube.com/watch?v=t0lmtrm_aa0</a></p>
+<p><br/><br/></p>
+<p><strong>Resultados del árbol</strong></p>
+<p><strong>Eventos</strong> : + <span class="math inline">\(S\)</span> : sobrevive + <span class="math inline">\(S&#39;\)</span> : no sobrevive + <span class="math inline">\(H\)</span> : hombre + <span class="math inline">\(M\)</span> : mujer</p>
+<p><strong>Probabilidades:</strong></p>
+<ul>
+<li><span class="math inline">\(P(S&#39;) = 0.62\)</span></li>
+<li><span class="math inline">\(P(S) = 0.28\)</span></li>
+<li><span class="math inline">\(P(M) = 0.35\)</span></li>
+<li><span class="math inline">\(P(H) = 0.64\)</span></li>
+<li><span class="math inline">\(P(S&#39;|M= = 0.26\)</span></li>
+<li><span class="math inline">\(P(S|M= = 0.74\)</span></li>
+<li><span class="math inline">\(P(S&#39;|H) = 0.81\)</span></li>
+<li><span class="math inline">\(P(S|H) = 0.19\)</span></li>
+</ul>
+<p><strong>Referencias sobre árboles de decisión </strong></p>
+<ul>
+<li><p><a href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion" class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p></li>
+<li><p><a href="https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html" class="uri">https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html</a></p></li>
+</ul>
 </div>
 </div>
 

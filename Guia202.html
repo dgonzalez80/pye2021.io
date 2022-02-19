@@ -801,11 +801,11 @@ Versión 5.4.0 Copyright (c) 2006-2020 Togaware Pty Ltd.
 Escriba &#39;rattle()&#39; para agitar, sacudir y  rotar sus datos.</code></pre>
 <pre class="r"><code>library(rpart.plot)
 
-arbol=rpart( formula = Survived ~ Sex + Age,
+arbol=rpart( formula = Survived ~ Sex,
              data = titanic_train,
              method = &quot;class&quot;)
 fancyRpartPlot(arbol)</code></pre>
-<p><img src="Guia202_files/figure-html/unnamed-chunk-2-1.png" width="672" /> <br/> Código tomado de : <a href="https://www.youtube.com/watch?v=t0lmtrm_aa0" class="uri">https://www.youtube.com/watch?v=t0lmtrm_aa0</a></p>
+<p><img src="Guia202_files/figure-html/unnamed-chunk-2-1.png" width="672" /> <br/> Código basado en: <a href="https://www.youtube.com/watch?v=t0lmtrm_aa0" class="uri">https://www.youtube.com/watch?v=t0lmtrm_aa0</a></p>
 <p><br/><br/></p>
 <p><strong>Resultados del árbol</strong></p>
 <p><strong>Eventos</strong> : + <span class="math inline">\(S\)</span> : sobrevive + <span class="math inline">\(S&#39;\)</span> : no sobrevive + <span class="math inline">\(H\)</span> : hombre + <span class="math inline">\(M\)</span> : mujer</p>
@@ -820,6 +820,23 @@ fancyRpartPlot(arbol)</code></pre>
 <li><span class="math inline">\(P(S&#39;|H) = 0.81\)</span></li>
 <li><span class="math inline">\(P(S|H) = 0.19\)</span></li>
 </ul>
+<pre class="r"><code>t= table(titanic_train$Survived,
+         titanic_train$Sex)       # construcción tabla cruzada
+
+t = t %&gt;%  
+      prop.table() %&gt;% 
+      addmargins() %&gt;% 
+      round(.,4)
+
+rownames(t)=c(&quot;Died&quot;,&quot;Survived&quot;, &quot;Sum&quot;)
+
+      
+t        # tabla de probabilidades</code></pre>
+<pre><code>          
+           female   male    Sum
+  Died     0.0909 0.5253 0.6162
+  Survived 0.2615 0.1223 0.3838
+  Sum      0.3524 0.6476 1.0000</code></pre>
 <p><strong>Referencias sobre árboles de decisión </strong></p>
 <ul>
 <li><p><a href="https://rpubs.com/jboscomendoza/arboles_decision_clasificacion" class="uri">https://rpubs.com/jboscomendoza/arboles_decision_clasificacion</a></p></li>

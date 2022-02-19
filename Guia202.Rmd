@@ -364,13 +364,13 @@ library(rpart)
 library(rattle)
 library(rpart.plot)
 
-arbol=rpart( formula = Survived ~ Sex + Age,
+arbol=rpart( formula = Survived ~ Sex,
              data = titanic_train,
              method = "class")
 fancyRpartPlot(arbol)
 ```
 <br/>
-Código tomado de : https://www.youtube.com/watch?v=t0lmtrm_aa0
+Código basado en: https://www.youtube.com/watch?v=t0lmtrm_aa0
 
 <br/><br/>
 
@@ -392,6 +392,22 @@ Código tomado de : https://www.youtube.com/watch?v=t0lmtrm_aa0
 + $P(S|M=  = 0.74$
 + $P(S'|H) = 0.81$
 + $P(S|H) = 0.19$
+
+```{r}
+t= table(titanic_train$Survived,
+         titanic_train$Sex)       # construcción tabla cruzada
+
+t = t %>%  
+      prop.table() %>% 
+      addmargins() %>% 
+      round(.,4)
+
+rownames(t)=c("Died","Survived", "Sum")
+
+      
+t        # tabla de probabilidades
+```
+
 
 
 

@@ -410,9 +410,41 @@ t        # tabla de probabilidades
 
 
 
+<br/>
 
 **Referencias sobre árboles de decisión **
 
 + https://rpubs.com/jboscomendoza/arboles_decision_clasificacion
 
 + https://bookdown.org/content/2031/arboles-de-decision-parte-ii.html
+
+<br/><br/><br/>
+
+## **Problemas propuestos**
+
+<br/>
+
+**Problema 1** : Se escogen al azar 5 lámparas de 25 de las cuales 8 son defectuosas. Hallar la probabilidad de que:
+<br/>
+a. Ninguna de las lámparas seleccionadas sea defectuosa.
+b. Exactamente una de las lámparas seleccionadas sea defectuosa.
+c. Por lo menos una de las lámparas seleccionadas no sea defectuosa
+
+<br/><br/>
+
+**Problema 2** :  : Un estudiante realiza dos exámenes en un mismo día. La probabilidad de que apruebe el
+primer examen  es de 0.6 . La probabilidad de que apruebe el segundo examen es de 0.8; y la de que apruebe los dos exámenes es 0.5 :
+
+a. Represente la información suministrada mediante: 
+    + Una tabla cruzada, con las probabilidades marginales, conjuntas y condicionales 
+    + Diagrama de árbol,  
+    + Un diagrama de Venn
+
+
+b. Que es mas probable que ocurra :
+    + Que sabiendo que gane el primer examen, también gane el segundo examen
+    + Que sabiendo que perdió el primer examen, también pierda el segundo examen
+
+<br/><br/>
+
+**Problema 3** : El Departamento de crédito de una cadena de supermercados, informó que el 30% de sus ventas se pagan con efectivo o con cheque; 30% se paga con tarjeta de crédito y el resto con tarjeta débito. Veinte por ciento de las ventas realizadas con efectivo o cheque, noventa por ciento de las compras realizadas con tarjeta de crédito y el sesenta por ciento de las compras realizadas con tarjeta débito, son realizadas por más de  50.000. La señora Fatima acaba de comprar un vestido nuevo que le costó  120.000. ¿Que es más probable que halla pagado su vestido con tarjeta de crédito o que lo halla hecho con tarjeta débito?

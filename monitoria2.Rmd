@@ -15,6 +15,14 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
+## **Primer parcial**
+
+[Primer parcial 2015-2](https://github.com/dgonzalez80/pye20221.io/blob/main/pdf/PARCIAL1.pdf)
+
+<br/><br/><br/><br/>
+
 ## **Punto 1**:
 
 Un cargamento de 1500 lavadoras contiene 400 defectuosas y 1100 no defectuosas. Se eligen al azar doscientas lavadoras (sin sustitución) y se clasifican. 
@@ -98,3 +106,6 @@ b.¿Cuál es la probabilidad de que un animal elegido aleatoriamente que tiene b
 Se cree que la distribución de los grupos sanguíneos en Estados Unidos en la Segunda Guerra Mundial era: tipo A, 41%; tipo B, 9%; tipo AB, 4%; y tipo O, 46%. Se estima que en esa época, el 4% de las personas pertenecientes al tipo O fue clasificado como del tipo A; el 88% de los del tipo A fue correctamente clasificado; el 4% de los del tipo B se clasificó como del tipo A, y el 10% de los del tipo AB fue, igualmente, clasificado como del tipo A. Un soldado fue herido y conducido a la enfermería. Se le clasificó como del tipo A. ¿Cuál es la probabilidad de que tal grupo sea ciertamente el suyo?
 	
 *Tomados de J. Susan Milto (2001)* 
+
+
+

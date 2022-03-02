@@ -17,15 +17,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-## **Primer parcial**
+## **Ejemplos de Primeros parciales**
 
 <br/><br/>
 
-[Primer parcial 2015-2](https://github.com/dgonzalez80/pye20221.io/blob/main/pdf/PARCIAL1.pdf)
+### [**Primer parcial 2015-2**](https://github.com/dgonzalez80/pye20221.io/blob/main/pdf/PARCIAL1.pdf)
 
 <br/><br/>
 
-[Primer parcial 20171](https://github.com/dgonzalez80/pye20221.io/blob/main/pdf/Primer%20parcial_20171-C.pdf)
+### [**Primer parcial 2017-1**](https://github.com/dgonzalez80/pye20221.io/blob/main/pdf/Primer%20parcial_20171-C.pdf)
 
 <br/><br/>
 

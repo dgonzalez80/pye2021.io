@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <br/><br/>
 
 ### [**Primer parcial 2017-1**](https://github.com/dgonzalez80/pye20221.io/blob/main/pdf/Primer%20parcial_20171-C.pdf)
+Nota: el **punto 2** corresponde al módulo 3 . No hacer
 
 <br/><br/>
 

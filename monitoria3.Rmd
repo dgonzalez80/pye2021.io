@@ -1,5 +1,5 @@
 ---
-title: "**Monitoria **"
+title: "**Monitoria 3**"
 author: "dgonzalez80"
 date: " "
 output:
@@ -15,4 +15,22 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### <span style="color:#BC2B6A">**EN CONSTRUCCION**</span>
+<br/><br/>
+
+## **Ejercicios propuestos U3.1**
+
+<br/>
+
+#### [**Taller 302**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_302.pdf)<br/>
+
+<br/>
+
+#### [**Taller 303**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_303.pdf)<br/>
+
+<br/>
+
+#### [**Taller 304**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_304.pdf)<br/>
+
+<br/>
+
+#### [**Taller 306**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_306.pdf)<br/>

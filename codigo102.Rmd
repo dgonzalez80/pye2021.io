@@ -1,7 +1,7 @@
 ---
-title: "Código 2"
+title: "Código 102"
 author: "dgonzalez "
-subtitle: "Módulo 1- Unidad 1.1" 
+subtitle: "Módulo 1- Unidad 1.2" 
 output:
   html_document:
     toc: yes

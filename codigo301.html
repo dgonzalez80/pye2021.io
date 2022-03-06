@@ -12,7 +12,7 @@
 <meta name="author" content="dgonzalez" />
 
 
-<title>Código 2</title>
+<title>Código 301</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -539,17 +539,77 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Código 2</h1>
-<h3 class="subtitle">Módulo 1- Unidad 1.1</h3>
+<h1 class="title toc-ignore">Código 301</h1>
+<h3 class="subtitle">Módulo 3- Unidad 3.1</h3>
 <h4 class="author">dgonzalez</h4>
 
 </div>
 
 
+<div id="variables-discretas" class="section level1">
+<h1><strong>Variables discretas</strong></h1>
+<p>En el caso de las variables discretas la función de distribución de probabilidad <span class="math inline">\(f(x)\)</span> debe cumplir las siguientes propiedades</p>
+<ul>
+<li><p><span class="math inline">\(f(x) = P(X=x) &gt; 0\)</span>, la probabilidad es un valor mayor a cero</p></li>
+<li><p><span class="math inline">\(\sum_{R_X} f(x) = 1\)</span>, la suma de todas las probabilidades es igual a uno</p></li>
+</ul>
+<p>En este caso se puede utilizar la función sumatoria <code>sum(x, na.rm = FALSE)</code>, donde <code>x</code> es un vector y <code>na.rm</code> indica si el vector tienen datos faltantes.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="img/ej1.png" width="80" /></td>
+<td align="left">Para la función <span class="math inline">\(f(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[f_{_{X}}(x) = \left \{ 
+                \begin{matrix} 
+                \displaystyle\binom{40}{x}(0.7)^{x}(0.3)^{40-x} &amp; \mbox{si }    x=0,1,2,\ldots,40\\ 
+                &amp; \\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<pre class="r"><code># declaracion de la funcion
+fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+
+# grafico de la funcion
+plot(w, fw(w), pch=19, col=&quot;#BC2B6A&quot;, las=1)
+grid()</code></pre>
+<p><img src="codigo301_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Para verificar que la suma de todas las probabilidades es igual a uno</p>
+<pre class="r"><code>fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+sum(fw(w))</code></pre>
+<pre><code>[1] 1</code></pre>
+<p>Para calcular la probabilidad <span class="math inline">\(P(20 \leq X \leq 30)\)</span></p>
+<pre class="r"><code>sum(fw(20:30))</code></pre>
+<pre><code>[1] 0.8016552</code></pre>
+<div id="valor-esperado" class="section level3">
+<h3><strong>Valor esperado</strong></h3>
+<pre class="r"><code>fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+Ex=sum(fw(w)*w)
+cat(&quot;E[X] = &quot;,Ex)</code></pre>
+<pre><code>E[X] =  28</code></pre>
+</div>
+<div id="varianza" class="section level3">
+<h3><strong>Varianza</strong></h3>
+<pre class="r"><code>fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
+w=0:40
+Ex=sum(fw(w)*w)
+Ex2=sum(fw(w)*w^2)
+Vx=Ex2-Ex^2
+cat(&quot;V[X] = &quot;,Vx)</code></pre>
+<pre><code>V[X] =  8.4</code></pre>
+</div>
+</div>
+<div id="variables-continuas" class="section level1">
+<h1><strong>Variables continuas</strong></h1>
 <div id="integración" class="section level2">
-<h2>Integración</h2>
-<p>El concepto de integración se utiliza en probabilidad para derminar el area bajo la curva de una funcion de densidad <span class="math inline">\(f(x)\)</span> para una variable aleatoria continua.</p>
-<p>Dos de las propuedades de una <span class="math inline">\(f(x)\)</span> son:</p>
+<h2><strong>Integración</strong></h2>
+<p>El concepto de integración se utiliza en probabilidad para determinar el área bajo la curva de una función de densidad <span class="math inline">\(f(x)\)</span> para una variable aleatoria continua.</p>
+<p>Dos de las propiedades de una <span class="math inline">\(f(x)\)</span> son:</p>
 <ul>
 <li><p><span class="math inline">\(\displaystyle\int\limits_{-\infty}^{+\infty} \dfrac{1}{4} f(x) \:dx = 1\)</span></p></li>
 <li><p><span class="math inline">\(P(a \leq X \leq b) = \displaystyle\int\limits_{a}^{b} f(x) \:dx\)</span></p></li>
@@ -567,8 +627,14 @@ div.tocify {
 </ul>
 <p><code>integrate(function(x) x, lower = 0, upper = 1)</code></p>
 <p><br/><br/></p>
-<p>Ejemplo :</p>
-<p>Para la función</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="img/ej2.png" width="80" /></td>
+<td align="left">Para la función <span class="math inline">\(f(x)\)</span></td>
+</tr>
+</tbody>
+</table>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{ 
                 \begin{matrix} 
                 \dfrac{1}{4} e^{-x/4} &amp; \mbox{ , }  x \geq 0\\ 
@@ -576,7 +642,7 @@ div.tocify {
                 0  &amp; \mbox{en otro caso }
                 \end{matrix}\right.  
                 \]</span></p>
-<p><span class="math display">\[P(X &lt; 5\]</span></p>
+<p><span class="math display">\[P(X &lt; 5)\]</span></p>
 <pre class="r"><code># declaracion de la funcion
 fx=function(x){1/4*exp(-x/4)}
 
@@ -588,10 +654,57 @@ plot(x,fx(x), type=&quot;l&quot;, col=&quot;#BC2B6A&quot;, lwd=5)
 x1=seq(0,5,0.01)
 f1=fx(x1)
 polygon(c(0,x1,5),c(0,f1,0),col=&quot;skyblue&quot;)</code></pre>
-<p><img src="codigo301_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="codigo301_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <pre class="r"><code># integral entre 5 y 15 : P( X &lt; 5)
 integrate(fx, 0,5)</code></pre>
 <pre><code>0.7134952 with absolute error &lt; 7.9e-15</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="valor-esperado-1" class="section level2">
+<h2><strong>Valor esperado</strong></h2>
+<p><span class="math display">\[E(X) = \displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx\]</span></p>
+<p>En este caso la función se multiplica por <span class="math inline">\(x\)</span></p>
+<pre class="r"><code>Mx=function(x){1/4*exp(-x/4)*x}
+Ex=integrate(Mx, 0, Inf)
+cat(&quot;E[X] = &quot;, Ex$value,&quot;\n&quot;)</code></pre>
+<pre><code>E[X] =  4 </code></pre>
+<p><br/><br/></p>
+</div>
+<div id="varianza-1" class="section level2">
+<h2><strong>Varianza</strong></h2>
+<p><span class="math display">\[V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}\]</span></p>
+<pre class="r"><code>fx=function(x){1/4*exp(-x/4)}
+Mx1=function(x){1/4*exp(-x/4)*x}
+Mx2=function(x){1/4*exp(-x/4)*x^2}
+Ex=integrate(Mx1, lower=0,upper=Inf)
+Ex2=integrate(Mx2, lower=0,upper=Inf)
+
+cat(&quot;V[X] = &quot;, Ex2$value-Ex$value^2)</code></pre>
+<pre><code>V[X] =  16</code></pre>
+<pre class="r"><code>fx=function(x){1/4*exp(-x/4)}
+Mx1=function(x){1/4*exp(-x/4)*x}
+Mx2=function(x){1/4*exp(-x/4)*x^2}
+Ex=integrate(Mx1, lower=0,upper=Inf)
+Ex2=integrate(Mx2, lower=0,upper=Inf)
+cat(&quot;E[X] = &quot;, Ex$value,&quot;\n&quot;)</code></pre>
+<pre><code>E[X] =  4 </code></pre>
+<pre class="r"><code>cat(&quot;V[X] = &quot;, Ex2$value-Ex$value^2)</code></pre>
+<pre><code>V[X] =  16</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="otras-herramientas" class="section level2">
+<h2><strong>Otras herramientas</strong></h2>
+<div id="wolframalpha" class="section level3">
+<h3><strong>WolframAlpha</strong></h3>
+<p><img src="img/walpha.png" /></p>
+<p><a href="https://www.wolframalpha.com/" class="uri">https://www.wolframalpha.com/</a></p>
+</div>
+<div id="symlab" class="section level3">
+<h3><strong>Symlab</strong></h3>
+<p><img src="img/symbolab3.png" /></p>
+<p><a href="https://es.symbolab.com/" class="uri">https://es.symbolab.com/</a></p>
+</div>
+</div>
 </div>
 
 

@@ -87,6 +87,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 # **Recursos **
 
 ![](img/variables1.png)
+<br/><br/>
 
 ## **Introducción**
 
@@ -117,12 +118,11 @@ En esta unidad se tratará el  caso univariado discreto, luego el caso continuo,
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-<br/>
-
 ## **Definición Variable aleatoria**
 
 Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un numero . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$) 
 
+</div> 
 
 Las variables aleatorias se clasifican teniendo en cuenta las características de su rango en discretas, continuas. La distribución de una variable aleatoria será univariada si se estudia el comportamiento de una sola variable y serán multivariadas si se considera el comportamiento conjunto de varias variables definidas sobre el mismo espacio muestral.Este ultimo caso sera tratado en la **Unidad 3.2**
 <br/><br/>
@@ -178,8 +178,6 @@ Para catacterizar la variable se define  la función de distribución de probabi
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-<br/><br/>
-
 ### **Definición: Función de distribución de probabilidad**
 
 Para $X$ un variable aleatoria discreta, su función de distribución de probabilidad estará dada por $f(x)$, la cual proporciona las probabilidades asociadas a todos los valores de su rango $R_{X}$ . Esta función debe cumplir las siguientes propiedades:
@@ -211,7 +209,6 @@ Como complemento de $f(x)$ y debido a que puede resultar más interesante calcul
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-<br/><br/>
 
 ### **Función de probabilidad acumulada**
 
@@ -225,7 +222,7 @@ $$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$$
 
 |    |                                     |
 |:--:|:------------------------------------|
-| ![](img/ej2.png) | Para la variable definida como $X$ número de puntos obtenidos al lanzar un dado tenemos  que : |
+| ![](img/ej2.png) | Para la variable definida como $X$: número de puntos obtenidos al lanzar un dado tenemos  que : |
 
 |  $x_{i}$  |             1  |             2  |             3  |             4  |             5  |             6  |
 |:---------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|
@@ -287,7 +284,7 @@ $$f_{_{X}}(x) = \left \{
 
 <br/>
 
-En este caso se utiliza la función combinatoria vista en la guía 0.2
+En este caso se utiliza la función combinatoria vista en la Guía 0.2
 
 Para representar la función utilizamos el siguiente código
 
@@ -355,7 +352,6 @@ En este caso las variables por lo general proceden de una medición como por eje
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 
-<br/><br/>
 
 ### **Función de densidad de probabilidad** 
 
@@ -464,7 +460,7 @@ En el caso continuo y similarmente para el caso discreto.
 + $E(XY) = E(X)E(Y)$, 	unicamente en el caso que $X$ e $Y$ sean variables aleatorias independientes
 </div> 
 
-<br/><br/><br/><br/>
+<br/><br/>
 
 
 ## **Varianza**
@@ -490,7 +486,7 @@ Con este nuevo elemento se define la varianza de una variable aleatorias como la
 
 ### **Definición Varianza**
 
-$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$ 
+$$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$ 
 
 </div> 
 

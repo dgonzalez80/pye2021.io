@@ -95,7 +95,7 @@ El concepto de variable aleatoria constituye uno de los conceptos principales de
 
 Ahora, se puede relacionar el concepto de variable aleatoria a diferentes contextos donde se requiere dar respuesta a preguntas relacionadas con la ocurrencia o no de fenómenos aleatorios que eventualmente se presentarán en el futuro, como por ejemplo: 
 
-* ¿Cuánto tiempo se tarda un estudiante  en ir a la universidad?
+* ¿Cuánto tiempo se tarda un estudiante  en ir de su casa a la universidad?
 
 * ¿Cuál será  el resultado en mi próximo examen de estadística? 
 
@@ -107,7 +107,7 @@ Ahora, se puede relacionar el concepto de variable aleatoria a diferentes contex
 
 * ¿Qué  diámetro tendrá la  perforación de una máquina en una lámina de acero que hace parte de una puerta de un vehículo?
 
-* ¿ cuanto tiempo tardara la creación de la vacuna para el Covid-19?
+* ¿Cuantos mensajes recibiré hoy por WhatsApp?
 
 
 En  todos los casos se trata de  preguntas que tienen  diferentes  respuestas, o  que no tienen un único valor como  respuesta.  En este documento  se estudiará el concepto de variable aleatoria y mediante la definición  de una función  matemática que nos  permita caracterizar su  comportamiento, realizaremos diferentes cálculos de probabilidades de interés. Para ello será necesario  retomar conocimientos de cálculo integral que serán  expuestos en su momento mediante funciones de fácil manejo.
@@ -241,14 +241,14 @@ Tambien podemos representar esta función de manera gráfica
 ```{r}
 x=1:6
 fx=rep(1,6)/6
-plot(x,fx,pch=19, ylim=c(0,0.18), las=1, xlab="puntos", ylab="f(x)")  
-lines(x, fx, type="h", col=2)
+plot(x,fx,pch=19, ylim=c(0,0.18), las=1, xlab="puntos", ylab="f(x)", col="#BC2B6A")  
+lines(x, fx, type="h", col="#E09600", lty=3)
 grid()
   
 ```
 <br/>
 
-Para la construcción de la función de distribución acumulada se acumulan los valores correspondienes a las probabilidades puntuales de manera creciente
+Para la construcción de la función de distribución acumulada se acumulan los valores correspondientes a las probabilidades puntuales de manera creciente
 
 ```{r}
 x=1:6
@@ -258,6 +258,8 @@ plot(x,Fx, las=1, ylab="F(x)", xlab="puntos",pch=19, ylim=c(0,1))
 lines(x, Fx, type="s", col=2)
 grid()
 ```
+
+
 ```{r}
 x=1:6
 fx=round(rep(1,6)/6,6)

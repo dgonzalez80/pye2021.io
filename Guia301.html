@@ -643,13 +643,13 @@ div.tocify {
 <p>El concepto de variable aleatoria constituye uno de los conceptos principales de la probabilidad y estadística. A este concepto se pueden asociar dos paradigmas de evolución histórica segun J.A. Alberth &amp; B. Ruiz (2013) , El primero basada en el resultado de fenómenos aleatorios y por otro lado el proceso que relaciona los conjuntos de espacio muestral y sus respectivas probabilidades, para definir el concepto de variable aleatória como función de números reales y el espacio para el sustento matemático.</p>
 <p>Ahora, se puede relacionar el concepto de variable aleatoria a diferentes contextos donde se requiere dar respuesta a preguntas relacionadas con la ocurrencia o no de fenómenos aleatorios que eventualmente se presentarán en el futuro, como por ejemplo:</p>
 <ul>
-<li><p>¿Cuánto tiempo se tarda un estudiante en ir a la universidad?</p></li>
+<li><p>¿Cuánto tiempo se tarda un estudiante en ir de su casa a la universidad?</p></li>
 <li><p>¿Cuál será el resultado en mi próximo examen de estadística?</p></li>
 <li><p>El dueño de la cafetería se puede preguntar ¿Cuantas botellas de agua se venderán esta semana?</p></li>
 <li><p>¿Cuánto tiempo tardaría la entrega de un paquete una empresa de mensajería?</p></li>
 <li><p>¿Cuánto tiempo dura la bombilla de un vehículo?</p></li>
 <li><p>¿Qué diámetro tendrá la perforación de una máquina en una lámina de acero que hace parte de una puerta de un vehículo?</p></li>
-<li><p>¿ cuanto tiempo tardara la creación de la vacuna para el Covid-19?</p></li>
+<li><p>¿Cuantos mensajes recibiré hoy por WhatsApp?</p></li>
 </ul>
 <p>En todos los casos se trata de preguntas que tienen diferentes respuestas, o que no tienen un único valor como respuesta. En este documento se estudiará el concepto de variable aleatoria y mediante la definición de una función matemática que nos permita caracterizar su comportamiento, realizaremos diferentes cálculos de probabilidades de interés. Para ello será necesario retomar conocimientos de cálculo integral que serán expuestos en su momento mediante funciones de fácil manejo.</p>
 <p>En esta unidad se tratará el caso univariado discreto, luego el caso continuo,con sus principales características, conceptos relacionados con los vistos en el modulo anterior.</p>
@@ -772,11 +772,11 @@ div.tocify {
 <p>Tambien podemos representar esta función de manera gráfica</p>
 <pre class="r"><code>x=1:6
 fx=rep(1,6)/6
-plot(x,fx,pch=19, ylim=c(0,0.18), las=1, xlab=&quot;puntos&quot;, ylab=&quot;f(x)&quot;)  
-lines(x, fx, type=&quot;h&quot;, col=2)
+plot(x,fx,pch=19, ylim=c(0,0.18), las=1, xlab=&quot;puntos&quot;, ylab=&quot;f(x)&quot;, col=&quot;#BC2B6A&quot;)  
+lines(x, fx, type=&quot;h&quot;, col=&quot;#E09600&quot;, lty=3)
 grid()</code></pre>
 <p><img src="Guia301_files/figure-html/unnamed-chunk-1-1.png" width="672" /> <br/></p>
-<p>Para la construcción de la función de distribución acumulada se acumulan los valores correspondienes a las probabilidades puntuales de manera creciente</p>
+<p>Para la construcción de la función de distribución acumulada se acumulan los valores correspondientes a las probabilidades puntuales de manera creciente</p>
 <pre class="r"><code>x=1:6
 fx=rep(1,6)/6
 Fx=cumsum(fx)

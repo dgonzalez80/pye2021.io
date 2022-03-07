@@ -468,6 +468,12 @@ Ejemplos:
 +	Nivel de endeudamiento de una empresa al final del año en porcentaje
 + Precio del metro cuadrado de tierra  en a comuna 22 de Cali
 
+<br/><br/> 
+
+|    |                                     |
+|:--:|:------------------------------------|
+| ![](img/Nota_ojo.png) | Es importante poder distinguir entre variables estadísticas y variables no estadística en una base de datos. Para hacerlo nos preguntamos si para la variable en análisis tiene sentido un análisis estadístico (gráficos, tabla o indicadores).  Por ejemplo: No tiene sentido realizar un análisis con variables como :  id, nombre, correo electrónico, dirección, teléfono, longitud y latitud, representante legal, entro otras |
+
 <br/><br/><br/>
 
 ### **4. Diseño del estudio**

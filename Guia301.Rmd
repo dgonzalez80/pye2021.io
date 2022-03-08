@@ -193,13 +193,13 @@ Por lo general este tipo de variables proceden del conteo. Ejemplos.
 
 * Número de llamadas que entran a un conmutador diariamente
 
-* Número de personas contagiadas por Covid19 durante un dia
+* Número de personas contagiadas por Covid19 durante un día
 
-* Número de quejas reportadas a una sucursal bancaria en un dia
+* Número de quejas reportadas a una sucursal bancaria en un día
 
 * Número de accidentes producidos en una ciudad
 
-* Número de huevos producidos diariamenete en una avicola
+* Número de huevos producidos diariamente en una avícola
 
 * Número de hijos en una familia
 
@@ -467,7 +467,7 @@ En el caso continuo y similarmente para el caso discreto.
 
 ## **Varianza**
 
-Otra caracteristica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirma veremos el concepto de momento de una variable aleatoria
+Otra caracteristica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definirla veremos el concepto de momento de una variable aleatoria
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
 

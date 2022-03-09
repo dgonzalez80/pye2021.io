@@ -106,7 +106,7 @@ Calcule la probabilidad de que el tiempo que  pase para que el radar detecte ent
 $$f(x)= \dfrac{exp\{-2\} 2^x}{x!} \mbox{ , } x = 01,2,3,4,5.... $$
 
 + Determine la probabilidad de que $X$ sea igual a 0, 1, 2, 3, 4, 5 y 6
-+ Grafique ka función de distribución de probabilidad para estos valores de $X$
++ Grafique la función de distribución de probabilidad para estos valores de $X$
 + Determine la función de distribución acumulada para estos valores de $X$.
 + Represente la función $f(x)$ gráficamente
 

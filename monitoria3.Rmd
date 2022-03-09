@@ -15,10 +15,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# <span style="color:#2271B3">**Ejercicios propuestos U3.1**</span>
+# <span style="color:#104E8B">**Ejercicios propuestos U3.1**</span>
 <br/>
 
-## <span style="color:#2271B3">**Taller 302**</span>
+## <span style="color:#104E8B">**Taller 302**</span>
 <br/><br/>
 
  **3.1** Clasifique las siguientes variables aleatorias como discretas o continuas:
@@ -47,6 +47,7 @@ Calcule la probabilidad de que el tiempo que  pase para que el radar detecte ent
 
   + usando la función de distribución de probabilidad acumulada de $X$
   + utilizando la función de densidad de probabilidad de $X$
+  + Represente las funciones $f(x)$ y $F(x)$ gráficamente
   
 <br/><br/>
 
@@ -54,6 +55,7 @@ Calcule la probabilidad de que el tiempo que  pase para que el radar detecte ent
  
  + $P(X < 4)$
  + $P(3 \leq X < 4)$
+ + Represente la función $f(x)$ gráficamente
  
  <br/><br/>
  
@@ -70,6 +72,7 @@ Calcule la probabilidad de que el tiempo que  pase para que el radar detecte ent
  + ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad de probabilidad válida?
  + Calcule la probabilidad de que al menos 50% de las empresas tengan utilidades durante el primer año
  + Calcule la probabilidad de que al menos el 80% de las empresas tengan utilidad durante el primer año
+  + Represente la función $f(x)$ gráficamente
  
  <br/><br/>
  
@@ -93,6 +96,8 @@ Calcule la probabilidad de que el tiempo que  pase para que el radar detecte ent
  
 + Los críticos considerarían que la lavadora es una ganga si no hay una probabilidad de que requiera una reparación mayor antes del sexto año. ¿Se puede considerar la lavadora como una ganga?
 + ¿Cuál es la probabilidad de que a lavadora requiera una reparación mayor durante el primer año?
++ Represente la función $f(x)$ gráficamente
+  
 
 <br/><br/>
 
@@ -102,7 +107,8 @@ $$f(x)= \dfrac{exp\{-2\} 2^x}{x!} \mbox{ , } x = 01,2,3,4,5.... $$
 
 + Determine la probabilidad de que $X$ sea igual a 0, 1, 2, 3, 4, 5 y 6
 + Grafique ka función de distribución de probabilidad para estos valores de $X$
-+ Determine la función de distribución acumulada para estos valores de $X$
++ Determine la función de distribución acumulada para estos valores de $X$.
++ Represente la función $f(x)$ gráficamente
 
 <br/><br/>
 
@@ -118,14 +124,14 @@ $$f(x)= \dfrac{exp\{-2\} 2^x}{x!} \mbox{ , } x = 01,2,3,4,5.... $$
 
 + Determine que la función de  densidad de probabilidad anterior es válida
 + Calcule la probabilidad de que el tiempo que le toma a un pasajero viajar desde la terminal principal hasta la explanada no exceda los 7 minutos
-
++ Represente la función $f(x)$ gráficamente
 
 <br/><br/>
 
 Problemas tomado de walpole (2006)
 
 
-## <span style="color:#2271B3">**Taller 303**</span>
+## <span style="color:#104E8B">**Taller 303**</span>
 
 <br/><br/>
 
@@ -239,7 +245,7 @@ Cuando el profesor de Probabilidad y Estadística se preparaba para imprimir el 
 
 <br/><br/>
 
-## <span style="color:#2271B3">**Taller 304**</span>
+## <span style="color:#104E8B">**Taller 304**</span>
 
 <br/><br/>
 

@@ -15,22 +15,316 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# <span style="color:#2271B3">**Ejercicios propuestos U3.1**</span>
+<br/>
+
+## <span style="color:#2271B3">**Taller 302**</span>
 <br/><br/>
 
-## **Ejercicios propuestos U3.1**
+ **3.1** Clasifique las siguientes variables aleatorias como discretas o continuas:
 
-<br/>
++ $X$ : el número de accidentes automovilísticos que ocurren al año en una ciudad determinada
++ $Y$ : el tiempo para  jugar 18 hoyos de golf
++ $M$ : la cantidad de leche que una vaca determinada produce anualmente
++ $N$ : el número de huevos que una gallina pone mensualmente
++ $P$ : el número de permisos para construcción que los funcionarios de una  ciudad emiten cada mes
++ $Q$ : el peso del grano producido por acre
 
-#### [**Taller 302**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_302.pdf)<br/>
 
-<br/>
+<br/><br/>
 
-#### [**Taller 303**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_303.pdf)<br/>
 
-<br/>
+**3.14**  El tiempo que pasa, en horas, para que un radar detecte entre conductores sucesivos a los que exceden los límites de velocidad es una variable aleatoria continua con una  función de distribución acumulada:
 
-#### [**Taller 304**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_304.pdf)<br/>
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0  & \mbox{ , }	x \leq 0\\ 
+				 1-exp\{-8x \}  & x \geq 0 
+				\end{matrix}\right.  
+				$$
+				
+Calcule la probabilidad de que el tiempo que  pase para que el radar detecte entre conductores sucesivos a  los que exceden los límites de velocidad sea menor a 12 minutos
 
-<br/>
+  + usando la función de distribución de probabilidad acumulada de $X$
+  + utilizando la función de densidad de probabilidad de $X$
+  
+<br/><br/>
 
-#### [**Taller 306**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller_306.pdf)<br/>
+ **3.18** Una variable aleatoria continua $X$, que puede tomar valores entre $x=2$ y $x=5$, tiene una función de densidad data por $f(x)=2(1+x)/27$.  Calcule 
+ 
+ + $P(X < 4)$
+ + $P(3 \leq X < 4)$
+ 
+ <br/><br/>
+ 
+ **3.33** Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad está dada por
+ 
+ $$f_{_{Y}}(y) = \left \{ 
+				\begin{matrix} 
+				ky^4 (1-y)^3 & \mbox{ , }	0 \leq y \leq 1\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+ 
+ 
+ + ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad de probabilidad válida?
+ + Calcule la probabilidad de que al menos 50% de las empresas tengan utilidades durante el primer año
+ + Calcule la probabilidad de que al menos el 80% de las empresas tengan utilidad durante el primer año
+ 
+ <br/><br/>
+ 
+ **3.24** Calcule la distribución de probabilidad par el número de discos compactos de jazz, de una colección que consta de  5 de jazz, 2 de música clásica y 3 de rock, al seleccionar de esta colección 4 de manera aleatoria. Explique sus resultados utilizando una fórmula.
+ 
+<br/><br/>
+
+**3.25** De una caja que contiene 4 monedad de 10 centavos y 2 monedas de 5 centavos se seleccionan 3 monedas de manera aleatoria  y sin reemplazo. calcule la distribución de probabilidad para el total $T$ de las 3 monedas .  Exprese la distribución de probabilidad de forma gráfica 
+
+<br/><br/>
+
+**3.31** Con base en las pruebas extensas, el fabricante de una lavadora determinó que el tiempo $Y$ (en años) para que el electrodoméstico requiera una reparación mayor se obtiene mediante la siguiente función de densidad de probabilidad :
+
+ 
+  $$f_{_{Y}}(y) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{4} exp\{-y/4\} & \mbox{ , }	y \geq 0\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+ 
++ Los críticos considerarían que la lavadora es una ganga si no hay una probabilidad de que requiera una reparación mayor antes del sexto año. ¿Se puede considerar la lavadora como una ganga?
++ ¿Cuál es la probabilidad de que a lavadora requiera una reparación mayor durante el primer año?
+
+<br/><br/>
+
+**3.65** Sea el número de llamadas telefónicas que recibe un conmutador durante un intervalo de 5 minutos una variable aleatoria $X$ con la siguiente función de distribución de probabilidad:
+
+$$f(x)= \dfrac{exp\{-2\} 2^x}{x!} \mbox{ , } x = 01,2,3,4,5.... $$
+
++ Determine la probabilidad de que $X$ sea igual a 0, 1, 2, 3, 4, 5 y 6
++ Grafique ka función de distribución de probabilidad para estos valores de $X$
++ Determine la función de distribución acumulada para estos valores de $X$
+
+<br/><br/>
+
+**3.72** El congestionamiento de pasajeros es un problema de servicio en los aeropuertos, en los cuales se instalan trenes para reducir la congestión.  cuando se usa el tren el tiempo $X$, en minutos, que toma viajar desde la terminal principal hasta una  explanada específica tiene la siguiente función de densidad:
+
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{10} & \mbox{ , }	0 \leq y \leq 10\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
++ Determine que la función de  densidad de probabilidad anterior es válida
++ Calcule la probabilidad de que el tiempo que le toma a un pasajero viajar desde la terminal principal hasta la explanada no exceda los 7 minutos
+
+
+<br/><br/>
+
+Problemas tomado de walpole (2006)
+
+
+## <span style="color:#2271B3">**Taller 303**</span>
+
+<br/><br/>
+
+**1.** Suponga que $f(x)=exp\{-x\}$, para $0 \leq x \leq 1$, $0$ para cualquier otro caso. Determine :
+
++ $P(1 < X)$
++ $P(1 < X < 2.5$
++ $P(X = 3$
++ $P(X < 4)$
++ Los valores de $Me$, $Q_{1}$ y $Q_{3}$
+
+<br/><br/>
+
+**2.** Para una variable aleatoria con función de densidad : $f(x)= x/8$ para $3 < X < 5$, determine :
+
++ $P(X < 4)$
++ $P(X > 3.5)$
++ $P(4 < X < 5)$
++ $P(X < 3.5 o X > 4.5)$
++ el valor de $Me$
+
+<br/><br/>
+
+**3.** Suponga que $X$ tiene una función de distribución acumulada :
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0    & \mbox{ , } x \leq 0\\ 
+				 2x   & \mbox{, } x < 0 < x 5  \\
+				 1    & \mbox{ , } 5 \leq 5
+				\end{matrix}\right.  
+				$$
+				
++ $P(X < 4)$
++ $P(X = 1.5)$
++ $P(X > 3)$
++ $P(0.5 < X < 2.7$
+
+<br/><br/>
+
+**4.** Para la variable aleatoria que tiene la siguiente función de distribución de probabilidad :
+
+| $x$  | $-2$ | $-1$   | $0$    |  $1$   | $2$    |
+|:----:|:----:|:------:|:------:|:------:|:------:|
+|$f(x)$|$1/8$ |$2/8$   |$2/8$   |$2/8$   | $1/8$  |
+
+
++ $P(X \leq 2)$
++ $P(X > 3)$
++ $P(-1 \leq X \leq 1)$
++ $P(X < 3.5 o X > 4.5)$
++ El valor de $Me$
+
+<br/><br/>
+
+**5.** Para una variable con función de distribución de probabilidad : 
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{2x + 1}{25} & \mbox{ , }	x=0, 1, 2, 3, 4\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+Determine:
++ $P(X =1)$
++ $P(X \leq 1)$
++ $P(2 \leq X < 4)$
+
+<br/><br/>
+
+**6.** Para una variable aleatoria con función de distribución de probabilidad: $f(x)= (3/4)(1/4)^{x}$, para $x=0, 1, 2, 3,... $
+
++ $P(X = 2)$
++ $P(X \leq 2)$
++ $P(2 \leq X$
+
+<br/><br/>
+
+**7.**
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0    & \mbox{ , } x \leq 0\\ 
+				 0.2 x   & \mbox{, } 0 < x 5  \\
+				 1    & \mbox{ , } 5 \leq 5
+				\end{matrix}\right.  
+				$$
+				
++ $P(X < 2.8)$
++ $P(X > 1.5)$
++ $P(X < -2)$
++ Determine $f_{_{X}}(x)$
+
+
+<br/><br/>
+
+**8.** El tiempo de reparación (en minutos) de una máquina fotocopiadora tiene una función de densidad:
+
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{22} exp\{-x/22\} & \mbox{ , }	x > 0\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+Cuando el profesor de Probabilidad y Estadística se preparaba para imprimir el cuestionario del segundo examen parcial, fue enterado por la secretaria del departamento que la máquina fotocopiadora se había averiado y que el técnico había acabado de llegar en ese instante y empezado a repararla. El profesor debe contar con por lo menos 10 minutos extras - tiempo de fotocopiado de 35 exámenes, organizar sus respectivas hojas de respuestas, sumado tiempo de su desplazamiento hasta el salón de clase, arreglo de las mesas y entrega de los cuestionarios a los estudiantes. Al mirar el reloj, el profesor observa que faltan 20 minutos para la hora en que debe empezar el examen y decide esperar a que el técnico repare la fotocopiadora. ¿Es acertada o no la decisión que tomó el profesor? Justifique su respuesta.   
+
+
+
+<br/><br/>
+
+## <span style="color:#2271B3">**Taller 304**</span>
+
+<br/><br/>
+
+**1.** Suponga que $f(x)=exp\{-x\}$, para $0 \leq x \leq 1$, $0$ para cualquier otro caso. Determine :
+
++ $E[X]$
++ $V[X]$
+
+<br/><br/>
+
+**2.** Para una variable aleatoria con función de densidad : $f(x)= x/8$ para $3 < X < 5$, determine :
+
++ $\mu_{_{X}}$
++ $\sigma_{_{X}}$
+
+
+**3.** Suponga que $X$ tiene una función de distribución acumulada:
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0    & \mbox{ , } x \leq 0\\ 
+				 \dfrac{1}{5}x   & \mbox{, } x < 0 < x 5  \\
+				 1    & \mbox{ , } 5 \leq 5
+				\end{matrix}\right.  
+				$$
+
+Determine : 
+
++  $E[X]$
++ $V[X]$
++ Se podría obtener el coeficiente de variación?. En caso afirmativo, ¿que valor tendría?
+
+<br/><br/>
+
+**4.** Para la variable aleatoria que tiene la siguiente función de distribución de probabilidad :
+
+| $x$  | $-2$ | $-1$   | $0$    |  $1$   | $2$    |
+|:----:|:----:|:------:|:------:|:------:|:------:|
+|$f(x)$|$1/8$ |$2/8$   |$2/8$   |$2/8$   | $1/8$  |
+
+Determine : 
+
++  $E[X]$
++ $V[X]$
+
+<br/><br/>
+
+**5.** Para una variable con función de distribución de probabilidad : 
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{2x + 1}{25} & \mbox{ , }	x=0, 1, 2, 3, 4\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+Determine : 
+
++  $E[X]$
++ $V[X]$
++ Coeficiente de variación
+
+<br/><br/>
+
+**6.** Para una variable aleatoria con función de distribución de probabilidad: $f(x)= (3/4)(1/4)^{x}$, para $x=0, 1, 2, 3,... $
+
+Determine : 
+
++ $E[X]$
++ $V[X]$
+
+Problemas tomados de Mongomery(2003)
+
+<br/><br/>
+
+**7.** Una de las preocupaciones que tienen los padres hoy en dia está relacionada con el tiempo que pasan sus hijos usando celular. Un estudio determinó que el número de llamadas que un joven realiza durante un dia es una variable aleatoria ($X$) con función de distribución :
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{8^{x} exp\{-8\}}{x!} & \mbox{ , }	x = 0,1,2,3,4,5,.....\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+El estudio afirma también que los jóvenes en promedio reciben al rededor de 12 llamadas por día, valor que es considerado muy alto, debido a que a esa edad por lo regular no se tienen actividades económicas que lo ameriten. También mencionan que debido a que se ha logrado identificar la función de distribución de probabilidad es fácil establecer que se trata de una variable con un comportamiento homogéneo. ¿Está de acuerdo con la información suministrada en el artículo? . Justifique su respuesta. 
+
+
+<br/><br/>

@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # <span style="color:#104E8B">**Ejercicios propuestos U3.1**</span>
 <br/>
 
-## <span style="color:#104E8B">**Taller 302**</span>
+## <span style="color:#104E8B">**Taller 312**</span>
 <br/><br/>
 
  **3.1** Clasifique las siguientes variables aleatorias como discretas o continuas:
@@ -126,14 +126,15 @@ $$f(x)= \dfrac{exp\{-2\} 2^x}{x!} \mbox{ , } x = 01,2,3,4,5.... $$
 + Calcule la probabilidad de que el tiempo que le toma a un pasajero viajar desde la terminal principal hasta la explanada no exceda los 7 minutos
 + Represente la función $f(x)$ gráficamente
 
-<br/><br/>
+<br/>
 
 Problemas tomado de walpole (2006)
 
-
-## <span style="color:#104E8B">**Taller 303**</span>
-
 <br/><br/>
+
+## <span style="color:#104E8B">**Taller 313**</span>
+
+<br/>
 
 **1.** Suponga que $f(x)=exp\{-x\}$, para $0 \leq x \leq 1$, $0$ para cualquier otro caso. Determine :
 
@@ -211,7 +212,7 @@ Determine:
 
 <br/><br/>
 
-**7.**
+**7.** Sponga que $X$ tiene una función de probabilidad acumulada: 
 
 $$F_{_{X}}(x) = \left \{ 
 				\begin{matrix} 
@@ -220,7 +221,9 @@ $$F_{_{X}}(x) = \left \{
 				 1    & \mbox{ , } 5 \leq 5
 				\end{matrix}\right.  
 				$$
-				
+
+Determine: 
+
 + $P(X < 2.8)$
 + $P(X > 1.5)$
 + $P(X < -2)$
@@ -245,7 +248,7 @@ Cuando el profesor de Probabilidad y Estadística se preparaba para imprimir el 
 
 <br/><br/>
 
-## <span style="color:#104E8B">**Taller 304**</span>
+## <span style="color:#104E8B">**Taller 314**</span>
 
 <br/><br/>
 

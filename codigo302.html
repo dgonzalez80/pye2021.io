@@ -12,7 +12,7 @@
 <meta name="author" content="dgonzalez" />
 
 
-<title>Código 2</title>
+<title>Código 302</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -539,15 +539,346 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Código 2</h1>
-<h3 class="subtitle">Módulo 1- Unidad 1.1</h3>
+<h1 class="title toc-ignore">Código 302</h1>
+<h3 class="subtitle">Módulo 3- Unidad 3.2</h3>
 <h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<div id="en-construccion" class="section level3">
-<h3><span style="color:#BC2B6A"><strong>EN CONSTRUCCION</strong></span></h3>
+<div id="caso-discreto-discreto" class="section level1">
+<h1><strong>Caso Discreto-Discreto</strong></h1>
+<p><br/><br/></p>
+<div id="ejemplo-1" class="section level3">
+<h3><strong>Ejemplo 1</strong></h3>
+<p>El número de veces que falla una máquina <span class="math inline">\(X\)</span> con <span class="math inline">\(R_{X}=\{1,2,3\}\)</span> durante un dia y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por <span class="math inline">\(Y\)</span> con <span class="math inline">\(R_{Y}=\{1,2,3\}\)</span>. Su función de probabilidad conjunta para <span class="math inline">\(X,Y\)</span> está dada por :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(f(x,y)\)</span></td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(y\)</span></td>
+<td align="center">1</td>
+<td align="center">0.05</td>
+<td align="center">0.05</td>
+<td align="center">0.10</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">2</td>
+<td align="center">0.050</td>
+<td align="center">0.10</td>
+<td align="center">0.35</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">0.20</td>
+<td align="center">0.10</td>
+</tr>
+</tbody>
+</table>
+<p>Función de distribución de probabilidad conjunta</p>
+<pre class="r"><code>fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
+fxy</code></pre>
+<pre><code>     [,1] [,2] [,3]
+[1,] 0.05 0.05 0.10
+[2,] 0.05 0.10 0.35
+[3,] 0.00 0.20 0.10</code></pre>
+<pre class="r"><code>sum(fxy)</code></pre>
+<pre><code>[1] 1</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="funciones-distribución-marginales" class="section level3">
+<h3><strong>Funciones distribución marginales</strong></h3>
+<pre class="r"><code>fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
+fxy=addmargins(fxy,c(1,2))
+colnames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;h(y)&quot;)
+rownames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;g(x)&quot;)
+fxy</code></pre>
+<pre><code>        1    2    3 h(y)
+1    0.05 0.05 0.10  0.2
+2    0.05 0.10 0.35  0.5
+3    0.00 0.20 0.10  0.3
+g(x) 0.10 0.35 0.55  1.0</code></pre>
+</div>
+<div id="representación-gráfica-de-fxy" class="section level3">
+<h3><strong>Representación gráfica de <span class="math inline">\(f(x,y)\)</span></strong></h3>
+<p>Para construir la gráfica de X y Y debemos crear los vectores</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center">x</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">y</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center">fxy</td>
+<td align="center">0.15</td>
+<td align="center">0.05</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.20</td>
+<td align="center">0.35</td>
+<td align="center">0</td>
+<td align="center">0.10</td>
+<td align="center">0.15</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>x=1:3
+y=1:3
+x=rep(x,each=3)
+y=rep(y,3)
+fxy=c(0.15,0.05,0, 0,0.20,0.35, 0,0.10,0.15)
+
+plot3D::scatter3D(x, y, fxy,
+          colvar = NULL, 
+          col = &quot;blue&quot;,
+          pch = 19, cex = 1.5,
+          phi = 20, theta = 60,  
+          zlab=&quot;f(xy)&quot;, xlab=&quot;x&quot;, ylab=&quot;y&quot;,
+          bty = &quot;b2&quot;,
+          col.panel =&quot;steelblue&quot;,
+          col.grid = &quot;darkblue&quot;,
+          add_lines=TRUE)</code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="funciones-de-distribución-marginal" class="section level3">
+<h3><strong>Funciones de distribución marginal</strong></h3>
+<pre class="r"><code>fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
+fxy=addmargins(fxy,c(1,2))
+colnames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;h(y)&quot;)
+rownames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;g(x)&quot;)
+fxy</code></pre>
+<pre><code>        1    2    3 h(y)
+1    0.05 0.05 0.10  0.2
+2    0.05 0.10 0.35  0.5
+3    0.00 0.20 0.10  0.3
+g(x) 0.10 0.35 0.55  1.0</code></pre>
+</div>
+<div id="covarianza-y-correlación" class="section level3">
+<h3><strong>Covarianza y Correlación</strong></h3>
+<pre class="r"><code>x=c(0,1,2) 
+y=c(0,1,2)
+fxy=matrix(c(0.15,0.05,0,0,0.20,0.35,0,0.10,0.15), ncol=3 )
+
+fxy=addmargins(fxy,c(1,2))
+colnames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;h(y)&quot;)
+rownames(fxy)=c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;g(x)&quot;)
+
+fxy=as.table(fxy)
+gx=fxy[,4]
+hy=fxy[4,]
+
+
+Ex=sum(x*gx)
+Ex2=sum(x^2*gx)
+Vx=Ex2-(Ex)^2
+
+Ey=sum(y*hy)
+Ey2=sum(y^2*hy)
+Vy=Ey2-(Ey)^2
+
+x=rep(x,each=3)
+y=rep(y,3)
+fxy=c(0.15,0.05,0,0,0.20,0.35,0,0.10,0.15)
+Exy=sum(x*y*fxy)
+CovXY=Exy-Ex*Ey
+Rho=CovXY/sqrt(Vx*Vy)</code></pre>
+<pre><code>E(X) =  1.35 </code></pre>
+<pre><code>E(X2) =  2.35 </code></pre>
+<pre><code>V(X) =  0.5275 </code></pre>
+<pre><code>E(Y) =  1.05 </code></pre>
+<pre><code>E(Y2) =  1.55 </code></pre>
+<pre><code>V(Y) =  0.4475 </code></pre>
+<pre><code>E(XY) =  1.7 </code></pre>
+<pre><code>Cov(XY) =  0.2825 </code></pre>
+<pre><code>Rho =  0.5814478 </code></pre>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="caso-continuo-continuo" class="section level1">
+<h1><strong>Caso Continuo-continuo</strong></h1>
+<p><br/><br/></p>
+<p><strong>Ejemplo 2</strong></p>
+<p>Una empresa prestadora se servicios a domicilio tienen dos lineas telefónicas para que los clientes puedan realizar sus pedidos. Sea X y Y la proporción del tiempo en que las lineas se encuentran ocupadas. La función de densidad conjunta que modela <span class="math inline">\(f(x,y)\)</span> esta dada por:</p>
+<p><span class="math display">\[f(x,y) = \left \{ \begin{matrix} \dfrac{3}{2}(x^{2}+y^{2}) &amp; \mbox{ } 0 \leq x \leq 1\\ 
+                                     &amp; \mbox{ } 0 \leq y \leq 1 \\
+                                     &amp;\\
+                                   0 &amp; \mbox{ en otro caso }\end{matrix}\right.  \]</span> <br/><br/></p>
+<p>Inicialmente se verifica la condición :</p>
+<p><span class="math inline">\(\displaystyle\int_{0}^{1} \displaystyle\int_{0}^{1} \dfrac{3}{2}(x^{2}+y^{2}) \:dx \:dy = 1\)</span></p>
+<pre class="r"><code>library(cubature) 
+fxy &lt;- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(1, 1))</code></pre>
+<pre><code>$integral
+[1] 1
+
+$error
+[1] 2.220446e-16
+
+$functionEvaluations
+[1] 17
+
+$returnCode
+[1] 0</code></pre>
+<p>basado en : <a href="http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf" class="uri">http://homepages.math.uic.edu/~jyang06/stat401/handouts/handout8.pdf</a></p>
+<p><br/><br/></p>
+<p>Ahora su representación gráfica</p>
+<pre class="r"><code>x=seq(0,1,length=10)
+y=seq(0,1,length=10)
+fxy=function(x,y){3/2*(x^2+y^2)}
+z=outer(x, y, fxy)
+persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = &quot;red&quot;,
+      xlab = &quot;x&quot;, ylab =&quot;y&quot;, zlab = &quot;f(x,y)&quot;,
+      main=&quot; &quot;, col.main=&quot;blue&quot;)</code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Nota: basada en : <a href="https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html" class="uri">https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.html</a></p>
+<p><br/><br/></p>
+<div id="otras-alternativas" class="section level3">
+<h3><strong>Otras alternativas</strong></h3>
+<p><br/></p>
+<p><img src="img/walpha2.png" /> <br/></p>
+<p><img src="img/symbolab2.png" /></p>
+<p><br/><br/></p>
+</div>
+<div id="otros-gráficos" class="section level2">
+<h2><strong>Otros gráficos</strong></h2>
+<p><span class="math display">\[f(x,y) = \left \{ \begin{matrix} \dfrac{2}{3}\Big(x+2y\Big) &amp; \mbox{ } 0 \leq x \leq 1\\ 
+                                     &amp; \mbox{ } 0 \leq y \leq 1 \\
+                                     &amp;\\
+                                   0 &amp; \mbox{ en otro caso }\end{matrix}\right.  \]</span></p>
+<pre class="r"><code>library(&quot;scatterplot3d&quot;)
+x &lt;- c(0,1,1,0,0) 
+y &lt;- c(0,0,1,1,0) 
+z &lt;- c(0,1,2,1,0) 
+s &lt;- scatterplot3d(x,y,z, type=&#39;l&#39;,xlim=c(0,1),ylim=c(0,1),zlim=c(0,2), angle=45,
+                   xlab=&quot;x&quot;, ylab=&quot;y&quot;, zlab=&quot;f(x,y) &quot;,scale.y=0.7,cex.axis=.7, cex.names = .7, lwd=3,
+                   grid=TRUE, box=TRUE,
+                   label.tick.marks=TRUE)
+
+# plano XY
+x0=c(0,1,1,0)
+y0=c(0,0,1,1)
+z0=c(0,0,0,0)
+polygon(s$xyz.convert(x0,y0,z0),col=&quot;#0000ff11&quot;) # morado claro
+
+# Funcion de densidad de probabilidad f(x,y)
+x1=c(0,1,1,0)
+y1=c(0,0,1,1)
+z1=c(0,1,2,1)
+polygon(s$xyz.convert(x1,y1,z1),col=&quot;#8080FF99&quot;) # morado </code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><span class="math display">\[P(X \geq 0.5 ; Y \geq 0.5) = \int_{0.5}^{1} \int_{0.5}^{1} \dfrac{2}{3}\Big(x+2y\Big) \:dx \:dy\]</span></p>
+<pre class="r"><code>library(&quot;scatterplot3d&quot;)
+x &lt;- c(0,1,1,0,0) 
+y &lt;- c(0,0,1,1,0) 
+z &lt;- c(0,1,2,1,0) 
+s &lt;- scatterplot3d(x,y,z, type=&#39;l&#39;,xlim=c(0,1),ylim=c(0,1),zlim=c(0,2), angle=45,
+                   xlab=&quot;x&quot;, ylab=&quot;y&quot;, zlab=&quot;f(x,y) &quot;,scale.y=0.7,cex.axis=.7, cex.names = .7,lwd=2,
+                   grid=TRUE, box=TRUE,
+                   label.tick.marks=TRUE)
+
+# plano fxy - techo  
+x4=c(.5,1,1,.5)
+y4=c(.5,.5,1,1)
+z4=c(1 ,1.5,2,1.5)
+polygon(s$xyz.convert(x4,y4,z4),col=&quot;#0000ff22&quot;, lwd=4)  #violeta
+
+# frente 
+x5=c(0.5,1,1,0.5)
+y5=c(0.5,0.5,0.5,0.5)
+z5=c(0,0,1.5,1)
+polygon(s$xyz.convert(x5,y5,z5),col=&quot;#80FFFF99&quot;,lwd=4) # azul claro
+
+# lateral derecho 
+x6=c(1,1,1,1)
+y6=c(.5,1,1,.5)
+z6=c(0,0,2,1.5)
+polygon(s$xyz.convert(x6,y6,z6),col=&quot;#80FFFF99&quot;,lwd=4) # azul claro
+
+# lateral izquierdo si va transparente
+x7=c(.5,.5,.5,.5)
+y7=c(.5,1,1,.5)
+z7=c(0,0,1.5,1)
+polygon(s$xyz.convert(x7,y7,z7)) # </code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><span class="math display">\[f_{XY}(x,y)=\left\{\begin{matrix}\ \dfrac{48}{49} xy^{2} &amp; 3\leq x \leq 4, \hspace{.5cm} 0.5 \leq y \leq 1 \\ &amp; \\
+ 0 &amp; \mbox{para cualquier otro caso} \end{matrix}\right.\]</span></p>
+<pre class="r"><code> library(lattice)
+x=seq(3,4,by=0.03)
+y=seq(0.5,1,by=0.03)
+fun=function(x,y){48*x*y^2/49}
+z=outer(x,y,fun)
+wireframe(z,xlab=&quot;x&quot;,ylab=&quot;y&quot;,zlab=&quot;f(x,y)&quot;,col=&quot;blue&quot;)</code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code>x=seq(3,4,by=0.03)
+y=seq(0.5,1,by=0.03)
+fxy=function(x,y){48*x*y^2/49}
+z=outer(x, y, fxy)
+persp(x,y,z,theta = 40, phi = 10,expand=0.5, col = &quot;orange&quot;,
+      xlab = &quot;x&quot;, ylab =&quot;y&quot;, zlab = &quot;f(x,y)&quot;,
+      main=&quot; &quot;, col.main=&quot;blue&quot;)</code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><br/><br/></p>
+<pre class="r"><code># tomada de:
+# http://pj.freefaculty.org/R/WorkingExamples/plot-3d-MVNormal-1.R
+library(&quot;mvtnorm&quot;)
+
+N=50
+x &lt;- seq(-3,3, length=N)
+y &lt;- seq(-3,3,length=N)
+z &lt;- matrix(0, N, N)
+for (i in 1:N) for (j in 1:N) {
+  z[i,j]=dmvnorm(c(x[i],y[j]), c(0,0),
+        matrix(c(1,0.5,0.5,1),2,2))}
+persp(x,y,z,theta=20, phi=15, 
+      xlab=&quot;x&quot;, 
+      ylab=&quot;y&quot;, 
+      zlab=&quot;f(x,y)&quot;,
+      scale=TRUE,
+      expand=.4,
+      axes=TRUE,
+      col=&quot;#007FFF&quot;)</code></pre>
+<p><img src="codigo302_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
 </div>
 
 

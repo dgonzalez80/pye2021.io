@@ -2,10 +2,8 @@
 library(RSocrata)    # llamado de libreria
 library(tidyverse)   # libreria de librerias util en el manejo de datos
 token <- "zxMsD6eXc0zlEMryRGW87Hwrz"  # token
-Colombia <- read.socrata("https://www.datos.gov.co/resource/gt2j-8ykr.json", app_token = token) # lectura 
 
 
-Colombia<- readRDS("data/Colombia.RDS")
 Colombia$edad=as.integer(Colombia$edad)
 Colombia$sexo=str_to_lower(Colombia$sexo)
 Colombia$estado=str_to_lower(Colombia$estado)
@@ -36,11 +34,13 @@ summarytools::freq(Colombia20$estado, cumul = F)
 summarytools::descr(Colombia22$edad)
 
 saveRDS(Colombia, file = "data/Colombia.RDS") 
-saveRDS(Colombia22, file = "data/Colombia22.RDS") 
-saveRDS(Colombia21, file = "data/Colombia21.RDS") 
-saveRDS(Colombia21, file = "data/Colombia20.RDS") 
-saveRDS(Valle22, file = "data/Valle22.RDS") 
-saveRDS(Cali22, file = "data/Cali22.RDS") 
+
+
+
+
+#-----------------------------------------------------
+
+
 
 
 

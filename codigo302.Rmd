@@ -20,7 +20,7 @@ library(tidyverse)
 
 # **Caso Discreto-Discreto**
 
-<br/><br/>
+<br/><br/><br/>
 
 ### **Ejemplo 1**
 
@@ -33,6 +33,7 @@ El número de veces que falla una máquina $X$ con $R_{X}=\{1,2,3\}$ durante un 
 |    |  2     | 0.050 | 0.10 | 0.35 |
 |    |  3     | 0     | 0.20 | 0.10 |
 
+<br/><br/>
 
 Función de distribución de probabilidad conjunta
 
@@ -54,6 +55,7 @@ rownames(fxy)=c("1","2","3","g(x)")
 fxy
 ```
 
+<br/><br/>
 
 ### **Representación gráfica de $f(x,y)$**
 
@@ -88,6 +90,8 @@ plot3D::scatter3D(x, y, fxy,
 
 ```
 
+<br/><br/>
+
 ### **Funciones de distribución marginal**
 
 ```{r}
@@ -98,6 +102,7 @@ rownames(fxy)=c("1","2","3","g(x)")
 fxy
 ```
 
+<br/><br/>
 
 ### **Covarianza y Correlación**
 
@@ -133,18 +138,20 @@ Rho=CovXY/sqrt(Vx*Vy)
 
 ```
 
+<br/><br/>
+
 ```{r, warning=FALSE, message=FALSE, echo=FALSE}
 
-cat("E(X) = ", Ex, "\n")
-cat("E(X2) = ", Ex2, "\n")
-cat("V(X) = ", Vx, "\n")
-cat("E(Y) = ", Ey, "\n")
-cat("E(Y2) = ", Ey2, "\n")
-cat("V(Y) = ", Vy, "\n")
+cat("E(X)    = ", Ex, "\n")
+cat("E(X2)   = ", Ex2, "\n")
+cat("V(X)    = ", Vx, "\n")
+cat("E(Y)    = ", Ey, "\n")
+cat("E(Y2)   = ", Ey2, "\n")
+cat("V(Y)    = ", Vy, "\n")
 
-cat("E(XY) = ", Exy, "\n")
+cat("E(XY)   = ", Exy, "\n")
 cat("Cov(XY) = ", CovXY, "\n")
-cat("Rho = ", Rho, "\n")
+cat("Rho     = ", Rho, "\n")
 ```
 
 
@@ -205,11 +212,11 @@ Nota: basada en : https://estadistica-dma.ulpgc.es/cursoR4ULPGC/9e-grafPersp.htm
 <br/>
 
 ![](img/walpha2.png)
-<br/>
+<br/><br/>
 
 ![](img/symbolab2.png)
 
-<br/><br/>
+<br/><br/><br/>
 
 ## **Otros gráficos**
 

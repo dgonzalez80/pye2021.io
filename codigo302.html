@@ -548,7 +548,7 @@ div.tocify {
 
 <div id="caso-discreto-discreto" class="section level1">
 <h1><strong>Caso Discreto-Discreto</strong></h1>
-<p><br/><br/></p>
+<p><br/><br/><br/></p>
 <div id="ejemplo-1" class="section level3">
 <h3><strong>Ejemplo 1</strong></h3>
 <p>El número de veces que falla una máquina <span class="math inline">\(X\)</span> con <span class="math inline">\(R_{X}=\{1,2,3\}\)</span> durante un dia y el número de veces en que el operario requiere llamar al técnico para su arreglo esta dado por <span class="math inline">\(Y\)</span> con <span class="math inline">\(R_{Y}=\{1,2,3\}\)</span>. Su función de probabilidad conjunta para <span class="math inline">\(X,Y\)</span> está dada por :</p>
@@ -593,6 +593,7 @@ div.tocify {
 </tr>
 </tbody>
 </table>
+<p><br/><br/></p>
 <p>Función de distribución de probabilidad conjunta</p>
 <pre class="r"><code>fxy=matrix(c(0.05,0.05,0,0.05,0.10,0.20,0.10,0.35,0.10), ncol=3 )
 fxy</code></pre>
@@ -616,6 +617,7 @@ fxy</code></pre>
 2    0.05 0.10 0.35  0.5
 3    0.00 0.20 0.10  0.3
 g(x) 0.10 0.35 0.55  1.0</code></pre>
+<p><br/><br/></p>
 </div>
 <div id="representación-gráfica-de-fxy" class="section level3">
 <h3><strong>Representación gráfica de <span class="math inline">\(f(x,y)\)</span></strong></h3>
@@ -677,6 +679,7 @@ plot3D::scatter3D(x, y, fxy,
           col.grid = &quot;darkblue&quot;,
           add_lines=TRUE)</code></pre>
 <p><img src="codigo302_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><br/><br/></p>
 </div>
 <div id="funciones-de-distribución-marginal" class="section level3">
 <h3><strong>Funciones de distribución marginal</strong></h3>
@@ -690,6 +693,7 @@ fxy</code></pre>
 2    0.05 0.10 0.35  0.5
 3    0.00 0.20 0.10  0.3
 g(x) 0.10 0.35 0.55  1.0</code></pre>
+<p><br/><br/></p>
 </div>
 <div id="covarianza-y-correlación" class="section level3">
 <h3><strong>Covarianza y Correlación</strong></h3>
@@ -720,15 +724,16 @@ fxy=c(0.15,0.05,0,0,0.20,0.35,0,0.10,0.15)
 Exy=sum(x*y*fxy)
 CovXY=Exy-Ex*Ey
 Rho=CovXY/sqrt(Vx*Vy)</code></pre>
-<pre><code>E(X) =  1.35 </code></pre>
-<pre><code>E(X2) =  2.35 </code></pre>
-<pre><code>V(X) =  0.5275 </code></pre>
-<pre><code>E(Y) =  1.05 </code></pre>
-<pre><code>E(Y2) =  1.55 </code></pre>
-<pre><code>V(Y) =  0.4475 </code></pre>
-<pre><code>E(XY) =  1.7 </code></pre>
+<p><br/><br/></p>
+<pre><code>E(X)    =  1.35 </code></pre>
+<pre><code>E(X2)   =  2.35 </code></pre>
+<pre><code>V(X)    =  0.5275 </code></pre>
+<pre><code>E(Y)    =  1.05 </code></pre>
+<pre><code>E(Y2)   =  1.55 </code></pre>
+<pre><code>V(Y)    =  0.4475 </code></pre>
+<pre><code>E(XY)   =  1.7 </code></pre>
 <pre><code>Cov(XY) =  0.2825 </code></pre>
-<pre><code>Rho =  0.5814478 </code></pre>
+<pre><code>Rho     =  0.5814478 </code></pre>
 <p><br/><br/><br/></p>
 </div>
 </div>
@@ -773,9 +778,9 @@ persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = &quot;red&quot;,
 <div id="otras-alternativas" class="section level3">
 <h3><strong>Otras alternativas</strong></h3>
 <p><br/></p>
-<p><img src="img/walpha2.png" /> <br/></p>
+<p><img src="img/walpha2.png" /> <br/><br/></p>
 <p><img src="img/symbolab2.png" /></p>
-<p><br/><br/></p>
+<p><br/><br/><br/></p>
 </div>
 <div id="otros-gráficos" class="section level2">
 <h2><strong>Otros gráficos</strong></h2>

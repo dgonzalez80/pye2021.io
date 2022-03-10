@@ -793,13 +793,8 @@ data(titanic_train)  # cargar los datos
 #install.packages(&quot;rpart.plot&quot;)
 
 library(rpart)
-library(rattle)</code></pre>
-<pre><code>Loading required package: tibble</code></pre>
-<pre><code>Loading required package: bitops</code></pre>
-<pre><code>Rattle: A free graphical interface for data science with R.
-Versión 5.4.0 Copyright (c) 2006-2020 Togaware Pty Ltd.
-Escriba &#39;rattle()&#39; para agitar, sacudir y  rotar sus datos.</code></pre>
-<pre class="r"><code>library(rpart.plot)
+library(rattle)
+library(rpart.plot)
 
 arbol=rpart( formula = Survived ~ Sex,
              data = titanic_train,

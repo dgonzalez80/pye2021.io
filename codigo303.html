@@ -805,7 +805,7 @@ data.frame(x,fx,Fx)        # construye tabla</code></pre>
 <li>Generar 15 números aleatorios a partir de esta distribución</li>
 </ol>
 <pre class="r"><code>rbinom(15,20,0.30)</code></pre>
-<pre><code> [1]  7 10  8  6 10  8  5  5  4  5  3  5  5  6  6</code></pre>
+<pre><code> [1]  6  8  6  6  4  7  7 11  6  6  8  4  5  7  6</code></pre>
 <p><br/></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Construir la gráfica de la función de distribución de probabilidad <span class="math inline">\(f(x)\)</span> para <span class="math inline">\(X\)</span></li>
@@ -868,8 +868,8 @@ ggplot(dat) + geom_point(aes(x, fx),colour = &quot;orange&quot;, size = 4) +
 <li>Genere 10 números aleatorios de la variables <span class="math inline">\(X\)</span></li>
 </ol>
 <pre class="r"><code>rnorm(10,70,sqrt(100))</code></pre>
-<pre><code> [1] 79.17823 80.26547 81.92403 48.06762 71.50109 45.55130 72.66382 64.23750
- [9] 82.23875 64.81092</code></pre>
+<pre><code> [1] 77.91053 62.23859 62.63797 52.94710 59.33609 70.53828 72.67212 68.26983
+ [9] 68.98623 68.09381</code></pre>
 <p><br/></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Generar la gráfica de la función de densidad de la variable <span class="math inline">\(X\)</span>, <span class="math inline">\(f(x)\)</span></li>
@@ -937,19 +937,19 @@ N: 1000
 
                       value
 ----------------- ---------
-             Mean      6.02
-          Std.Dev      0.49
-              Min      4.53
-               Q1      5.68
-           Median      6.00
+             Mean      6.00
+          Std.Dev      0.50
+              Min      4.62
+               Q1      5.65
+           Median      5.99
                Q3      6.33
-              Max      7.92
-              MAD      0.48
-              IQR      0.65
+              Max      7.86
+              MAD      0.50
+              IQR      0.68
                CV      0.08
          Skewness      0.21
       SE.Skewness      0.08
-         Kurtosis      0.12
+         Kurtosis      0.10
           N.Valid   1000.00
         Pct.Valid    100.00</code></pre>
 </div>

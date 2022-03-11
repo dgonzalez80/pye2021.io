@@ -659,20 +659,20 @@ t21=table(Colombia$ubicacion, Colombia$estado)
 (t22=addmargins(t21))</code></pre>
 <pre><code>              
                fallecido   grave    leve moderado     Sum
-  casa                 0       0 5735613        0 5735613
-  fallecido       134551       0       0        0  134551
-  hospital             0       0       0     6098    6098
-  hospital uci         0    1357       0        0    1357
-  Sum             134551    1357 5735613     6098 5877619</code></pre>
+  casa                 0       0 5902872        0 5902872
+  fallecido       139189       0       0        0  139189
+  hospital             0       0       0     4763    4763
+  hospital uci         0     842       0        0     842
+  Sum             139189     842 5902872     4763 6047666</code></pre>
 <p>La tabla de frecuencias la convertimos en tabla de probabilidades</p>
 <pre class="r"><code>t23=prop.table(t21)
 round(t23, 4)</code></pre>
 <pre><code>              
                fallecido  grave   leve moderado
-  casa            0.0000 0.0000 0.9758   0.0000
-  fallecido       0.0229 0.0000 0.0000   0.0000
-  hospital        0.0000 0.0000 0.0000   0.0010
-  hospital uci    0.0000 0.0002 0.0000   0.0000</code></pre>
+  casa            0.0000 0.0000 0.9761   0.0000
+  fallecido       0.0230 0.0000 0.0000   0.0000
+  hospital        0.0000 0.0000 0.0000   0.0008
+  hospital uci    0.0000 0.0001 0.0000   0.0000</code></pre>
 </div>
 </div>
 </div>

@@ -617,13 +617,14 @@ data(cars)  # data set cars</code></pre>
  Mean   :15.4   Mean   : 42.98  
  3rd Qu.:19.0   3rd Qu.: 56.00  
  Max.   :25.0   Max.   :120.00  </code></pre>
-<pre><code> fecha_reporte_web   id_de_caso        fecha_de_notificaci_n departamento      
- Length:6074155     Length:6074155     Length:6074155        Length:6074155    
- Class :character   Class :character   Class :character      Class :character  
- Mode  :character   Mode  :character   Mode  :character      Mode  :character  
-                                                                               
-                                                                               
-                                                                               
+<pre><code> fecha_reporte_web  id_de_caso        fecha_de_notificaci_n departamento      
+ Min.   :NA        Length:6074155     Min.   :NA            Length:6074155    
+ 1st Qu.:NA        Class :character   1st Qu.:NA            Class :character  
+ Median :NA        Mode  :character   Median :NA            Mode  :character  
+ Mean   :NA                           Mean   :NA                              
+ 3rd Qu.:NA                           3rd Qu.:NA                              
+ Max.   :NA                           Max.   :NA                              
+ NA&#39;s   :6074155                      NA&#39;s   :6074155                         
  departamento_nom   ciudad_municipio   ciudad_municipio_nom      edad       
  Length:6074155     Length:6074155     Length:6074155       Min.   :  1.00  
  Class :character   Class :character   Class :character     1st Qu.: 27.00  
@@ -631,6 +632,7 @@ data(cars)  # data set cars</code></pre>
                                                             Mean   : 39.73  
                                                             3rd Qu.: 52.00  
                                                             Max.   :114.00  
+                                                                            
  unidad_medida          sexo           fuente_tipo_contagio  ubicacion        
  Length:6074155     Length:6074155     Length:6074155       Length:6074155    
  Class :character   Class :character   Class :character     Class :character  
@@ -638,27 +640,31 @@ data(cars)  # data set cars</code></pre>
                                                                               
                                                                               
                                                                               
-    estado           recuperado        fecha_inicio_sintomas fecha_diagnostico 
- Length:6074155     Length:6074155     Length:6074155        Length:6074155    
- Class :character   Class :character   Class :character      Class :character  
- Mode  :character   Mode  :character   Mode  :character      Mode  :character  
-                                                                               
-                                                                               
-                                                                               
- fecha_recuperado   tipo_recuperacion    per_etn_          nom_grupo_       
- Length:6074155     Length:6074155     Length:6074155     Length:6074155    
- Class :character   Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-                                                                            
-                                                                            
-                                                                            
- fecha_muerte       pais_viajo_1_cod   pais_viajo_1_nom  
- Length:6074155     Length:6074155     Length:6074155    
- Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character  
-                                                         
-                                                         
-                                                         </code></pre>
+                                                                              
+    estado           recuperado        fecha_inicio_sintomas fecha_diagnostico
+ Length:6074155     Length:6074155     Min.   :NA            Min.   :NA       
+ Class :character   Class :character   1st Qu.:NA            1st Qu.:NA       
+ Mode  :character   Mode  :character   Median :NA            Median :NA       
+                                       Mean   :NA            Mean   :NA       
+                                       3rd Qu.:NA            3rd Qu.:NA       
+                                       Max.   :NA            Max.   :NA       
+                                       NA&#39;s   :6074155       NA&#39;s   :6074155  
+ fecha_recuperado  tipo_recuperacion    per_etn_          nom_grupo_       
+ Min.   :NA        Length:6074155     Length:6074155     Length:6074155    
+ 1st Qu.:NA        Class :character   Class :character   Class :character  
+ Median :NA        Mode  :character   Mode  :character   Mode  :character  
+ Mean   :NA                                                                
+ 3rd Qu.:NA                                                                
+ Max.   :NA                                                                
+ NA&#39;s   :6074155                                                           
+  fecha_muerte     pais_viajo_1_cod   pais_viajo_1_nom  
+ Min.   :NA        Length:6074155     Length:6074155    
+ 1st Qu.:NA        Class :character   Class :character  
+ Median :NA        Mode  :character   Mode  :character  
+ Mean   :NA                                             
+ 3rd Qu.:NA                                             
+ Max.   :NA                                             
+ NA&#39;s   :6074155                                        </code></pre>
 <p>Por otro lado la función <em>View()</em> permite visualizar la base en una ventana de manera separada</p>
 <pre class="r"><code>View(Colombia)  </code></pre>
 <pre class="r"><code>View(iris</code></pre>
@@ -683,10 +689,8 @@ data(cars)  # data set cars</code></pre>
 <p>Para realizar una revisión de una variable cualitativa utilizamos la función <em>table()</em>, la cual construye una tabla de frecuencias</p>
 <pre class="r"><code>table(Colombia$ubicacion)</code></pre>
 <pre><code>
-        casa         Casa         CASA    Fallecido     Hospital Hospital UCI 
-       24337      5878528            7       139189         4763          842 
-         N/A 
-       26489 </code></pre>
+        casa    fallecido     hospital hospital uci 
+     5902872       139189         4763          842 </code></pre>
 <p>Observemos aparecen valores diferentes para una sola categoría de la variable:</p>
 <ul>
 <li>casa<br />
@@ -719,8 +723,8 @@ library(tidyverse)</code></pre>
 <p>Para verificar los arreglo volvemos a construir la tabla</p>
 <pre class="r"><code>table(Colombia$ubicacion)</code></pre>
 <pre><code>
-        casa    fallecido     hospital hospital uci          n/a 
-     5902872       139189         4763          842        26489 </code></pre>
+        casa    fallecido     hospital hospital uci 
+     5902872       139189         4763          842 </code></pre>
 <p>Después de esto realizamos en cambio de <em>n/a</em> por <em>NA</em></p>
 <pre class="r"><code>Colombia$ubicacion[Colombia$ubicacion==&quot;n/a&quot;]=NA
 table(Colombia$ubicacion)</code></pre>
